@@ -16,7 +16,7 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GUIGenerateur());
         }
     }
 }

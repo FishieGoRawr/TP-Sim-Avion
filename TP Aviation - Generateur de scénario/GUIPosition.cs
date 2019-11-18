@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    public partial class Form1 : Form
+    public partial class GUIPosition : Form
     {
-        public Form1()
+        public GUIPosition()
         {
             InitializeComponent();
+        }
+
+        private void PcbWorldmap_MouseClick(object sender, MouseEventArgs e)
+        {
+            Console.WriteLine("X: " + e.X);
+            Console.WriteLine("Y: " + e.Y);
+        }
+
+        private void convertPosToDegree(int x, int y)
+        {
+
         }
     }
 }
