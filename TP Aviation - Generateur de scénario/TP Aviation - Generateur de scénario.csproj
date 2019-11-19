@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aeronef.cs" />
+    <Compile Include="Aeroport.cs" />
+    <Compile Include="ControlleurGenerateur.cs" />
     <Compile Include="GUIGenerateur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +64,15 @@
     <Compile Include="GUIPosition.Designer.cs">
       <DependentUpon>GUIPosition.cs</DependentUpon>
     </Compile>
+    <Compile Include="PositionGeo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scenario.cs" />
     <EmbeddedResource Include="GUIGenerateur.resx">
       <DependentUpon>GUIGenerateur.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,14 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,12 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\worldmap.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\worldmap copie.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\worldmap good.png" />

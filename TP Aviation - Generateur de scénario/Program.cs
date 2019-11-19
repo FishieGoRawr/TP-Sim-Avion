@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    static class Program
+    static class Generateur
     {
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -20,3 +20,4 @@ namespace TP_Aviation___Generateur_de_scénario
         }
     }
 }
+
