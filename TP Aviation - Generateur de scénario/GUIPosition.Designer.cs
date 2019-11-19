@@ -43,7 +43,7 @@
             this.pcbWorldmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbWorldmap.TabIndex = 0;
             this.pcbWorldmap.TabStop = false;
-            this.pcbWorldmap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PcbWorldmap_MouseClick);
+            this.pcbWorldmap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pcbWorldmap_MouseClick);
             // 
             // GUIPosition
             // 
@@ -52,10 +52,9 @@
             this.ClientSize = new System.Drawing.Size(1000, 498);
             this.Controls.Add(this.pcbWorldmap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUIPosition";
             this.Text = "GUIPosition";
-            this.Load += new System.EventHandler(this.GUIPosition_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbWorldmap)).EndInit();
             this.ResumeLayout(false);
 

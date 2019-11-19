@@ -47,7 +47,13 @@ namespace TP_Aviation___Generateur_de_scénario
 
         private void BtnPosition_Click(object sender, EventArgs e)
         {
-            new GUIPosition().Show();
+            GUIPosition guipos = new GUIPosition(this);
+            guipos.Show();
+        }
+
+        public void changerValeurPosition(string position)
+        {
+            txtPosition.Text = position;
         }
     }
 }
