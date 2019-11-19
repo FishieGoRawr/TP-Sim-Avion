@@ -35,10 +35,11 @@
             // pcbWorldmap
             // 
             this.pcbWorldmap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pcbWorldmap.Image = global::TP_Aviation___Generateur_de_scénario.Properties.Resources.worldmap_copie;
+            this.pcbWorldmap.Image = global::TP_Aviation___Generateur_de_scénario.Properties.Resources.worldmap_good;
             this.pcbWorldmap.Location = new System.Drawing.Point(-1, -1);
+            this.pcbWorldmap.Margin = new System.Windows.Forms.Padding(2);
             this.pcbWorldmap.Name = "pcbWorldmap";
-            this.pcbWorldmap.Size = new System.Drawing.Size(1773, 885);
+            this.pcbWorldmap.Size = new System.Drawing.Size(1000, 499);
             this.pcbWorldmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbWorldmap.TabIndex = 0;
             this.pcbWorldmap.TabStop = false;
@@ -46,13 +47,15 @@
             // 
             // GUIPosition
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1771, 883);
+            this.ClientSize = new System.Drawing.Size(1000, 498);
             this.Controls.Add(this.pcbWorldmap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GUIPosition";
             this.Text = "GUIPosition";
+            this.Load += new System.EventHandler(this.GUIPosition_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbWorldmap)).EndInit();
             this.ResumeLayout(false);
 
