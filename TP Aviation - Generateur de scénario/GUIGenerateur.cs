@@ -22,8 +22,11 @@ namespace TP_Aviation___Generateur_de_scénario
 
         private void loadCmbTypeCargo()
         {
-            cmbTypeCargo.Items.Add("Passagers");
-            cmbTypeCargo.Items.Add("Marchandises");
+            cmbTypeAeronef.Items.Add("Passagers");
+            cmbTypeAeronef.Items.Add("Marchandises");
+            cmbTypeAeronef.Items.Add("Observateurs");
+            cmbTypeAeronef.Items.Add("Incendies");
+            cmbTypeAeronef.Items.Add("Secours");
         }
 
         private void clearAeroport()
@@ -95,7 +98,7 @@ namespace TP_Aviation___Generateur_de_scénario
         private void btnAnnulerAeronef_Click(object sender, EventArgs e)
         {
             txtNomAeronef.Clear();
-            cmbTypeCargo.SelectedIndex = -1;
+            cmbTypeAeronef.SelectedIndex = -1;
             txtVitesse.Clear();
             txtLoad.Clear();
             txtUnload.Clear();

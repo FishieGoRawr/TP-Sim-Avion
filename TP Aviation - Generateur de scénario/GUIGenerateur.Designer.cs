@@ -57,7 +57,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtVitesse = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cmbTypeCargo = new System.Windows.Forms.ComboBox();
+            this.cmbTypeAeronef = new System.Windows.Forms.ComboBox();
             this.btnAnnulerAeronef = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.txtNomAeronef = new System.Windows.Forms.TextBox();
@@ -260,7 +260,7 @@
             this.grpAeronefs.Controls.Add(this.label8);
             this.grpAeronefs.Controls.Add(this.txtVitesse);
             this.grpAeronefs.Controls.Add(this.label7);
-            this.grpAeronefs.Controls.Add(this.cmbTypeCargo);
+            this.grpAeronefs.Controls.Add(this.cmbTypeAeronef);
             this.grpAeronefs.Controls.Add(this.btnAnnulerAeronef);
             this.grpAeronefs.Controls.Add(this.button5);
             this.grpAeronefs.Controls.Add(this.txtNomAeronef);
@@ -338,13 +338,13 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Vitesse";
             // 
-            // cmbTypeCargo
+            // cmbTypeAeronef
             // 
-            this.cmbTypeCargo.FormattingEnabled = true;
-            this.cmbTypeCargo.Location = new System.Drawing.Point(320, 234);
-            this.cmbTypeCargo.Name = "cmbTypeCargo";
-            this.cmbTypeCargo.Size = new System.Drawing.Size(176, 28);
-            this.cmbTypeCargo.TabIndex = 11;
+            this.cmbTypeAeronef.FormattingEnabled = true;
+            this.cmbTypeAeronef.Location = new System.Drawing.Point(320, 234);
+            this.cmbTypeAeronef.Name = "cmbTypeAeronef";
+            this.cmbTypeAeronef.Size = new System.Drawing.Size(176, 28);
+            this.cmbTypeAeronef.TabIndex = 11;
             // 
             // btnAnnulerAeronef
             // 
@@ -461,7 +461,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtVitesse;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmbTypeCargo;
+        private System.Windows.Forms.ComboBox cmbTypeAeronef;
         private System.Windows.Forms.Button btnAnnulerAeronef;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtNomAeronef;

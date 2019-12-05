@@ -19,3 +19,14 @@ D:\Bibliothèque\Documents\École\Prog III\TP-Sim-Avion\TP Aviation - Generateur
 D:\Bibliothèque\Documents\École\Prog III\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.csproj.GenerateResource.cache
 D:\Bibliothèque\Documents\École\Prog III\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.exe
 D:\Bibliothèque\Documents\École\Prog III\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.pdb
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\bin\Debug\TP Aviation - Generateur de scénario.exe.config
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\bin\Debug\TP Aviation - Generateur de scénario.exe
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\bin\Debug\TP Aviation - Generateur de scénario.pdb
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.csprojAssemblyReference.cache
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP_Aviation___Generateur_de_scénario.GUIGenerateur.resources
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP_Aviation___Generateur_de_scénario.GUIPosition.resources
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP_Aviation___Generateur_de_scénario.Properties.Resources.resources
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.csproj.GenerateResource.cache
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.exe
+C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Generateur de scénario\obj\Debug\TP Aviation - Generateur de scénario.pdb
