@@ -8,19 +8,17 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class PositionGeo
     {
-        public double m_latitude { get; set; }
-        public double m_longitude { get; set; }
-        public string m_horizontal { get; set; }
-        public string m_vertical { get; set; }
+        double m_latitude, m_longitude;
+        string horizontal, vertical;
 
         public PositionGeo(string pos)
         {
             string[] posSplit = new string[2];
             posSplit = pos.Split(' ');
 
-            m_horizontal = posSplit[0].Substring(4);
+            horizontal = posSplit[0].Substring(4);
             m_longitude = Convert.ToDouble(posSplit[0].Substring(0, 4));
-            m_vertical = posSplit[2].Substring(4);
+            vertical = posSplit[2].Substring(4);
             m_latitude = Convert.ToDouble(posSplit[2].Substring(0, 4));
         }
 
@@ -41,7 +39,7 @@ namespace TP_Aviation___Generateur_de_scénario
             double lon, lat;
             double[] coords = new double[2];
 
-            if (x < (Properties.Resources.worldmap_good.Width / 2))
+            if (x < ( Properties.Resources.worldmap_good.Width / 2))
                 lon = (inverserNombre(0, 180, (x * 180) / 1000)) * -1;
             else
                 lon = (x * 180) / 1000;
@@ -64,7 +62,7 @@ namespace TP_Aviation___Generateur_de_scénario
 
         public override string ToString()
         {
-            return m_longitude + m_horizontal + " " + m_latitude + m_vertical;
+            return  m_longitude + horizontal + " " + m_latitude + vertical;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroIncendie : Distance
     {
-        public Bitmap m_image { get; set; }
+        Bitmap m_image;
 
         public AeroIncendie(string nom, int vitesse, int entretien, PositionGeo origine) : base(nom, vitesse, entretien, origine)
         {
