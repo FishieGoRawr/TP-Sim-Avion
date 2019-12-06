@@ -12,11 +12,11 @@ namespace TP_Aviation___Generateur_de_scénario
     [XmlInclude(typeof(Transport))]
     public class Aeronef
     {
-        protected String m_nom;
-        protected int m_vitesse;
-        protected int m_tempsEnt;
-        protected PositionGeo m_localisation;
-        protected PositionGeo m_origine;
+        public String m_nom;
+        public int m_vitesse;
+        public int m_tempsEnt;
+        public PositionGeo m_localisation;
+        public PositionGeo m_origine;
 
         public Aeronef(string nom, int vitesse, int entretien, PositionGeo origine)
         {
@@ -36,14 +36,24 @@ namespace TP_Aviation___Generateur_de_scénario
             m_origine = new PositionGeo();
         }
 
-        public void creerAvion(string type)
+        public string Nom
         {
-            
+            get { return m_nom; }
         }
 
-        public void creerAvion(int dequoi, int dequoi2)
+        public PositionGeo Localisation
         {
+            get { return m_localisation; }
+        }
 
+        public int Vitesse
+        {
+            get { return m_vitesse; }
+        }
+
+        public int Entretien
+        {
+            get { return m_tempsEnt; }
         }
     }
 

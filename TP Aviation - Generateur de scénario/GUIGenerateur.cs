@@ -164,18 +164,20 @@ namespace TP_Aviation___Generateur_de_scénario
             String aeroports;
 
             nom = txtNomAeronef.Text;
-            type = txtNomAeronef.Text;
-            vitesse = Int32.Parse(txtNomAeronef.Text);
-            entretien = Int32.Parse(txtNomAeronef.Text);
-            charger = Int32.Parse(txtNomAeronef.Text);
-            decharger = Int32.Parse(txtNomAeronef.Text);
+            type = cmbTypeAeronef.Text;
+            vitesse = Int32.Parse(txtVitesse.Text);
+            entretien = Int32.Parse(txtEntretient.Text);
+            charger = Int32.Parse(txtLoad.Text);
+            decharger = Int32.Parse(txtUnload.Text);
             change = Int32.Parse(txtChange.Text);
             aeroports = lsbAeroports.GetItemText(lsbAeroports.SelectedItem);
 
-            controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
+            string areonef;
+            areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
+            lsbAeronefs.Items.Add(areonef);
         }
 
-        private void btnGenerer_Click(object sender, EventArgs e)
+        private void BtnGenerer_Click(object sender, EventArgs e)
         {
             controller.serializeScenario();
         }

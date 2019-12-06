@@ -431,7 +431,7 @@
             this.btnGenerer.TabIndex = 22;
             this.btnGenerer.Text = "Générer le scénario";
             this.btnGenerer.UseVisualStyleBackColor = true;
-            this.btnGenerer.Click += new System.EventHandler(this.btnGenerer_Click);
+            this.btnGenerer.Click += new System.EventHandler(this.BtnGenerer_Click);
             // 
             // GUIGenerateur
             // 
