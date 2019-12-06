@@ -92,11 +92,6 @@ namespace TP_Aviation___Generateur_de_scénario
             StringWriter writer = new StringWriter(output);
 
             listAeroport.Add(new Aeroport());
-            listAeroport.Add(new Aeroport());
-            listAeroport.Add(new Aeroport());
-
-            listAeroport[0][0] = usine.creerAvion("null", "passager", 0, 0, 0, 0, 0, new PositionGeo());
-            listAeroport[1][0] = usine.creerAvion("null", "passager", 0, 0, 0, 0, 0, new PositionGeo());
 
             XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
             serializer.Serialize(writer, this.listAeroport);

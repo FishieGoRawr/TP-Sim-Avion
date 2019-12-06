@@ -18,7 +18,7 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
-            this.m_image = null;
+            this.m_image = new Bitmap(@"Images\observateur.png");
             this.m_nbAller = nbAller;
             this.m_rayon = rayon;
         }

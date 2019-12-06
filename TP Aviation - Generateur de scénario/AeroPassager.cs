@@ -22,7 +22,7 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_tempsEmb = charger;
             this.m_tempsDeb = decharger;
             this.m_capacite = change;
-            this.m_image = null;
+            this.m_image = new Bitmap(@"Images\passager.png");
         }
 
         public AeroPassager() : base()
