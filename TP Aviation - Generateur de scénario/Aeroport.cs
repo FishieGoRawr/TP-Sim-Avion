@@ -8,11 +8,11 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class Aeroport
     {
-        public string m_nom;
-        public PositionGeo m_localisation;
-        public List<Aeronef> m_listAeronef;
-        public int m_achalPassager;
-        public int m_achalMarchandise;
+        public string m_nom { get; set; }
+        public PositionGeo m_localisation { get; set; }
+        public List<Aeronef> m_listAeronef { get; set; }
+        public int m_achalPassager { get; set; }
+        public int m_achalMarchandise { get; set; }
 
         public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager, string p_positionGeo)
         {

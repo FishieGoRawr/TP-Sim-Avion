@@ -9,7 +9,7 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroSecours : Distance
     {
-        Bitmap m_image;
+        public Bitmap m_image { get; set; }
 
         public AeroSecours(string nom, int vitesse, int entretien, PositionGeo origine, int nbAller) : base(nom, vitesse, entretien, origine)
         {
