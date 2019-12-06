@@ -24,5 +24,17 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_capacite = change;
             this.m_image = null;
         }
+
+        public AeroPassager() : base()
+        {
+            m_nom = "null";
+            m_vitesse = 0;
+            m_tempsEnt = 0;
+            m_origine = new PositionGeo();
+            m_tempsEmb = 0;
+            m_tempsDeb = 0;
+            m_capacite = 0;
+            m_image = null;
+        }
     }
 }

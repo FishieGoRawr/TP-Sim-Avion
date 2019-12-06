@@ -7,9 +7,10 @@ using System.Drawing;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    class AeroIncendie : Distance
+    public class AeroIncendie : Distance
     {
         Bitmap m_image;
+
         public AeroIncendie(string nom, int vitesse, int entretien, PositionGeo origine) : base(nom, vitesse, entretien, origine)
         {
             this.m_nom = nom;
@@ -18,6 +19,16 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_origine = origine;
             this.m_image = null;
             this.m_nbAller = 0;
+        }
+
+        public AeroIncendie() : base()
+        {
+            m_nom = "null";
+            m_vitesse = 0;
+            m_tempsEnt = 0;
+            m_origine = new PositionGeo();
+            m_image = null;
+            m_nbAller = 0;
         }
 
         public int NbAller

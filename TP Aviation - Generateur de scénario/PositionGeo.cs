@@ -19,6 +19,18 @@ namespace TP_Aviation___Generateur_de_scénario
             m_latitude = Convert.ToDouble(posSplit[1].Substring(1));
         }
 
+        public PositionGeo(int posX, int posY)
+        {
+            m_longitude = posX;
+            m_latitude = posY;
+        }
+
+        public PositionGeo()
+        {
+            m_longitude = 0;
+            m_latitude = 0;
+        }
+
         private double[] convertPosToDegree(double x, double y)
         {
             double lon, lat;

@@ -22,9 +22,12 @@ namespace TP_Aviation___Generateur_de_scénario
 
         public void creerAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, string aeroports)
         {
-
-
             scenario.ajouterAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
+        }
+
+        public void serializeScenario()
+        {
+            scenario.SerializeScenario();
         }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
@@ -64,7 +66,22 @@ namespace TP_Aviation___Generateur_de_scénario
                 }
             }
 
-            listAeroport[temp]. = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
+            //listAeroport[temp] = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
+        }
+
+        public void SerializeScenario()
+        {
+            StringBuilder output = new StringBuilder();
+            StringWriter writer = new StringWriter(output);
+
+            listAeroport.Add(new Aeroport());
+            listAeroport.Add(new Aeroport());
+            listAeroport.Add(new Aeroport());
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
+            serializer.Serialize(writer, this.listAeroport);
+
+            Console.WriteLine(output.ToString());
         }
     }
 

@@ -8,11 +8,11 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class Aeroport
     {
-        string m_nom;
-        PositionGeo m_localisation;
-        List<Aeronef> m_listAeronef;
-        int m_achalPassager;
-        int m_achalMarchandise;
+        public string m_nom;
+        public PositionGeo m_localisation;
+        public List<Aeronef> m_listAeronef;
+        public int m_achalPassager;
+        public int m_achalMarchandise;
 
         public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager, string p_positionGeo)
         {
@@ -21,6 +21,15 @@ namespace TP_Aviation___Generateur_de_scénario
             m_achalPassager = p_achalPassager;
             m_achalMarchandise = p_achalMarchandise;
             m_localisation = new PositionGeo(p_positionGeo);
+        }
+
+        public Aeroport()
+        {
+            m_nom = "null";
+            m_localisation = new PositionGeo(0,0);
+            m_listAeronef = new List<Aeronef>();
+            m_achalPassager = 0;
+            m_achalMarchandise = 0;
         }
 
         public string Nom
