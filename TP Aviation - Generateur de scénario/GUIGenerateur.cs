@@ -13,11 +13,17 @@ namespace TP_Aviation___Generateur_de_scénario
     public partial class GUIGenerateur : Form
     {
         ControlleurGenerateur controller;
+        String coord;
 
         public GUIGenerateur()
         {
             InitializeComponent();
             controller = new ControlleurGenerateur();
+        }
+
+        public String Coords
+        {
+            set { coord = value; }
         }
 
         private void loadCmbTypeCargo()
@@ -80,7 +86,9 @@ namespace TP_Aviation___Generateur_de_scénario
                 MessageBox.Show(messageErreur);
             else
             {
-                controller.creerAeroport(txtNomAeroport.Text, Convert.ToInt32(txtAchPassager.Text), Convert.ToInt32(txtAchMarchandise.Text), txtPosition.Text);
+                string areoport;
+                areoport = controller.creerAeroport(txtNomAeroport.Text, Convert.ToInt32(txtAchPassager.Text), Convert.ToInt32(txtAchMarchandise.Text), txtPosition.Text);
+                lsbAeroports.Items.Add(areoport);
             }
         }
 

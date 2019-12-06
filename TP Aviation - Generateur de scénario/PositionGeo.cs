@@ -9,14 +9,17 @@ namespace TP_Aviation___Generateur_de_scénario
     public class PositionGeo
     {
         double m_latitude, m_longitude;
+        string horizontal, vertical;
 
         public PositionGeo(string pos)
         {
             string[] posSplit = new string[2];
             posSplit = pos.Split(' ');
 
-            m_longitude = Convert.ToDouble(posSplit[0].Substring(1));
-            m_latitude = Convert.ToDouble(posSplit[1].Substring(1));
+            horizontal = posSplit[0].Substring(4);
+            m_longitude = Convert.ToDouble(posSplit[0].Substring(0, 4));
+            vertical = posSplit[2].Substring(4);
+            m_latitude = Convert.ToDouble(posSplit[2].Substring(0, 4));
         }
 
         private double[] convertPosToDegree(double x, double y)
@@ -47,7 +50,7 @@ namespace TP_Aviation___Generateur_de_scénario
 
         public override string ToString()
         {
-            return "Lon " + m_longitude + " Lat " + m_latitude;
+            return  m_longitude + horizontal + " " + m_latitude + vertical;
         }
     }
 }

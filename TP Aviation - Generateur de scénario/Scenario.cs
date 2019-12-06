@@ -35,10 +35,12 @@ namespace TP_Aviation___Generateur_de_scénario
             set { listAeroport.Add(value); }
         }
 
-        public void ajoutAeroport(string nom, int achalPass, int achalMarch, string position)
+        public string ajoutAeroport(string nom, int achalPass, int achalMarch, string position)
         {
             listAeroport.Add(new Aeroport(nom, achalPass, achalMarch, position));
-            printAeroport(0);
+
+            string areoport = listAeroport.Last().Nom + "   |   " + listAeroport.Last().Localisation + "   |   Achanlandage passager: " + listAeroport.Last().AchalPassager + "   |   Achanlandage marchandise: " + listAeroport.Last().AchalMarchandise;
+            return areoport;
         }
 
         public void printAeroport(int index)
@@ -64,7 +66,7 @@ namespace TP_Aviation___Generateur_de_scénario
                 }
             }
 
-            listAeroport[temp]. = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
+            listAeroport[temp][0] = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
         }
     }
 

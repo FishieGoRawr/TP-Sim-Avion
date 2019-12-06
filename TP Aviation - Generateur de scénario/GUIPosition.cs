@@ -23,7 +23,9 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             string coordString = "";
             //double[] coords = convertPosToDegree(e.X, e.Y);
-            double[] coords = convertPosToMinSec(e.X, e.Y);
+            coordString = convertPosToMinSec(e.X, e.Y);
+
+            guigen.Coords = coordString;
 
             //if (coords[0] < 0 && coords[1] > 0)
             //    coordString = "N" + coords[1] + " O" + coords[0];
@@ -35,8 +37,8 @@ namespace TP_Aviation___Generateur_de_scénario
             //    coordString = "N" + coords[1] + " E" + coords[0];
 
 
-            //guigen.changerValeurPosition(coordString);
-            //this.Dispose();
+            guigen.changerValeurPosition(coordString);
+            this.Dispose();
         }
 
         private double[] convertPosToDegree(double x, double y)
@@ -60,9 +62,9 @@ namespace TP_Aviation___Generateur_de_scénario
             return coords;
         }
 
-        private double[] convertPosToMinSec(double x, double y)
+        private string convertPosToMinSec(double x, double y)
         {
-            double[] coords = new double[2];
+            string coords = "";
             char horizontal = ' ', vertical = ' ';
             double milieuX = pcbWorldmap.Width / 2;
             double milieuY = pcbWorldmap.Height / 2;
@@ -90,7 +92,8 @@ namespace TP_Aviation___Generateur_de_scénario
             {
                 horizontal = 'E';
                 vertical = 'S';
-            }            
+            }
+            coords = Math.Round(horizontalDegreeMin, 2).ToString()+ horizontal + " ; " + Math.Round(verticalDegreeMin, 2).ToString() + vertical;
 
             return coords;
         }
