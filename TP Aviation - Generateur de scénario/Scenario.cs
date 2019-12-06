@@ -90,7 +90,7 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             StringBuilder output = new StringBuilder();
 
-            using (TextWriter writer = new StreamWriter(@".\scenario.xml"))
+            using (TextWriter writer = new StreamWriter(@".\Scénarios\scenario.xml"))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
                 serializer.Serialize(writer, this.listAeroport);

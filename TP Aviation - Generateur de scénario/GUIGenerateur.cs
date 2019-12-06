@@ -61,7 +61,13 @@ namespace TP_Aviation___Generateur_de_scénario
         /// </summary>
         private void clearAeronef()
         {
-
+            txtNomAeronef.Text = "";
+            txtVitesse.Text = "";
+            txtEntretient.Text = "";
+            txtLoad.Text = "";
+            txtUnload.Text = "";
+            txtChange.Text = "";
+            cmbTypeAeronef.Text = "";
         }
 
         /// <summary>
@@ -115,6 +121,7 @@ namespace TP_Aviation___Generateur_de_scénario
                 areoport = controller.creerAeroport(txtNomAeroport.Text, Convert.ToInt32(txtAchPassager.Text), Convert.ToInt32(txtAchMarchandise.Text), txtPosition);
                 lsbAeroports.Items.Add(areoport);
             }
+            clearAeroport();
         }
 
         /// <summary>
@@ -252,10 +259,17 @@ namespace TP_Aviation___Generateur_de_scénario
                     string areonef;
                     areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, nomAreoport[0]);
                     lsbAeronefs.Items.Add(areonef);
+                    clearAeronef();
                 }
             }
             else
+<<<<<<< HEAD
                 MessageBox.Show("Vous devez sélectionner un aréoport pour pouvoir y ajouté un avion.");
+=======
+            {
+                MessageBox.Show("Veuillex choisir l'aréoport auqeul va apartenir l'avion.");
+            }
+>>>>>>> fa32f7f1cd341b5b828d16d8fbbddb8390f0424f
         }
 
         /// <summary>
@@ -267,5 +281,9 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             controller.serializeScenario();
         }
+<<<<<<< HEAD
+=======
+       
+>>>>>>> fa32f7f1cd341b5b828d16d8fbbddb8390f0424f
     }
 }
