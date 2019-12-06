@@ -39,7 +39,13 @@ namespace TP_Aviation___Generateur_de_scénario
 
         private void clearAeronef()
         {
-
+            txtNomAeronef.Text = "";
+            txtVitesse.Text = "";
+            txtEntretient.Text = "";
+            txtLoad.Text = "";
+            txtUnload.Text = "";
+            txtChange.Text = "";
+            cmbTypeAeronef.Text = "";
         }
 
         public void changerValeurPosition(string position, int posX, int posY)
@@ -51,7 +57,6 @@ namespace TP_Aviation___Generateur_de_scénario
         //EVENTS
         private void BtnAjouterAeroport_Click(object sender, EventArgs e)
         {
-
             string messageErreur = "";
             bool aeroportValide = true;
 
@@ -84,6 +89,7 @@ namespace TP_Aviation___Generateur_de_scénario
                 areoport = controller.creerAeroport(txtNomAeroport.Text, Convert.ToInt32(txtAchPassager.Text), Convert.ToInt32(txtAchMarchandise.Text), txtPosition);
                 lsbAeroports.Items.Add(areoport);
             }
+            clearAeroport();
         }
 
         private void BtnPosition_Click(object sender, EventArgs e)
@@ -206,22 +212,19 @@ namespace TP_Aviation___Generateur_de_scénario
                     string areonef;
                     areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, nomAreoport[0]);
                     lsbAeronefs.Items.Add(areonef);
+                    clearAeronef();
                 }
             }
             else
             {
-                MessageBox.Show("Fuck off");
-                
+                MessageBox.Show("Veuillex choisir l'aréoport auqeul va apartenir l'avion.");
             }
-
-
-
         }
 
         private void BtnGenerer_Click(object sender, EventArgs e)
         {
             controller.serializeScenario();
         }
-        ///
+       
     }
 }
