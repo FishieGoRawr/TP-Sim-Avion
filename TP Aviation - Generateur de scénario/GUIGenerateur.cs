@@ -153,11 +153,11 @@ namespace TP_Aviation___Generateur_de_scénario
 
             String nom;
             String type;
-            int vitesse;
-            int entretien;
-            int charger;
-            int decharger;
-            int change;
+            int vitesse = 0;
+            int entretien = 0;
+            int charger = 0;
+            int decharger = 0;
+            int change = 0;
             String aeroports;
 
             if (lsbAeroports.SelectedIndex != -1)
@@ -167,22 +167,22 @@ namespace TP_Aviation___Generateur_de_scénario
                     areonefValide = false;
                     messageErreur = "Veuillez entrer un nom pour l'aréonef.";
                 }
-                else if (string.IsNullOrEmpty(txtVitesse.Text))
+                else if (string.IsNullOrEmpty(txtVitesse.Text) || !(int.TryParse(txtVitesse.Text, out vitesse)))
                 {
                     areonefValide = false;
                     messageErreur = "Veuillez entrer une vitesse pour l'aréonef.";
                 }
-                else if (string.IsNullOrEmpty(txtEntretient.Text))
+                else if (string.IsNullOrEmpty(txtEntretient.Text) || !(int.TryParse(txtEntretient.Text, out entretien)))
                 {
                     areonefValide = false;
                     messageErreur = "Veuillez entrer un temps d'entretien pour l'aréonef.";
                 }
-                else if (string.IsNullOrEmpty(txtLoad.Text))
+                else if (string.IsNullOrEmpty(txtLoad.Text) || !(int.TryParse(txtLoad.Text, out charger)))
                 {
                     areonefValide = false;
                     messageErreur = "Veuillez entrer un temps de chargement pour l'aréonef.";
                 }
-                else if (string.IsNullOrEmpty(txtUnload.Text))
+                else if (string.IsNullOrEmpty(txtUnload.Text) || !(int.TryParse(txtUnload.Text, out decharger)))
                 {
                     areonefValide = false;
                     messageErreur = "Veuillez entrer un temps de déchargement pour l'aréonef.";
@@ -194,11 +194,6 @@ namespace TP_Aviation___Generateur_de_scénario
                 {
                     nom = txtNomAeronef.Text;
                     type = cmbTypeAeronef.Text;
-                    vitesse = Int32.Parse(txtVitesse.Text);
-                    entretien = Int32.Parse(txtEntretient.Text);
-                    charger = Int32.Parse(txtLoad.Text);
-                    decharger = Int32.Parse(txtUnload.Text);
-                    change = Int32.Parse(txtChange.Text);
                     aeroports = lsbAeroports.SelectedItem.ToString();
 
                     string[] nomAreoport =  aeroports.Split(' ');
@@ -209,13 +204,7 @@ namespace TP_Aviation___Generateur_de_scénario
                 }
             }
             else
-            {
-                MessageBox.Show("Fuck off");
-                
-            }
-
-
-
+                MessageBox.Show("Vous devez sélectionner un aréoport pour pouvoir y ajouté un avion.");
         }
 
         private void BtnGenerer_Click(object sender, EventArgs e)
