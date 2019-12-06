@@ -14,16 +14,14 @@ namespace TP_Aviation___Generateur_de_scénario
         protected int m_tempsEnt;
         protected PositionGeo m_localisation;
         protected PositionGeo m_origine;
-        protected Bitmap m_image;
 
-        public Aeronef(string nom, int vitesse, int entretien, PositionGeo origine, Bitmap img)
+        public Aeronef(string nom, int vitesse, int entretien, PositionGeo origine)
         {
             this.m_nom = nom;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_localisation = null;
             this.m_origine = origine;
-            this.m_image = img;
         }
 
         public void creerAvion(string type)

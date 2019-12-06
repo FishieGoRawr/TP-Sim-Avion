@@ -43,5 +43,10 @@ namespace TP_Aviation___Generateur_de_scénario
             get { return m_achalMarchandise; }
         }
 
+        public Aeronef this[int index]
+        {
+            get { return m_listAeronef[index]; }
+            set { m_listAeronef.Add(value); }
+        }
     }
 }

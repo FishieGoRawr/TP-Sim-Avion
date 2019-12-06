@@ -10,17 +10,18 @@ namespace TP_Aviation___Generateur_de_scénario
     class AeroMarchandise : Transport
     {
         float m_capacite;
+        Bitmap m_image;
 
-        public AeroMarchandise(string nom, int vitesse, int entretien, PositionGeo origine, Bitmap img, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, img, charger, decharger)
+        public AeroMarchandise(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
         {
             this.m_nom = nom;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
-            this.m_image = img;
             this.m_tempsEmb = charger;
             this.m_tempsDeb = decharger;
             this.m_capacite = change;
+            this.m_image = null;
         }
     }
 }

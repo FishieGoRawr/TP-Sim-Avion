@@ -12,7 +12,7 @@ namespace TP_Aviation___Generateur_de_scénario
         protected int m_tempsEmb;
         protected int m_tempsDeb;
 
-        public Transport(string nom, int vitesse, int entretien, PositionGeo origine, Bitmap img, int charger, int decharger) : base(nom, vitesse, entretien, origine, img)
+        public Transport(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger) : base(nom, vitesse, entretien, origine)
         {
 
         }

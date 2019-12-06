@@ -153,6 +153,7 @@ namespace TP_Aviation___Generateur_de_scénario
             int charger;
             int decharger;
             int change;
+            String aeroports;
 
             nom = txtNomAeronef.Text;
             type = txtNomAeronef.Text;
@@ -161,8 +162,9 @@ namespace TP_Aviation___Generateur_de_scénario
             charger = Int32.Parse(txtNomAeronef.Text);
             decharger = Int32.Parse(txtNomAeronef.Text);
             change = Int32.Parse(txtChange.Text);
+            aeroports = lsbAeroports.GetItemText(lsbAeroports.SelectedItem);
 
-            controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change);
+            controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
         }
 
         ///

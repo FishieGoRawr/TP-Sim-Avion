@@ -9,15 +9,16 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     class AeroObservateur : Distance
     {
+        Bitmap m_image;
         int m_rayon;
 
-        public AeroObservateur(string nom, int vitesse, int entretien, PositionGeo origine, Bitmap img, int nbAller, int rayon) : base(nom, vitesse, entretien, origine, img, nbAller)
+        public AeroObservateur(string nom, int vitesse, int entretien, PositionGeo origine, int nbAller, int rayon) : base(nom, vitesse, entretien, origine)
         {
             this.m_nom = nom;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
-            this.m_image = img;
+            this.m_image = null;
             this.m_nbAller = nbAller;
             this.m_rayon = rayon;
         }

@@ -9,11 +9,24 @@ namespace TP_Aviation___Generateur_de_scénario
 
     public sealed class Scenario
     {
+        static Scenario m_scenario;
         List<Aeroport> listAeroport;
 
         Scenario()
         {
             listAeroport = new List<Aeroport>();
+        }
+
+        public static Scenario getScenario
+        {
+            get
+            {
+                if (m_scenario == null)
+                {
+                    m_scenario = new Scenario();
+                }
+                return m_scenario;
+            }
         }
 
         public Aeroport this[int index]
@@ -36,10 +49,22 @@ namespace TP_Aviation___Generateur_de_scénario
             Console.WriteLine("Position: " + listAeroport[index].Localisation.ToString()); ;
         }
 
-        public void ajouterAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change)
+        public void ajouterAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, string aeroports)
         {
+            PositionGeo origine = null;
             UsineAeronef usine = UsineAeronef.getUsineAeronef;
-            usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change);
+            int temp = 0;
+
+            for (int i = 0; i < listAeroport.Count; i++)
+            {
+                if (listAeroport[i].Nom == aeroports)
+                {
+                    origine = listAeroport[i].Localisation;
+                    temp = i;
+                }
+            }
+
+            listAeroport[temp]. = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
         }
     }
 
