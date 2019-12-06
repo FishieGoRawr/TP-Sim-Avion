@@ -9,8 +9,8 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroPassager : Transport
     {
-        public int m_capacite { get; set; }
-        public Bitmap m_image { get; set; }
+        int m_capacite;
+        Bitmap m_image;
 
         public AeroPassager(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
         {
@@ -22,7 +22,7 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_tempsEmb = charger;
             this.m_tempsDeb = decharger;
             this.m_capacite = change;
-            this.m_image = null;
+            this.m_image = new Bitmap(@"Images\passager.png");
         }
 
         public AeroPassager() : base()

@@ -52,20 +52,18 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             string messageErreur = "";
             bool aeroportValide = true;
-            int tempPass = 0;
-            int tempMarch = 0;
 
             if (string.IsNullOrEmpty(txtNomAeroport.Text))
             {
                 aeroportValide = false;
                 messageErreur = "Veuillez entrer un nom pour l'aréoport.";
             }
-            else if (string.IsNullOrEmpty(txtAchPassager.Text) || !(int.TryParse(txtAchPassager.Text, out tempPass)))
+            else if (string.IsNullOrEmpty(txtAchPassager.Text))
             {
                 aeroportValide = false;
                 messageErreur = "Veuillez choisir l'achalandage de passager pour cet aéroport.";
             }
-            else if (string.IsNullOrEmpty(txtAchMarchandise.Text) || !(int.TryParse(txtAchMarchandise.Text, out tempMarch)))
+            else if (string.IsNullOrEmpty(txtAchMarchandise.Text))
             {
                 aeroportValide = false;
                 messageErreur = "Veuillez choisir l'achalandage de marchandise pour cet aéroport.";
@@ -148,6 +146,9 @@ namespace TP_Aviation___Generateur_de_scénario
 
         private void BtnAjouterAeronef_Click(object sender, EventArgs e)
         {
+            bool areonefValide = true;
+            string messageErreur = "";
+
             String nom;
             String type;
             int vitesse;
@@ -157,18 +158,49 @@ namespace TP_Aviation___Generateur_de_scénario
             int change;
             String aeroports;
 
-            nom = txtNomAeronef.Text;
-            type = cmbTypeAeronef.Text;
-            vitesse = Int32.Parse(txtVitesse.Text);
-            entretien = Int32.Parse(txtEntretient.Text);
-            charger = Int32.Parse(txtLoad.Text);
-            decharger = Int32.Parse(txtUnload.Text);
-            change = Int32.Parse(txtChange.Text);
-            aeroports = lsbAeroports.GetItemText(lsbAeroports.SelectedItem);
+            if (string.IsNullOrEmpty(txtNomAeronef.Text))
+            {
+                areonefValide = false;
+                messageErreur = "Veuillez entrer un nom pour l'aréonef.";
+            }
+            else if(string.IsNullOrEmpty(txtVitesse.Text))
+            {
+                areonefValide = false;
+                messageErreur = "Veuillez entrer une vitesse pour l'aréonef.";
+            }
+            else if (string.IsNullOrEmpty(txtEntretient.Text))
+            {
+                areonefValide = false;
+                messageErreur = "Veuillez entrer un temps d'entretien pour l'aréonef.";
+            }
+            else if (string.IsNullOrEmpty(txtLoad.Text))
+            {
+                areonefValide = false;
+                messageErreur = "Veuillez entrer un temps de chargement pour l'aréonef.";
+            }
+            else if (string.IsNullOrEmpty(txtUnload.Text))
+            {
+                areonefValide = false;
+                messageErreur = "Veuillez entrer un temps de déchargement pour l'aréonef.";
+            }
 
-            string areonef;
-            areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
-            lsbAeronefs.Items.Add(areonef);
+            if (!areonefValide)
+                MessageBox.Show(messageErreur);
+            else
+            {
+                nom = txtNomAeronef.Text;
+                type = cmbTypeAeronef.Text;
+                vitesse = Int32.Parse(txtVitesse.Text);
+                entretien = Int32.Parse(txtEntretient.Text);
+                charger = Int32.Parse(txtLoad.Text);
+                decharger = Int32.Parse(txtUnload.Text);
+                change = Int32.Parse(txtChange.Text);
+                aeroports = lsbAeroports.GetItemText(lsbAeroports.SelectedItem);
+
+                string areonef;
+                areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
+                lsbAeronefs.Items.Add(areonef);
+            }
         }
 
         private void BtnGenerer_Click(object sender, EventArgs e)

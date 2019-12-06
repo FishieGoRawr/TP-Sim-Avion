@@ -12,13 +12,13 @@ namespace TP_Aviation___Generateur_de_scénario
     class Scenario
     {
         static Scenario m_scenario;
-        public List<Aeroport> listAeroport;
+        List<Aeroport> listAeroport;
         UsineAeronef usine;
 
         Scenario()
         {
             listAeroport = new List<Aeroport>();
-            usine = UsineAeronef.getUsineAeronef;
+             usine = UsineAeronef.getUsineAeronef;
         }
 
         public static Scenario getScenario
@@ -93,8 +93,6 @@ namespace TP_Aviation___Generateur_de_scénario
 
             listAeroport.Add(new Aeroport());
 
-            //listAeroport[0][0] = usine.creerAvion("null", "Passagers", 0, 0, 0, 0, 0, new PositionGeo());
-            
             XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
             serializer.Serialize(writer, this.listAeroport);
 
