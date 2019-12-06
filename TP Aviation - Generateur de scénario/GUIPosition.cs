@@ -23,56 +23,25 @@ namespace TP_Aviation___Generateur_de_scénario
         private void pcbWorldmap_MouseClick(object sender, MouseEventArgs e)
         {
             string coordString = "";
-            //double[] coords = convertPosToDegree(e.X, e.Y);
             coordString = convertPosToMinSec(e.X, e.Y);
 
-            guigen.Coords = coordString;
-
-            //if (coords[0] < 0 && coords[1] > 0)
-            //    coordString = "N" + coords[1] + " O" + coords[0];
-            //else if (coords[0] < 0 && coords[1] < 0)
-            //    coordString = "S" + coords[1] + " O" + coords[0];
-            //else if (coords[0] > 0 && coords[1] < 0)
-            //    coordString = "S" + coords[1] + " E" + coords[0];
-            //else
-            //    coordString = "N" + coords[1] + " E" + coords[0];
-
+            guigen.m_coord = coordString;
 
             guigen.changerValeurPosition(coordString);
             this.Dispose();
-        }
-
-        private double[] convertPosToDegree(double x, double y)
-        {
-            double lon, lat;
-            double[] coords = new double[2];
-
-            if (x < (pcbWorldmap.Width / 2))
-                lon = (reverseNumber(0, 180, (x * 180) / 1000)) * -1;
-            else
-                lon = (x * 180) / 1000;
-
-            if (y < pcbWorldmap.Height / 2)
-                lat = reverseNumber(0, 90, (y * 90) / 249.5);
-            else
-                lat = reverseNumber(0, 90, (y * 90) / 249.5);
-
-            coords[0] = Math.Round(lon, 3);
-            coords[1] = Math.Round(lat, 3);
-
-            return coords;
         }
 
         private string convertPosToMinSec(double x, double y)
         {
             string coords = "";
             char horizontal = ' ', vertical = ' ';
-            double milieuX = pcbWorldmap.Width / 2;
-            double milieuY = pcbWorldmap.Height / 2;
-            double degFromMidX = Math.Abs(x - milieuX);
-            double degFromMidY = Math.Abs(y - milieuY);
-            double horizontalDegreeMin = (degFromMidX * 360) / pcbWorldmap.Width;
-            double verticalDegreeMin = (degFromMidY * 180) / pcbWorldmap.Height;
+            double degFromMidX = Math.Abs(x - pcbWorldmap.Width / 2);
+            double degFromMidY = Math.Abs(y - pcbWorldmap.Height / 2);
+
+            double horizontalDegree = (degFromMidX * 360) / pcbWorldmap.Width;
+            double verticalDegree = (degFromMidY * 180) / pcbWorldmap.Height;
+            double horizontalMin = (horizontalDegree - Math.Floor(horizontalDegree)) * 60;
+            double verticalMin = (verticalDegree - Math.Floor(verticalDegree)) * 60;
 
             if (x < (pcbWorldmap.Width / 2) && y < (pcbWorldmap.Height / 2)) //Cadran 1
             {
@@ -94,14 +63,9 @@ namespace TP_Aviation___Generateur_de_scénario
                 horizontal = 'E';
                 vertical = 'S';
             }
-            coords = Math.Round(horizontalDegreeMin, 2).ToString()+ horizontal + " ; " + Math.Round(verticalDegreeMin, 2).ToString() + vertical;
 
+            coords = Math.Floor(verticalDegree) + "°" + Math.Floor(verticalMin) + "' " + vertical + ", " + Math.Floor(horizontalDegree) + "°" + Math.Floor(horizontalMin) + "'" + horizontal;
             return coords;
-        }
-
-        private double reverseNumber(double min, double max, double input)
-        {
-            return (max + min) - input;
         }
     }
 }

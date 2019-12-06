@@ -13,17 +13,11 @@ namespace TP_Aviation___Generateur_de_scénario
     public partial class GUIGenerateur : Form
     {
         ControlleurGenerateur controller;
-        String coord;
 
         public GUIGenerateur()
         {
             InitializeComponent();
             controller = new ControlleurGenerateur();
-        }
-
-        public String Coords
-        {
-            set { coord = value; }
         }
 
         private void loadCmbTypeCargo()
@@ -120,7 +114,7 @@ namespace TP_Aviation___Generateur_de_scénario
 
         private void CmbTypeAeronef_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbTypeAeronef.Text == "Passagers")
+            if (cmbTypeAeronef.Text == "Passagers")
             {
                 lblChange.Text = "Capacité";
                 lblChange.Visible = true;
@@ -129,7 +123,7 @@ namespace TP_Aviation___Generateur_de_scénario
                 txtChange.Visible = true;
 
             }
-            else if(cmbTypeAeronef.Text == "Marchandises")
+            else if (cmbTypeAeronef.Text == "Marchandises")
             {
                 lblChange.Text = "Capacité";
                 lblChange.Visible = true;
@@ -137,7 +131,7 @@ namespace TP_Aviation___Generateur_de_scénario
                 txtChange.Text = "";
                 txtChange.Visible = true;
             }
-            else if(cmbTypeAeronef.Text == "Observateurs")
+            else if (cmbTypeAeronef.Text == "Observateurs")
             {
                 lblChange.Text = "Rayon";
                 lblChange.Visible = true;
@@ -181,7 +175,6 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             controller.serializeScenario();
         }
-
         ///
     }
 }
