@@ -9,8 +9,8 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroPassager : Transport
     {
-        int m_capacite;
-        Bitmap m_image;
+        public int m_capacite { get; set; }
+        public Bitmap m_image { get; set; }
 
         public AeroPassager(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
         {
