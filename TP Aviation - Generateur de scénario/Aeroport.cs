@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
@@ -13,6 +14,7 @@ namespace TP_Aviation___Generateur_de_scénario
         public List<Aeronef> m_listAeronef;
         public int m_achalPassager;
         public int m_achalMarchandise;
+        public Bitmap m_image;
 
         public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager, string p_positionGeo)
         {
@@ -21,6 +23,7 @@ namespace TP_Aviation___Generateur_de_scénario
             m_achalPassager = p_achalPassager;
             m_achalMarchandise = p_achalMarchandise;
             m_localisation = new PositionGeo(p_positionGeo);
+            m_image = new Bitmap("@Images/airport.png");
         }
 
         public Aeroport()
