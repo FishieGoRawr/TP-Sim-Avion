@@ -49,9 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AeroIncendie.cs" />
+    <Compile Include="AeroMarchandise.cs" />
     <Compile Include="Aeronef.cs" />
+    <Compile Include="AeroObservateur.cs" />
+    <Compile Include="AeroPassager.cs" />
     <Compile Include="Aeroport.cs" />
+    <Compile Include="AeroSecours.cs" />
     <Compile Include="ControlleurGenerateur.cs" />
+    <Compile Include="Distance.cs" />
     <Compile Include="GUIGenerateur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Scenario.cs" />
+    <Compile Include="Transport.cs" />
+    <Compile Include="UsineAeronef.cs" />
     <EmbeddedResource Include="GUIGenerateur.resx">
       <DependentUpon>GUIGenerateur.cs</DependentUpon>
     </EmbeddedResource>

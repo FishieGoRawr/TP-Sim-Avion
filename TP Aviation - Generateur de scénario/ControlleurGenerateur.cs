@@ -12,7 +12,7 @@ namespace TP_Aviation___Generateur_de_scénario
 
         public ControlleurGenerateur()
         {
-            scenario = new Scenario();
+            scenario = Scenario.getScenario;
         }
 
         public void creerAeroport(string nom, int achalPass, int achalMarch, string position)
@@ -20,9 +20,11 @@ namespace TP_Aviation___Generateur_de_scénario
             scenario.ajoutAeroport(nom, achalPass, achalMarch, position);
         }
 
-        public void creerAeronef(Aeroport aeroport)
+        public void creerAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, string aeroports)
         {
 
+
+            scenario.ajouterAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
         }
     }
 }

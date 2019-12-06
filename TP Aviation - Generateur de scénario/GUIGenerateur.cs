@@ -22,8 +22,11 @@ namespace TP_Aviation___Generateur_de_scénario
 
         private void loadCmbTypeCargo()
         {
-            cmbTypeCargo.Items.Add("Passagers");
-            cmbTypeCargo.Items.Add("Marchandises");
+            cmbTypeAeronef.Items.Add("Passagers");
+            cmbTypeAeronef.Items.Add("Marchandises");
+            cmbTypeAeronef.Items.Add("Observateurs");
+            cmbTypeAeronef.Items.Add("Incendies");
+            cmbTypeAeronef.Items.Add("Secours");
         }
 
         private void clearAeroport()
@@ -95,7 +98,7 @@ namespace TP_Aviation___Generateur_de_scénario
         private void btnAnnulerAeronef_Click(object sender, EventArgs e)
         {
             txtNomAeronef.Clear();
-            cmbTypeCargo.SelectedIndex = -1;
+            cmbTypeAeronef.SelectedIndex = -1;
             txtVitesse.Clear();
             txtLoad.Clear();
             txtUnload.Clear();
@@ -106,6 +109,64 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             loadCmbTypeCargo();
         }
+
+        private void CmbTypeAeronef_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbTypeAeronef.Text == "Passagers")
+            {
+                lblChange.Text = "Capacité";
+                lblChange.Visible = true;
+
+                txtChange.Text = "";
+                txtChange.Visible = true;
+
+            }
+            else if(cmbTypeAeronef.Text == "Marchandises")
+            {
+                lblChange.Text = "Capacité";
+                lblChange.Visible = true;
+
+                txtChange.Text = "";
+                txtChange.Visible = true;
+            }
+            else if(cmbTypeAeronef.Text == "Observateurs")
+            {
+                lblChange.Text = "Rayon";
+                lblChange.Visible = true;
+
+                txtChange.Text = "";
+                txtChange.Visible = true;
+            }
+            else
+            {
+                lblChange.Visible = false;
+                txtChange.Visible = false;
+            }
+        }
+
+        private void BtnAjouterAeronef_Click(object sender, EventArgs e)
+        {
+            String nom;
+            String type;
+            int vitesse;
+            int entretien;
+            int charger;
+            int decharger;
+            int change;
+            String aeroports;
+
+            nom = txtNomAeronef.Text;
+            type = txtNomAeronef.Text;
+            vitesse = Int32.Parse(txtNomAeronef.Text);
+            entretien = Int32.Parse(txtNomAeronef.Text);
+            charger = Int32.Parse(txtNomAeronef.Text);
+            decharger = Int32.Parse(txtNomAeronef.Text);
+            change = Int32.Parse(txtChange.Text);
+            aeroports = lsbAeroports.GetItemText(lsbAeroports.SelectedItem);
+
+            controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
+        }
+
         ///
     }
 }
