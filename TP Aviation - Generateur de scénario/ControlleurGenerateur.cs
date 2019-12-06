@@ -20,9 +20,9 @@ namespace TP_Aviation___Generateur_de_scénario
             scenario.ajoutAeroport(nom, achalPass, achalMarch, position);
         }
 
-        public void creerAeronef(Aeroport aeroport)
+        public void creerAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change)
         {
-
+            scenario.ajouterAeronef(nom, type, vitesse, entretien, charger, decharger, change);
         }
     }
 }

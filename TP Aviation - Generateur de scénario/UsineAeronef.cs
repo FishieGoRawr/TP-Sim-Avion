@@ -26,9 +26,16 @@ namespace TP_Aviation___Generateur_de_scénario
             }
         }
 
-        public Aeronef creerAvion(string type)
+        public Aeronef creerAvion(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change)
         {
-            Aeronef newAeronef = new Aeronef(type);
+            Aeronef newAeronef;
+
+            newAeronef = new AeroPassager();
+            newAeronef = new AeroMarchandise();
+            newAeronef = new AeroObservateur();
+            newAeronef = new AeroIncendie();
+            newAeronef = new AeroSecours();
+
             return newAeronef;
         }
     }

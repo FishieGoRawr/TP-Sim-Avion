@@ -109,6 +109,62 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             loadCmbTypeCargo();
         }
+
+        private void CmbTypeAeronef_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbTypeAeronef.Text == "Passagers")
+            {
+                lblChange.Text = "Capacité";
+                lblChange.Visible = true;
+
+                txtChange.Text = "";
+                txtChange.Visible = true;
+
+            }
+            else if(cmbTypeAeronef.Text == "Marchandises")
+            {
+                lblChange.Text = "Capacité";
+                lblChange.Visible = true;
+
+                txtChange.Text = "";
+                txtChange.Visible = true;
+            }
+            else if(cmbTypeAeronef.Text == "Observateurs")
+            {
+                lblChange.Text = "Rayon";
+                lblChange.Visible = true;
+
+                txtChange.Text = "";
+                txtChange.Visible = true;
+            }
+            else
+            {
+                lblChange.Visible = false;
+                txtChange.Visible = false;
+            }
+        }
+
+        private void BtnAjouterAeronef_Click(object sender, EventArgs e)
+        {
+            String nom;
+            String type;
+            int vitesse;
+            int entretien;
+            int charger;
+            int decharger;
+            int change;
+
+            nom = txtNomAeronef.Text;
+            type = txtNomAeronef.Text;
+            vitesse = Int32.Parse(txtNomAeronef.Text);
+            entretien = Int32.Parse(txtNomAeronef.Text);
+            charger = Int32.Parse(txtNomAeronef.Text);
+            decharger = Int32.Parse(txtNomAeronef.Text);
+            change = Int32.Parse(txtChange.Text);
+
+            controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change);
+        }
+
         ///
     }
 }

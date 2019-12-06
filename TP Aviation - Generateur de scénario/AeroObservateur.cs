@@ -11,9 +11,15 @@ namespace TP_Aviation___Generateur_de_scénario
     {
         int m_rayon;
 
-        public AeroObservateur()
+        public AeroObservateur(string nom, int vitesse, int entretien, PositionGeo origine, Bitmap img, int nbAller, int rayon) : base(nom, vitesse, entretien, origine, img, nbAller)
         {
-
+            this.m_nom = nom;
+            this.m_vitesse = vitesse;
+            this.m_tempsEnt = entretien;
+            this.m_origine = origine;
+            this.m_image = img;
+            this.m_nbAller = nbAller;
+            this.m_rayon = rayon;
         }
     }
 }

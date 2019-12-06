@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    class Distance : Aeronef
+    public abstract class Distance : Aeronef
     {
-        int m_nbAller;
+        protected int m_nbAller;
 
-        public Distance()
+        public Distance(string nom, int vitesse, int entretien, PositionGeo origine, Bitmap img, int nbAller) : base(nom, vitesse, entretien, origine, img)
         {
 
         }

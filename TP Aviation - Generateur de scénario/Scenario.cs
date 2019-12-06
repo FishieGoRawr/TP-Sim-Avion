@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    public class Scenario
+
+    public sealed class Scenario
     {
         List<Aeroport> listAeroport;
 
-        public Scenario()
+        Scenario()
         {
             listAeroport = new List<Aeroport>();
         }
@@ -34,5 +35,12 @@ namespace TP_Aviation___Generateur_de_scénario
             Console.WriteLine("AchalMarch: " + listAeroport[index].AchalMarchandise);
             Console.WriteLine("Position: " + listAeroport[index].Localisation.ToString()); ;
         }
+
+        public void ajouterAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change)
+        {
+            UsineAeronef usine = UsineAeronef.getUsineAeronef;
+            usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change);
+        }
     }
+
 }
