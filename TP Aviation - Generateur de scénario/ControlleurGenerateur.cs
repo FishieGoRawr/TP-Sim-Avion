@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
@@ -15,7 +16,7 @@ namespace TP_Aviation___Generateur_de_scénario
             scenario = Scenario.getScenario;
         }
 
-        public string creerAeroport(string nom, int achalPass, int achalMarch, string position)
+        public string creerAeroport(string nom, int achalPass, int achalMarch, TextBox position)
         {
             string areoport;
             areoport = scenario.ajoutAeroport(nom, achalPass, achalMarch, position);

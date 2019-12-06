@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroObservateur : Distance
     {
+        [XmlIgnore]
         Bitmap m_image;
         int m_rayon;
 
@@ -18,7 +20,7 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
-            this.m_image = new Bitmap(@"Images\observateur.png");
+            this.m_image = Properties.Resources.observateur;
             this.m_nbAller = nbAller;
             this.m_rayon = rayon;
         }

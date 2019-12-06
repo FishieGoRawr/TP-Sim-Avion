@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroIncendie : Distance
     {
+        [XmlIgnore]
         Bitmap m_image;
 
         public AeroIncendie(string nom, int vitesse, int entretien, PositionGeo origine) : base(nom, vitesse, entretien, origine)
@@ -17,7 +19,7 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
-            this.m_image = new Bitmap(@"Images\marchandise.png");
+            this.m_image = Properties.Resources.incendie;
             this.m_nbAller = 0;
         }
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
@@ -14,22 +16,23 @@ namespace TP_Aviation___Generateur_de_scénario
         public List<Aeronef> m_listAeronef;
         public int m_achalPassager;
         public int m_achalMarchandise;
+        [XmlIgnore]
         public Bitmap m_image;
 
-        public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager, string p_positionGeo)
+        public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager, TextBox p_positionGeo)
         {
             m_listAeronef = new List<Aeronef>();
             m_nom = p_nom;
             m_achalPassager = p_achalPassager;
             m_achalMarchandise = p_achalMarchandise;
             m_localisation = new PositionGeo(p_positionGeo);
-            m_image = new Bitmap("@Images/airport.png");
+            m_image = Properties.Resources.airport; 
         }
 
         public Aeroport()
         {
             m_nom = "null";
-            m_localisation = new PositionGeo(0,0);
+            m_localisation = new PositionGeo();
             m_listAeronef = new List<Aeronef>();
             m_achalPassager = 0;
             m_achalMarchandise = 0;

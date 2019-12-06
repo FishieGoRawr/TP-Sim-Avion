@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
@@ -39,7 +40,7 @@ namespace TP_Aviation___Generateur_de_scénario
             set { listAeroport.Add(value); }
         }
 
-        public string ajoutAeroport(string nom, int achalPass, int achalMarch, string position)
+        public string ajoutAeroport(string nom, int achalPass, int achalMarch, TextBox position)
         {
             listAeroport.Add(new Aeroport(nom, achalPass, achalMarch, position));
 
@@ -87,16 +88,13 @@ namespace TP_Aviation___Generateur_de_scénario
 
         public void SerializeScenario()
         {
-
             StringBuilder output = new StringBuilder();
-            StringWriter writer = new StringWriter(output);
 
-            listAeroport.Add(new Aeroport());
-
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
-            serializer.Serialize(writer, this.listAeroport);
-
-            Console.WriteLine(output.ToString());
+            using (TextWriter writer = new StreamWriter(@".\scenario.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
+                serializer.Serialize(writer, this.listAeroport);
+            }
         }
     }
 

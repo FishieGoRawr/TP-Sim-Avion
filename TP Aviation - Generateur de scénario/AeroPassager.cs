@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroPassager : Transport
     {
         int m_capacite;
+        [XmlIgnore]
         Bitmap m_image;
 
         public AeroPassager(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
@@ -22,7 +24,7 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_tempsEmb = charger;
             this.m_tempsDeb = decharger;
             this.m_capacite = change;
-            this.m_image = new Bitmap(@"Images\passager.png");
+            this.m_image = Properties.Resources.passager;
         }
 
         public AeroPassager() : base()

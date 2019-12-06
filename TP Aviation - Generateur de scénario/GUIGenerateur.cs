@@ -42,14 +42,16 @@ namespace TP_Aviation___Generateur_de_scénario
 
         }
 
-        public void changerValeurPosition(string position)
+        public void changerValeurPosition(string position, int posX, int posY)
         {
             txtPosition.Text = position;
+            txtPosition.Tag = String.Concat(posX, ' ', posY);
         }
 
         //EVENTS
         private void BtnAjouterAeroport_Click(object sender, EventArgs e)
         {
+
             string messageErreur = "";
             bool aeroportValide = true;
 
@@ -79,7 +81,7 @@ namespace TP_Aviation___Generateur_de_scénario
             else
             {
                 string areoport;
-                areoport = controller.creerAeroport(txtNomAeroport.Text, Convert.ToInt32(txtAchPassager.Text), Convert.ToInt32(txtAchMarchandise.Text), txtPosition.Text);
+                areoport = controller.creerAeroport(txtNomAeroport.Text, Convert.ToInt32(txtAchPassager.Text), Convert.ToInt32(txtAchMarchandise.Text), txtPosition);
                 lsbAeroports.Items.Add(areoport);
             }
         }
@@ -158,49 +160,62 @@ namespace TP_Aviation___Generateur_de_scénario
             int change;
             String aeroports;
 
-            if (string.IsNullOrEmpty(txtNomAeronef.Text))
+            if (lsbAeroports.SelectedIndex != -1)
             {
-                areonefValide = false;
-                messageErreur = "Veuillez entrer un nom pour l'aréonef.";
-            }
-            else if(string.IsNullOrEmpty(txtVitesse.Text))
-            {
-                areonefValide = false;
-                messageErreur = "Veuillez entrer une vitesse pour l'aréonef.";
-            }
-            else if (string.IsNullOrEmpty(txtEntretient.Text))
-            {
-                areonefValide = false;
-                messageErreur = "Veuillez entrer un temps d'entretien pour l'aréonef.";
-            }
-            else if (string.IsNullOrEmpty(txtLoad.Text))
-            {
-                areonefValide = false;
-                messageErreur = "Veuillez entrer un temps de chargement pour l'aréonef.";
-            }
-            else if (string.IsNullOrEmpty(txtUnload.Text))
-            {
-                areonefValide = false;
-                messageErreur = "Veuillez entrer un temps de déchargement pour l'aréonef.";
-            }
+                if (string.IsNullOrEmpty(txtNomAeronef.Text))
+                {
+                    areonefValide = false;
+                    messageErreur = "Veuillez entrer un nom pour l'aréonef.";
+                }
+                else if (string.IsNullOrEmpty(txtVitesse.Text))
+                {
+                    areonefValide = false;
+                    messageErreur = "Veuillez entrer une vitesse pour l'aréonef.";
+                }
+                else if (string.IsNullOrEmpty(txtEntretient.Text))
+                {
+                    areonefValide = false;
+                    messageErreur = "Veuillez entrer un temps d'entretien pour l'aréonef.";
+                }
+                else if (string.IsNullOrEmpty(txtLoad.Text))
+                {
+                    areonefValide = false;
+                    messageErreur = "Veuillez entrer un temps de chargement pour l'aréonef.";
+                }
+                else if (string.IsNullOrEmpty(txtUnload.Text))
+                {
+                    areonefValide = false;
+                    messageErreur = "Veuillez entrer un temps de déchargement pour l'aréonef.";
+                }
 
-            if (!areonefValide)
-                MessageBox.Show(messageErreur);
+                if (!areonefValide)
+                    MessageBox.Show(messageErreur);
+                else
+                {
+                    nom = txtNomAeronef.Text;
+                    type = cmbTypeAeronef.Text;
+                    vitesse = Int32.Parse(txtVitesse.Text);
+                    entretien = Int32.Parse(txtEntretient.Text);
+                    charger = Int32.Parse(txtLoad.Text);
+                    decharger = Int32.Parse(txtUnload.Text);
+                    change = Int32.Parse(txtChange.Text);
+                    aeroports = lsbAeroports.SelectedItem.ToString();
+
+                    string[] nomAreoport =  aeroports.Split(' ');
+
+                    string areonef;
+                    areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, nomAreoport[0]);
+                    lsbAeronefs.Items.Add(areonef);
+                }
+            }
             else
             {
-                nom = txtNomAeronef.Text;
-                type = cmbTypeAeronef.Text;
-                vitesse = Int32.Parse(txtVitesse.Text);
-                entretien = Int32.Parse(txtEntretient.Text);
-                charger = Int32.Parse(txtLoad.Text);
-                decharger = Int32.Parse(txtUnload.Text);
-                change = Int32.Parse(txtChange.Text);
-                aeroports = lsbAeroports.GetItemText(lsbAeroports.SelectedItem);
-
-                string areonef;
-                areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
-                lsbAeronefs.Items.Add(areonef);
+                MessageBox.Show("Fuck off");
+                
             }
+
+
+
         }
 
         private void BtnGenerer_Click(object sender, EventArgs e)

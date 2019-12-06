@@ -20,15 +20,13 @@ namespace TP_Aviation___Generateur_de_scénario
             InitializeComponent();
         }
 
-        private void pcbWorldmap_MouseClick(object sender, MouseEventArgs e)
+        private void PcbWorldmap_MouseClick(object sender, MouseEventArgs e)
         {
             string coordString = "";
             coordString = convertPosToMinSec(e.X, e.Y);
 
-            guigen.m_coord = coordString;
-
-            guigen.changerValeurPosition(coordString);
-            this.Dispose();
+            guigen.changerValeurPosition(coordString, e.X, e.Y);
+            this.Dispose();           
         }
 
         private string convertPosToMinSec(double x, double y)

@@ -108,5 +108,23 @@
   <ItemGroup>
     <None Include="Resources\worldmap good.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\airport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chopper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incendie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marchandise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\observateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passager.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
