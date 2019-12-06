@@ -175,6 +175,11 @@ namespace TP_Aviation___Generateur_de_scénario
             controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
         }
 
+        private void btnGenerer_Click(object sender, EventArgs e)
+        {
+            controller.serializeScenario();
+        }
+
         ///
     }
 }

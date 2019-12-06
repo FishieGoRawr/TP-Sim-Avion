@@ -13,6 +13,7 @@ namespace TP_Aviation___Generateur_de_scénario
     public partial class GUIPosition : Form
     {
         GUIGenerateur guigen;
+
         public GUIPosition(GUIGenerateur gui)
         {
             guigen = gui;

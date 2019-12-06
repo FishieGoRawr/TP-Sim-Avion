@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    class AeroObservateur : Distance
+    public class AeroObservateur : Distance
     {
         Bitmap m_image;
         int m_rayon;
@@ -21,6 +21,17 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_image = null;
             this.m_nbAller = nbAller;
             this.m_rayon = rayon;
+        }
+
+        public AeroObservateur() : base()
+        {
+            m_nom = "null";
+            m_vitesse = 0;
+            m_tempsEnt = 0;
+            m_origine = new PositionGeo();
+            m_image = null;
+            m_nbAller = 0;
+            m_rayon = 0;
         }
     }
 }

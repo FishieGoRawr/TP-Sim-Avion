@@ -27,5 +27,10 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             scenario.ajouterAeronef(nom, type, vitesse, entretien, charger, decharger, change, aeroports);
         }
+
+        public void serializeScenario()
+        {
+            scenario.SerializeScenario();
+        }
     }
 }
