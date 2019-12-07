@@ -10,9 +10,17 @@ namespace TP_Aviation___Simulation
     {
         protected int m_quantite;
 
-        public Passager() : base()
+        public Passager(string nom, Areoport destination) : base(nom, destination)
         {
+            this.m_nom = nom;
+            this.m_destination = destination;
 
+        }
+
+        public int randomPassager() 
+        {
+            int quantite = 0;
+            return quantite;
         }
     }
 }

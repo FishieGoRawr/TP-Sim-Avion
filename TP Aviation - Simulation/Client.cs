@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     {
         protected String m_nom;
 
-        public Client()
+        public Client(string nom)
         {
 
         }

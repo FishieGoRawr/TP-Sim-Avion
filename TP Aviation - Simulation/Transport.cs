@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    class Transport
+    public abstract class Transport : Aeronef
     {
+        protected int m_tempsEmb;
+        protected int m_tempsDeb;
+
+        public Transport(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger) : base(nom, vitesse, entretien, origine)
+        {
+
+        }
+
+        public Transport()
+        {
+
+        }
     }
 }

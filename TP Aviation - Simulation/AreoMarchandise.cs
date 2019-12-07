@@ -3,10 +3,50 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace TP_Aviation___Simulation
 {
-    class AreoMarchandise
+    public class AreoMarchandise : Transport
     {
+        float m_capacite { get; set; }
+        Bitmap m_image;
+
+        /// <summary>
+        /// Constructeur complex d'AeroMarchandise
+        /// </summary>
+        /// <param name="nom">Nom de l'aeronef</param>
+        /// <param name="vitesse">Vitesse de l'aeronef</param>
+        /// <param name="entretien">Temps d'entretien de l'aeronef</param>
+        /// <param name="origine">Point d'origine de l'aeronef</param>
+        /// <param name="charger">Temps de chargement de l'aeronefe</param>
+        /// <param name="decharger">Temps de déchargement de l'aeronef</param>
+        /// <param name="change">Capacité de l'aeronef</param>
+        public AreoMarchandise(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
+        {
+            this.m_nom = nom;
+            this.m_vitesse = vitesse;
+            this.m_tempsEnt = entretien;
+            this.m_origine = origine;
+            this.m_tempsEmb = charger;
+            this.m_tempsDeb = decharger;
+            this.m_capacite = change;
+            this.m_image = Properties.Resources.marchandise;
+        }
+
+        /// <summary>
+        /// Constructeur vide d'AeroMarchandise
+        /// </summary>
+        public AreoMarchandise() : base()
+        {
+            m_nom = "null";
+            m_vitesse = 0;
+            m_tempsEnt = 0;
+            m_origine = new PositionGeo();
+            m_tempsEmb = 0;
+            m_tempsDeb = 0;
+            m_capacite = 0;
+            m_image = null;
+        }
     }
 }
