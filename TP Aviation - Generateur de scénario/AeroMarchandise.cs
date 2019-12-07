@@ -10,10 +10,20 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class AeroMarchandise : Transport
     {
-        float m_capacite;
+        float m_capacite { get; set; }
         [XmlIgnore]
         Bitmap m_image;
 
+        /// <summary>
+        /// Constructeur complex d'AeroMarchandise
+        /// </summary>
+        /// <param name="nom">Nom de l'aeronef</param>
+        /// <param name="vitesse">Vitesse de l'aeronef</param>
+        /// <param name="entretien">Temps d'entretien de l'aeronef</param>
+        /// <param name="origine">Point d'origine de l'aeronef</param>
+        /// <param name="charger">Temps de chargement de l'aeronefe</param>
+        /// <param name="decharger">Temps de déchargement de l'aeronef</param>
+        /// <param name="change">Capacité de l'aeronef</param>
         public AeroMarchandise(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
         {
             this.m_nom = nom;
@@ -26,6 +36,9 @@ namespace TP_Aviation___Generateur_de_scénario
             this.m_image = Properties.Resources.marchandise;
         }
 
+        /// <summary>
+        /// Constructeur vide d'AeroMarchandise
+        /// </summary>
         public AeroMarchandise() : base()
         {
             m_nom = "null";

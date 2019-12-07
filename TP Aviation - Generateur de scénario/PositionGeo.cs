@@ -9,11 +9,9 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class PositionGeo
     {
-        int m_posX;
-        int m_posY;
-        string m_posDegreeMin;
-
-        double m_latitude, m_longitude;
+        int m_posX { get; set; }
+        int m_posY { get; set; }
+        string m_posDegreeMin { get; set; }
 
         public PositionGeo(TextBox posDegreeMin)
         {

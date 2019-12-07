@@ -34,55 +34,6 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Fournit le combobox avec les types d'avions possibles
-        /// </summary>
-        private void loadCmbTypeCargo()
-        {
-            cmbTypeAeronef.Items.Add("Passagers");
-            cmbTypeAeronef.Items.Add("Marchandises");
-            cmbTypeAeronef.Items.Add("Observateurs");
-            cmbTypeAeronef.Items.Add("Incendies");
-            cmbTypeAeronef.Items.Add("Secours");
-        }
-
-        /// <summary>
-        /// S'occupe de clear les textbox pour la saisie de donnée au niveau de l'aréoport.
-        /// </summary>
-        private void clearAeroport()
-        {
-            txtNomAeroport.Clear();
-            txtAchPassager.Clear();
-            txtAchMarchandise.Clear();
-            txtPosition.Clear();
-        }
-
-        /// <summary>
-        /// S'occupe de clear les textbox pour la saisie de donnée au niveau de l'aeronef.
-        /// </summary>
-        private void clearAeronef()
-        {
-            txtNomAeronef.Text = "";
-            txtVitesse.Text = "";
-            txtEntretient.Text = "";
-            txtLoad.Text = "";
-            txtUnload.Text = "";
-            txtChange.Text = "";
-            cmbTypeAeronef.Text = "";
-        }
-
-        /// <summary>
-        /// S'occupe de récupéré la position du GUIposition.
-        /// </summary>
-        /// <param name="position">Retourne un string de la position sous format degrée/minute.</param>
-        /// <param name="posX">Position en X sur la carte.</param>
-        /// <param name="posY">Position en Y sur la carte.</param>
-        public void changerValeurPosition(string position, int posX, int posY)
-        {
-            txtPosition.Text = position;
-            txtPosition.Tag = String.Concat(posX, ' ', posY);
-        }
-
-        /// <summary>
         /// Gestionnaire d'event pour un click sur le bouton "Ajouter un aréoport".
         /// </summary>
         /// <param name="sender">Source de l'event</param>
@@ -254,7 +205,7 @@ namespace TP_Aviation___Generateur_de_scénario
                     type = cmbTypeAeronef.Text;
                     aeroports = lsbAeroports.SelectedItem.ToString();
 
-                    string[] nomAreoport =  aeroports.Split(' ');
+                    string[] nomAreoport = aeroports.Split(' ');
 
                     string areonef;
                     areonef = controller.creerAeronef(nom, type, vitesse, entretien, charger, decharger, change, nomAreoport[0]);
@@ -263,13 +214,7 @@ namespace TP_Aviation___Generateur_de_scénario
                 }
             }
             else
-<<<<<<< HEAD
                 MessageBox.Show("Vous devez sélectionner un aréoport pour pouvoir y ajouté un avion.");
-=======
-            {
-                MessageBox.Show("Veuillex choisir l'aréoport auqeul va apartenir l'avion.");
-            }
->>>>>>> fa32f7f1cd341b5b828d16d8fbbddb8390f0424f
         }
 
         /// <summary>
@@ -279,11 +224,64 @@ namespace TP_Aviation___Generateur_de_scénario
         /// <param name="e">Event</param>
         private void BtnGenerer_Click(object sender, EventArgs e)
         {
-            controller.serializeScenario();
+            //if (lsbAeroports.Items.Count == 0)
+            //    MessageBox.Show("Vous devez au moin avoir un aréoport pour créer un scénario.");
+            //else if (lsbAeronefs.Items.Count == 0)
+            //    MessageBox.Show("Vous devez au moin avoir un aéronef quelquonque pour créer un scénario.");
+            //else
+            //    controller.serializeScenario();
+
+            controller.deserializeScenario();
+
         }
-<<<<<<< HEAD
-=======
-       
->>>>>>> fa32f7f1cd341b5b828d16d8fbbddb8390f0424f
+
+        /// <summary>
+        /// Fournit le combobox avec les types d'avions possibles
+        /// </summary>
+        private void loadCmbTypeCargo()
+        {
+            cmbTypeAeronef.Items.Add("Passagers");
+            cmbTypeAeronef.Items.Add("Marchandises");
+            cmbTypeAeronef.Items.Add("Observateurs");
+            cmbTypeAeronef.Items.Add("Incendies");
+            cmbTypeAeronef.Items.Add("Secours");
+        }
+
+        /// <summary>
+        /// S'occupe de clear les textbox pour la saisie de donnée au niveau de l'aréoport.
+        /// </summary>
+        private void clearAeroport()
+        {
+            txtNomAeroport.Clear();
+            txtAchPassager.Clear();
+            txtAchMarchandise.Clear();
+            txtPosition.Clear();
+        }
+
+        /// <summary>
+        /// S'occupe de clear les textbox pour la saisie de donnée au niveau de l'aeronef.
+        /// </summary>
+        private void clearAeronef()
+        {
+            txtNomAeronef.Text = "";
+            txtVitesse.Text = "";
+            txtEntretient.Text = "";
+            txtLoad.Text = "";
+            txtUnload.Text = "";
+            txtChange.Text = "";
+            cmbTypeAeronef.Text = "";
+        }
+
+        /// <summary>
+        /// S'occupe de récupéré la position du GUIposition.
+        /// </summary>
+        /// <param name="position">Retourne un string de la position sous format degrée/minute.</param>
+        /// <param name="posX">Position en X sur la carte.</param>
+        /// <param name="posY">Position en Y sur la carte.</param>
+        public void changerValeurPosition(string position, int posX, int posY)
+        {
+            txtPosition.Text = position;
+            txtPosition.Tag = String.Concat(posX, ' ', posY);
+        }
     }
 }

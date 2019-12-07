@@ -9,17 +9,17 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    public class Aeroport
+    public class Areoport
     {
-        public string m_nom;
-        public PositionGeo m_localisation;
-        public List<Aeronef> m_listAeronef;
-        public int m_achalPassager;
-        public int m_achalMarchandise;
+        public string m_nom { get; set; }
+        public PositionGeo m_localisation { get; set; }
+        public List<Aeronef> m_listAeronef { get; set; }
+        public int m_achalPassager { get; set; }
+        public int m_achalMarchandise { get; set; }
         [XmlIgnore]
         public Bitmap m_image;
 
-        public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager, TextBox p_positionGeo)
+        public Areoport(string p_nom, int p_achalMarchandise, int p_achalPassager, TextBox p_positionGeo)
         {
             m_listAeronef = new List<Aeronef>();
             m_nom = p_nom;
@@ -29,33 +29,13 @@ namespace TP_Aviation___Generateur_de_scénario
             m_image = Properties.Resources.airport; 
         }
 
-        public Aeroport()
+        public Areoport()
         {
             m_nom = "null";
             m_localisation = new PositionGeo();
             m_listAeronef = new List<Aeronef>();
             m_achalPassager = 0;
             m_achalMarchandise = 0;
-        }
-
-        public string Nom
-        {
-            get { return m_nom; }
-        }
-
-        public PositionGeo Localisation
-        {
-            get { return m_localisation; }
-        }
-
-        public int AchalPassager
-        {
-            get { return m_achalPassager; }
-        }
-
-        public int AchalMarchandise
-        {
-            get { return m_achalMarchandise; }
         }
 
         public Aeronef this[int index]

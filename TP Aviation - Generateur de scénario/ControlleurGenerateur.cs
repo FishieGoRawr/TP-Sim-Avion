@@ -35,5 +35,10 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             scenario.SerializeScenario();
         }
+
+        public void deserializeScenario()
+        {
+            scenario.DeserializeScenario();
+        }
     }
 }

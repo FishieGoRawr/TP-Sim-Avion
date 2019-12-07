@@ -10,16 +10,16 @@ using System.Xml.Serialization;
 namespace TP_Aviation___Generateur_de_scénario
 {
 
-    class Scenario
+    public class Scenario
     {
         static Scenario m_scenario;
-        List<Aeroport> listAeroport;
+        public List<Areoport> listAreoport;
         UsineAeronef usine;
 
         Scenario()
         {
-            listAeroport = new List<Aeroport>();
-             usine = UsineAeronef.getUsineAeronef;
+            listAreoport = new List<Areoport>();
+            usine = UsineAeronef.getUsineAeronef;
         }
 
         public static Scenario getScenario
@@ -34,46 +34,46 @@ namespace TP_Aviation___Generateur_de_scénario
             }
         }
 
-        public Aeroport this[int index]
+        public Areoport this[int index]
         {
-            get { return listAeroport[index]; }
-            set { listAeroport.Add(value); }
+            get { return listAreoport[index]; }
+            set { listAreoport.Add(value); }
         }
 
         public string ajoutAeroport(string nom, int achalPass, int achalMarch, TextBox position)
         {
-            listAeroport.Add(new Aeroport(nom, achalPass, achalMarch, position));
+            listAreoport.Add(new Areoport(nom, achalPass, achalMarch, position));
 
-            string areoport = listAeroport.Last().Nom + "   |   (" + listAeroport.Last().Localisation + ")   |   Achanlandage passager: " + listAeroport.Last().AchalPassager + "   |   Achanlandage marchandise: " + listAeroport.Last().AchalMarchandise;
+            string areoport = listAreoport.Last().m_nom + "   |   (" + listAreoport.Last().m_localisation + ")   |   Achanlandage passager: " + listAreoport.Last().m_achalPassager + "   |   Achanlandage marchandise: " + listAreoport.Last().m_achalMarchandise;
             return areoport;
         }
 
         public void printAeroport(int index)
         {
-            Console.WriteLine("Nom: " + listAeroport[index].Nom);
-            Console.WriteLine("AchalPass: " + listAeroport[index].AchalPassager);
-            Console.WriteLine("AchalMarch: " + listAeroport[index].AchalMarchandise);
-            Console.WriteLine("Position: " + listAeroport[index].Localisation.ToString()); ;
+            Console.WriteLine("Nom: " + listAreoport[index].m_nom);
+            Console.WriteLine("AchalPass: " + listAreoport[index].m_achalPassager);
+            Console.WriteLine("AchalMarch: " + listAreoport[index].m_achalMarchandise);
+            Console.WriteLine("Position: " + listAreoport[index].m_localisation.ToString()); ;
         }
 
         public string ajouterAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, string aeroports)
         {
             PositionGeo origine = null;
-            
+
             int temp = 0;
 
-            for (int i = 0; i < listAeroport.Count; i++)
+            for (int i = 0; i < listAreoport.Count; i++)
             {
-                if (listAeroport[i].Nom == aeroports)
+                if (listAreoport[i].m_nom == aeroports)
                 {
-                    origine = listAeroport[i].Localisation;
+                    origine = listAreoport[i].m_localisation;
                     temp = i;
                 }
             }
 
             string areonef;
             string changement;
-            listAeroport[temp][0] = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
+            listAreoport[temp][0] = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
 
             if ((type == "Passagers") | (type == "Marchandises"))
             {
@@ -88,14 +88,39 @@ namespace TP_Aviation___Generateur_de_scénario
 
         public void SerializeScenario()
         {
-            StringBuilder output = new StringBuilder();
+            Stream stream;
+            SaveFileDialog sfg = new SaveFileDialog();
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Areoport>));
 
-            using (TextWriter writer = new StreamWriter(@".\Scénarios\scenario.xml"))
+            sfg.InitialDirectory = @".\Scénarios\";
+            sfg.Filter = "XML File (*.xml)|*.xml";
+
+            if (sfg.ShowDialog() == DialogResult.OK)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
-                serializer.Serialize(writer, this.listAeroport);
+                if ((stream = sfg.OpenFile()) != null)
+                {
+                    serializer.Serialize(stream, this.listAreoport);
+                    stream.Close();
+                }
+            }
+        }
+
+        public void DeserializeScenario()
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.InitialDirectory = @".\Scénarios\";
+            ofd.Filter = "XML File (*.xml)|*.xml";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                XmlSerializer xs = new XmlSerializer(typeof(List<Areoport>));
+                using (StreamReader rd = new StreamReader(ofd.FileName))
+                {
+                    
+                    List<Areoport> listTest = xs.Deserialize(rd) as List<Areoport> ;
+                }
             }
         }
     }
-
 }
