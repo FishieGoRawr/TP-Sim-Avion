@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_Aviation___Simulation
 {
-    public partial class Form1 : Form
+    public partial class GUISimulateur : Form
     {
-        public Form1()
+        public GUISimulateur()
         {
             InitializeComponent();
         }

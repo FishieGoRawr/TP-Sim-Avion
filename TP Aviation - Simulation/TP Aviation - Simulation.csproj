@@ -46,14 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Aller.cs" />
+    <Compile Include="AllerRetour.cs" />
+    <Compile Include="AreoIncendie.cs" />
+    <Compile Include="AreoMarchandise.cs" />
+    <Compile Include="Areonef.cs" />
+    <Compile Include="AreoObservateur.cs" />
+    <Compile Include="AreoPassager.cs" />
+    <Compile Include="Areoport.cs" />
+    <Compile Include="AreoSecours.cs" />
+    <Compile Include="Attente.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ControllerSimulateur.cs" />
+    <Compile Include="Distance.cs" />
+    <Compile Include="DistanceClient.cs" />
+    <Compile Include="Débarquement.cs" />
+    <Compile Include="Embarquement.cs" />
+    <Compile Include="EnVol.cs" />
+    <Compile Include="Feu.cs" />
+    <Compile Include="GUISimulateur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUISimulateur.Designer.cs">
+      <DependentUpon>GUISimulateur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Horloge.cs" />
+    <Compile Include="Maintenance.cs" />
+    <Compile Include="Marchandise.cs" />
+    <Compile Include="Observateur.cs" />
+    <Compile Include="Observation.cs" />
+    <Compile Include="Passager.cs" />
+    <Compile Include="PositionGeo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenario.cs" />
+    <Compile Include="Secours.cs" />
+    <Compile Include="Transport.cs" />
+    <Compile Include="TransportClient.cs" />
+    <Compile Include="UsineClient.cs" />
+    <Compile Include="État.cs" />
+    <EmbeddedResource Include="GUISimulateur.resx">
+      <DependentUpon>GUISimulateur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +110,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chopper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incendie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marchandise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\observateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worldmap good.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
