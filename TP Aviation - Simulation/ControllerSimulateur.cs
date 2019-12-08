@@ -10,9 +10,13 @@ namespace TP_Aviation___Simulation
 {
     class ControllerSimulateur
     {
+        Scenario m_scenario;
+        Horloge m_horloge;
+
         public ControllerSimulateur()
         {
-
+            this.m_scenario = Scenario.getScenario;
+            this.m_horloge = new Horloge();
         }
 
         //Exemple
@@ -23,6 +27,34 @@ namespace TP_Aviation___Simulation
             {
                 ControllerSimulateur p = xs.Deserialize(rd) as ControllerSimulateur;
             }
+        }
+
+        public void spin()
+        {
+           
+
+        }
+
+        public void genererPassager()
+        {
+
+        }
+
+        public void genererMarchandise()
+        {
+
+        }
+        public void genererObservateur()
+        {
+
+        }
+        public void genererFeu()
+        {
+
+        }
+        public void genererSecours()
+        {
+
         }
     }
 }

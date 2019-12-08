@@ -20,5 +20,5 @@ namespace TP_Aviation___Simulation
 
         }
 
-    }v
+    }
 }

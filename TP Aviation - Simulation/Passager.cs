@@ -17,7 +17,7 @@ namespace TP_Aviation___Simulation
 
         }
 
-        public int randomPassager() 
+        public int nbPassager() 
         {
             int quantite = 0;
             return quantite;

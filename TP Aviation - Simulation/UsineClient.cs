@@ -30,6 +30,7 @@ namespace TP_Aviation___Simulation
         {
             Client newClient = null;
 
+            newClient = new Passager(nom, destination);
 
             return newClient;
         }

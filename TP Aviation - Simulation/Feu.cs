@@ -10,9 +10,11 @@ namespace TP_Aviation___Simulation
     {
         protected int m_intensite;
 
-        public Feu() : base()
+        public Feu(string nom, PositionGeo destination, int intensite) : base(nom, destination)
         {
-
+            this.m_nom = nom;
+            this.m_destination = destination;
+            this.m_intensite = intensite;
         }
     }
 }

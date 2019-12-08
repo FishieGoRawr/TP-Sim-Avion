@@ -10,9 +10,11 @@ namespace TP_Aviation___Simulation
     {
         protected double m_poid;
 
-        public Marchandise() : base()
+        public Marchandise(string nom, Areoport destination, double poid) : base(nom, destination)
         {
-
+            this.m_nom = nom;
+            this.m_destination = destination;
+            this.m_poid = poid;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     {
         protected PositionGeo m_destination;
 
-        public DistanceClient() : base()
+        public DistanceClient(String nom, PositionGeo destination) : base(nom)
         {
 
         }

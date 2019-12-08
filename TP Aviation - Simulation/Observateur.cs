@@ -11,9 +11,11 @@ namespace TP_Aviation___Simulation
     {
         protected int m_rayon;
 
-        public Observateur() : base()
+        public Observateur(string nom, PositionGeo destination, int rayon) : base(nom, destination)
         {
-
+            this.m_nom = nom;
+            this.m_destination = destination;
+            this.m_rayon = rayon;
         }
     }
 }
