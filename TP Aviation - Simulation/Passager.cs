@@ -10,17 +10,39 @@ namespace TP_Aviation___Simulation
     {
         protected int m_quantite;
 
-        public Passager(string nom, Areoport destination) : base(nom, destination)
+        public Passager(List<Areoport> listAreoport, Areoport origine) : base(listAreoport)
         {
-            this.m_nom = nom;
-            this.m_destination = destination;
-
+            this.m_nom = "Passager";
+            this.m_destination = randomAreoport(listAreoport, origine);
+            this.m_quantite = nbPassager();
         }
 
         public int nbPassager() 
         {
             int quantite = 0;
+            Random rand = new Random();
+            quantite = rand.Next(25);
+
             return quantite;
+        }
+
+        public Areoport randomAreoport(List<Areoport> listAreoport, Areoport origine)
+        {
+            int count = listAreoport.Count();
+            bool different = false;
+
+            Random rand = new Random();
+
+            while (different)
+            {
+                int destiation = rand.Next(count);
+                if (listAreoport[destiation].Equals(origine))
+                    different = false;
+                else
+                    different = true;
+            }
+
+            return listAreoport[count];
         }
     }
 }

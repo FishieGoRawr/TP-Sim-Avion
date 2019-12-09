@@ -30,29 +30,43 @@ namespace TP_Aviation___Simulation
             }
         }
 
-        public void ajouterPassager(string nom, Areoport destination, int passager)
+        public void ajouterPassager()
         {
-            usine.creerClient(nom, destination, passager);
+            foreach (var areoport in listAreoport)
+            {
+                usine.creerPassager(listAreoport, areoport);
+            }
         }
 
-        public void ajouterMarchandise(string nom, Areoport destination, double poid)
+        public void ajouterMarchandise()
         {
-            usine.creerClient(nom, destination, poid);
+            foreach (var areoport in listAreoport)
+            {
+                usine.creerMarchandise(listAreoport, areoport);
+            }
         }
 
-        public void ajouterObservateur()
+        public void ajouterObservateur(int width, int height)
         {
-            usine.creerClient();
+            usine.creerObservateur(width, height);
         }
 
-        public void ajouterFeu()
+        public void ajouterFeu(int width, int height)
         {
-            usine.creerClient();
+            Random nbFeu = new Random();
+            for (int i = 0; i < nbFeu.Next(1, 4); i++)
+            {
+                usine.creerFeu(width, height);
+            }
         }
 
-        public void ajouterSecours()
+        public void ajouterSecours(int width, int height)
         {
-            usine.creerClient();
+            Random nbSecours = new Random();
+            for (int i = 0; i < nbSecours.Next(1, 3); i++)
+            {
+                usine.creerSecours(width, height);
+            }
         }
     }
 }

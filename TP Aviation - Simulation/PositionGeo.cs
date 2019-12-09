@@ -29,6 +29,18 @@ namespace TP_Aviation___Simulation
             m_posY = 0;
         }
 
+        public int PosY
+        {
+            get { return m_posY; }
+            set { m_posY = value; }
+        }
+
+        public int PosX
+        {
+            get { return m_posX; }
+            set { m_posX = value; }
+        }
+
         public override string ToString()
         {
             return m_posDegreeMin;

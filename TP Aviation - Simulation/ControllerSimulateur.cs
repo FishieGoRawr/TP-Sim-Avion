@@ -12,11 +12,13 @@ namespace TP_Aviation___Simulation
     {
         Scenario m_scenario;
         Horloge m_horloge;
+        GUISimulateur m_gui;
 
         public ControllerSimulateur()
         {
             this.m_scenario = Scenario.getScenario;
             this.m_horloge = new Horloge();
+            this.m_gui =  new GUISimulateur();
         }
 
         //Exemple
@@ -44,17 +46,17 @@ namespace TP_Aviation___Simulation
         {
             m_scenario.ajouterMarchandise();
         }
-        public void genererObservateur()
+        public void genererObservateur(int width, int height)
         {
-            m_scenario.ajouterObservateur();
+            m_scenario.ajouterObservateur(width, height);
         }
-        public void genererFeu()
+        public void genererFeu(int width, int height)
         {
-            m_scenario.ajouterFeu();
+            m_scenario.ajouterFeu(width, height);
         }
-        public void genererSecours()
+        public void genererSecours(int width, int height)
         {
-            m_scenario.ajouterSecours();
+            m_scenario.ajouterSecours(width, height);
         }
     }
 }

@@ -10,9 +10,16 @@ namespace TP_Aviation___Simulation
     {
         protected PositionGeo m_destination;
 
-        public DistanceClient(String nom, PositionGeo destination) : base(nom)
+        public DistanceClient() : base()
         {
 
+        }
+
+        virtual public PositionGeo randomPosition(int width, int height)
+        {
+            PositionGeo position = new PositionGeo();
+
+            return position;
         }
     }
 }

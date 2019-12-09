@@ -10,9 +10,8 @@ namespace TP_Aviation___Simulation
     {
         protected Areoport m_destination;
 
-        public TransportClient(string nom, Areoport destination) : base(nom)
+        public TransportClient(List<Areoport> listAreoport) : base()
         {
-            this.m_destination = destination;
         }
     }
 }

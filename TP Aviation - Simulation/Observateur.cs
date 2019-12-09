@@ -11,11 +11,23 @@ namespace TP_Aviation___Simulation
     {
         int m_rayon;
 
-        public Observateur(string nom, PositionGeo destination) : base(nom, destination)
+        public Observateur(int width, int height) : base()
         {
-            this.m_nom = nom;
-            this.m_destination = destination;
+            this.m_nom = "Observateur";
+            this.m_destination = randomPosition(width, height);
             this.m_rayon = 20;
+        }
+
+        public override PositionGeo randomPosition(int width, int height)
+        {
+            PositionGeo position = new PositionGeo();
+
+            Random rand = new Random();
+
+            position.PosX = rand.Next(width);
+            position.PosY = rand.Next(height);
+
+            return position;
         }
     }
 }
