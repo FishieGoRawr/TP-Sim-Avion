@@ -37,24 +37,24 @@ namespace TP_Aviation___Simulation
 
         public void genererPassager()
         {
-
+            m_scenario.ajouterPassager();
         }
 
         public void genererMarchandise()
         {
-
+            m_scenario.ajouterMarchandise();
         }
         public void genererObservateur()
         {
-
+            m_scenario.ajouterObservateur();
         }
         public void genererFeu()
         {
-
+            m_scenario.ajouterFeu();
         }
         public void genererSecours()
         {
-
+            m_scenario.ajouterSecours();
         }
     }
 }

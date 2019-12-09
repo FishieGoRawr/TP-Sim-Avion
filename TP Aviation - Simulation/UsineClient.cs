@@ -26,11 +26,47 @@ namespace TP_Aviation___Simulation
             }
         }
 
-        public Client creerClient(string nom, string type, Areoport destination, int passager)
+        public Client creerClient(string nom, Areoport destination, int passager)
         {
             Client newClient = null;
 
             newClient = new Passager(nom, destination);
+
+            return newClient;
+        }
+
+        public Client creerClient(string nom, Areoport destination, double poid)
+        {
+            Client newClient = null;
+
+            newClient = new Marchandise(nom, destination, poid);
+
+            return newClient;
+        }
+
+        public Client creerClient(string nom, PositionGeo destination)
+        {
+            Client newClient = null;
+
+            newClient = new Observateur(nom, destination);
+
+            return newClient;
+        }
+
+        public Client creerClient(string nom, PositionGeo position, int intensite)
+        {
+            Client newClient = null;
+
+            newClient = new Feu(nom, position, intensite);
+
+            return newClient;
+        }
+
+        public Client creerClient(string nom, PositionGeo position)
+        {
+            Client newClient = null;
+
+            newClient = new Secours(nom, position);
 
             return newClient;
         }
