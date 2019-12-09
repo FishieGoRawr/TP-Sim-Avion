@@ -8,15 +8,13 @@ namespace TP_Aviation___Simulation
 {
     static class Program
     {
-        /// <summary>
-        /// Point d'entrée principal de l'application.
-        /// </summary>
+        public static GUISimulateur m_gui;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUISimulateur());
+            Application.Run(m_gui = new GUISimulateur());
         }
     }
 }

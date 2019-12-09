@@ -12,13 +12,11 @@ namespace TP_Aviation___Simulation
     {
         Scenario m_scenario;
         Horloge m_horloge;
-        GUISimulateur m_gui;
 
         public ControllerSimulateur()
         {
             this.m_scenario = Scenario.getScenario;
-            this.m_horloge = new Horloge();
-            this.m_gui =  new GUISimulateur();
+            //this.m_horloge = new Horloge();
         }
 
         //Exemple
