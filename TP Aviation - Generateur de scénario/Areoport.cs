@@ -19,6 +19,13 @@ namespace TP_Aviation___Generateur_de_scénario
         [XmlIgnore]
         public Bitmap m_image;
 
+        /// <summary>
+        /// Constructeur d'Aeroport
+        /// </summary>
+        /// <param name="p_nom">Nom de l'aeroport</param>
+        /// <param name="p_achalMarchandise">Nombre représentant l'achalandage des marchandises de l'aeroport</param>
+        /// <param name="p_achalPassager">Nombre représentant l'achalandage des passagers de l'aeroport</param>
+        /// <param name="p_positionGeo">Position géographique de l'aeroport</param>
         public Areoport(string p_nom, int p_achalMarchandise, int p_achalPassager, TextBox p_positionGeo)
         {
             m_listAeronef = new List<Aeronef>();
@@ -29,6 +36,9 @@ namespace TP_Aviation___Generateur_de_scénario
             m_image = Properties.Resources.airport; 
         }
 
+        /// <summary>
+        /// Constructeur vide d'Aeroport
+        /// </summary>
         public Areoport()
         {
             m_nom = "null";
@@ -38,6 +48,11 @@ namespace TP_Aviation___Generateur_de_scénario
             m_achalMarchandise = 0;
         }
 
+        /// <summary>
+        /// Retourne l'aeroport situé a l'index demander
+        /// </summary>
+        /// <param name="index">Position dans la liste de l'aeroport</param>
+        /// <returns></returns>
         public Aeronef this[int index]
         {
             get { return m_listAeronef[index]; }

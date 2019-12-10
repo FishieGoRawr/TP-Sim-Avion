@@ -60,5 +60,10 @@ namespace TP_Aviation___Simulation
             //controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
             //controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
         }
+
+        private void BtnChargerScenario_Click(object sender, EventArgs e)
+        {
+            controller.deserialize();
+        }
     }
 }

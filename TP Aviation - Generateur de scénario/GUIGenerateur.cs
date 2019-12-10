@@ -197,6 +197,7 @@ namespace TP_Aviation___Generateur_de_scénario
                     messageErreur = "Veuillez entrer un temps de déchargement pour l'aréonef.";
                 }
 
+                //Si toutes les conditions ne sont pas remplies, affiche un message d'erreur
                 if (!areonefValide)
                     MessageBox.Show(messageErreur);
                 else
@@ -224,14 +225,14 @@ namespace TP_Aviation___Generateur_de_scénario
         /// <param name="e">Event</param>
         private void BtnGenerer_Click(object sender, EventArgs e)
         {
-            //if (lsbAeroports.Items.Count == 0)
-            //    MessageBox.Show("Vous devez au moin avoir un aréoport pour créer un scénario.");
-            //else if (lsbAeronefs.Items.Count == 0)
-            //    MessageBox.Show("Vous devez au moin avoir un aéronef quelquonque pour créer un scénario.");
-            //else
-            //    controller.serializeScenario();
+            if (lsbAeroports.Items.Count == 0)
+                MessageBox.Show("Vous devez au moin avoir un aréoport pour créer un scénario.");
+            else if (lsbAeronefs.Items.Count == 0)
+                MessageBox.Show("Vous devez au moin avoir un aéronef quelquonque pour créer un scénario.");
+            else
+                controller.serializeScenario();
 
-            controller.deserializeScenario();
+            //controller.deserializeScenario();
 
         }
 

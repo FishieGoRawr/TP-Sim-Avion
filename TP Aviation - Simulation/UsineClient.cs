@@ -26,47 +26,47 @@ namespace TP_Aviation___Simulation
             }
         }
 
-        public Client creerPassager(List<Areoport> listAreoport, Areoport origine)
+        public Client creerPassager(List<Areoport> listAreoport, Areoport origine, Random rand)
         {
             Client newClient = null;
 
-            newClient = new Passager(listAreoport, origine);
+            newClient = new Passager(listAreoport, origine, rand);
 
             return newClient;
         }
 
-        public Client creerMarchandise(List<Areoport> listAreoport, Areoport origine)
+        public Client creerMarchandise(List<Areoport> listAreoport, Areoport origine, Random rand)
         {
             Client newClient = null;
 
-            newClient = new Marchandise(listAreoport, origine);
+            newClient = new Marchandise(listAreoport, origine, rand);
 
             return newClient;
         }
 
-        public Client creerObservateur(int width, int height) 
+        public Client creerObservateur(int width, int height, Random rand) 
         {
             Client newClient = null;
 
-            newClient = new Observateur(width, height);
+            newClient = new Observateur(width, height, rand);
 
             return newClient;
         }
 
-        public Client creerFeu(int width, int height)
+        public Client creerFeu(int width, int height, Random rand)
         {
             Client newClient = null;
 
-            newClient = new Feu(width, height);
+            newClient = new Feu(width, height, rand);
 
             return newClient;
         }
 
-        public Client creerSecours(int width, int height)
+        public Client creerSecours(int width, int height, Random rand)
         {
             Client newClient = null;
 
-            newClient = new Secours(width, height);
+            newClient = new Secours(width, height, rand);
 
             return newClient;
         }

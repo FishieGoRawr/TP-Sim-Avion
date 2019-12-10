@@ -24,10 +24,12 @@ namespace TP_Aviation___Generateur_de_scénario
         /// <param name="charger">Temps pour charger l'aeronef</param>
         /// <param name="decharger">Temps pour decharger l'aeronef</param>
         /// <param name="change">Capacité de passager de l'aeronef</param>
-        public AeroPassager(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
+        /// <param name="type">Type de l'areonef</param>
+        public AeroPassager(string nom, string type, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, type, vitesse, entretien, origine, charger, decharger)
         {
 
             this.m_nom = nom;
+            this.m_type = type;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;

@@ -14,5 +14,20 @@ namespace TP_Aviation___Simulation
         {
 
         }
+
+        public String Nom
+        {
+            get { return m_nom; }
+        }
+
+        public virtual int PosX
+        {
+            get { return -1; }
+        }
+
+        public virtual int PosY
+        {
+            get { return -1; }
+        }
     }
 }

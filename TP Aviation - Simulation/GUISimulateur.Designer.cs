@@ -91,6 +91,7 @@
             this.btnChargerScenario.TabIndex = 5;
             this.btnChargerScenario.Text = "Télécharger un scénario";
             this.btnChargerScenario.UseVisualStyleBackColor = true;
+            this.btnChargerScenario.Click += new System.EventHandler(this.BtnChargerScenario_Click);
             // 
             // lsbAreoport
             // 

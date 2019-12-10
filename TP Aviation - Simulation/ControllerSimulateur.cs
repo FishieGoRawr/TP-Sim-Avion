@@ -33,11 +33,17 @@ namespace TP_Aviation___Simulation
         //Exemple
         public void deserialize()
         {
-            XmlSerializer xs = new XmlSerializer(typeof(ControllerSimulateur));
-            using (StreamReader rd = new StreamReader("person.xml"))
+            OpenFileDialog ofd = new OpenFileDialog();
+            XmlSerializer xs = new XmlSerializer(typeof(List<Areoport>));
+
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                ControllerSimulateur p = xs.Deserialize(rd) as ControllerSimulateur;
+                using (StreamReader rd = new StreamReader(ofd.FileName))
+                {
+                    List<Areoport> listTest = xs.Deserialize(rd) as List<Areoport>;
+                }
             }
+
         }
 
         public void startSpin()
@@ -49,17 +55,11 @@ namespace TP_Aviation___Simulation
 
         public void spin()
         {
-
             while (m_simulateurEnMarche)
             {
                 Thread.Sleep(1);
                 m_horloge.ajouteMinutes();
             }
-        }
-
-        public void updateTimerGUI(int[] temps)
-        {
-
         }
 
         public void genererPassager()

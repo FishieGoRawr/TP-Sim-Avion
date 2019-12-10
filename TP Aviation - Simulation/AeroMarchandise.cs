@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace TP_Aviation___Simulation
 {
-    public class AreoMarchandise : Transport
+    public class AeroMarchandise : Transport
     {
         float m_capacite { get; set; }
         Bitmap m_image;
@@ -22,9 +22,10 @@ namespace TP_Aviation___Simulation
         /// <param name="charger">Temps de chargement de l'aeronefe</param>
         /// <param name="decharger">Temps de déchargement de l'aeronef</param>
         /// <param name="change">Capacité de l'aeronef</param>
-        public AreoMarchandise(string nom, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, vitesse, entretien, origine, charger, decharger)
+        public AeroMarchandise(string nom, string type, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, type, vitesse, entretien, origine, charger, decharger)
         {
             this.m_nom = nom;
+            this.m_type = type;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
@@ -37,7 +38,7 @@ namespace TP_Aviation___Simulation
         /// <summary>
         /// Constructeur vide d'AeroMarchandise
         /// </summary>
-        public AreoMarchandise() : base()
+        public AeroMarchandise() : base()
         {
             m_nom = "null";
             m_vitesse = 0;

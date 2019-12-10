@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace TP_Aviation___Simulation
 {
-    public class AreoObservateur : Distance
+    public class AeroObservateur : Distance
     {
         Bitmap m_image;
         int m_rayon { get; set; }
@@ -21,12 +21,15 @@ namespace TP_Aviation___Simulation
         /// <param name="origine">Point d'origine de l'aeronef</param>
         /// <param name="nbAller">Nombre d'aller que l'aeronef fait</param>
         /// <param name="rayon">Rayon d'un tour complet de l'aeronef</param>
-        public AreoObservateur(string nom, int vitesse, int entretien, PositionGeo origine, int nbAller, int rayon) : base(nom, vitesse, entretien, origine)
+        /// <param name="type">type de l'areonef</param>
+        public AeroObservateur(string nom, string type, int vitesse, int entretien, PositionGeo origine, int nbAller, int rayon) : base(nom, type, vitesse, entretien, origine)
         {
             this.m_nom = nom;
+            this.m_type = type;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
+            this.m_dispo = true;
             this.m_image = Properties.Resources.observateur;
             this.m_nbAller = nbAller;
             this.m_rayon = rayon;
@@ -35,7 +38,7 @@ namespace TP_Aviation___Simulation
         /// <summary>
         /// Constructeur vide d'AeroObservateur
         /// </summary>
-        public AreoObservateur() : base()
+        public AeroObservateur() : base()
         {
             m_nom = "null";
             m_vitesse = 0;

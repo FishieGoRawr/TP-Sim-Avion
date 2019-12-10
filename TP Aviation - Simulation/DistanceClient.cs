@@ -15,11 +15,21 @@ namespace TP_Aviation___Simulation
 
         }
 
-        virtual public PositionGeo randomPosition(int width, int height)
+        virtual public PositionGeo randomPosition(int width, int height, Random rand)
         {
             PositionGeo position = new PositionGeo();
 
             return position;
         }
+
+        public override int PosX
+        {
+            get { return m_destination.PosX; }
+        }
+        public override int PosY
+        {
+            get { return m_destination.PosX; }
+        }
+
     }
 }

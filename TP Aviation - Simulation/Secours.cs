@@ -8,22 +8,25 @@ namespace TP_Aviation___Simulation
 {
     class Secours : DistanceClient
     {
-        public Secours(int width, int height) : base()
+        public Secours(int width, int height, Random rand) : base()
         {
             this.m_nom = "Secours";
-            this.m_destination = randomPosition(width, height);
+            this.m_destination = randomPosition(width, height, rand);
         }
 
-        public override PositionGeo randomPosition(int width, int height)
+        public override PositionGeo randomPosition(int width, int height, Random rand)
         {
             PositionGeo position = new PositionGeo();
-
-            Random rand = new Random();
 
             position.PosX = rand.Next(width);
             position.PosY = rand.Next(height);
 
             return position;
+        }
+
+        public override string ToString()
+        {
+            return m_nom + " X: " + m_destination.PosX + " Y: " + m_destination.PosY;
         }
     }
 }

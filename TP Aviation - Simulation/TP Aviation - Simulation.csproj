@@ -51,13 +51,13 @@
   <ItemGroup>
     <Compile Include="Aller.cs" />
     <Compile Include="AllerRetour.cs" />
-    <Compile Include="AreoIncendie.cs" />
-    <Compile Include="AreoMarchandise.cs" />
-    <Compile Include="Areonef.cs" />
-    <Compile Include="AreoObservateur.cs" />
-    <Compile Include="AreoPassager.cs" />
+    <Compile Include="AeroIncendie.cs" />
+    <Compile Include="AeroMarchandise.cs" />
+    <Compile Include="Aeronef.cs" />
+    <Compile Include="AeroObservateur.cs" />
+    <Compile Include="AeroPassager.cs" />
     <Compile Include="Areoport.cs" />
-    <Compile Include="AreoSecours.cs" />
+    <Compile Include="AeroSecours.cs" />
     <Compile Include="Attente.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ControllerSimulateur.cs" />
