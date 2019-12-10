@@ -53,17 +53,20 @@ namespace TP_Aviation___Simulation
         private void BtnStart_Click(object sender, EventArgs e)
         {
             controller.startSpin();
-
-            //controller.genererPassager();
-            //controller.genererMarchandise();
-            //controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
-            //controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
-            //controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
         }
 
         private void BtnChargerScenario_Click(object sender, EventArgs e)
         {
             controller.deserialize();
+        }
+
+        private void BtnStop_Click(object sender, EventArgs e)
+        {
+            controller.genererPassager();
+            controller.genererMarchandise();
+            controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
         }
     }
 }
