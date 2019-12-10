@@ -8,14 +8,15 @@ namespace TP_Aviation___Simulation
 {
     class Embarquement : État
     {
-        public Embarquement() : base()
+        public Embarquement(Aeronef aeronef) : base(aeronef)
         {
-
+            etat = 2;
         }
 
-        public override void avancer()
+        public override void avancer(Aeronef aeronef, int tempsPasse)
         {
-
+            if (0 == 0)
+                Etat = 3;
         }
     }
 }

@@ -8,14 +8,14 @@ namespace TP_Aviation___Simulation
 {
     class Aller : EnVol
     {
-        public Aller() : base()
+        public Aller(Aeronef aeronef) : base(aeronef)
         {
-
+            etat = 4;
         }
 
-        public override void avancer()
+        public override void avancer(Aeronef aeronef, int tempsPasse)
         {
-
+            
         }
     }
 }

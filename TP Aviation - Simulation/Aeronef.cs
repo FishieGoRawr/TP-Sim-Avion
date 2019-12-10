@@ -59,5 +59,10 @@ namespace TP_Aviation___Simulation
         {
             get { return false; }
         }
+
+        public virtual int Entretien
+        {
+            get { return m_tempsEnt; }
+        }
     }
 }

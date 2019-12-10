@@ -83,9 +83,29 @@ namespace TP_Aviation___Simulation.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap feu {
+            get {
+                object obj = ResourceManager.GetObject("feu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap incendie {
             get {
                 object obj = ResourceManager.GetObject("incendie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jumelle {
+            get {
+                object obj = ResourceManager.GetObject("jumelle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +136,16 @@ namespace TP_Aviation___Simulation.Properties {
         internal static System.Drawing.Bitmap passager {
             get {
                 object obj = ResourceManager.GetObject("passager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap secours {
+            get {
+                object obj = ResourceManager.GetObject("secours", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

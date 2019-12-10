@@ -8,12 +8,21 @@ namespace TP_Aviation___Simulation
 {
     public abstract class État
     {
-        public État()
-        {
+        protected int etat = 0;
+        protected Aeronef m_aeronef;
 
+        public État(Aeronef aeronef)
+        {
+            
         }
 
-        virtual public void avancer()
+        public virtual int Etat
+        {
+            get { return etat; }
+            set { etat = value; }
+        }
+
+        public virtual void avancer(Aeronef aeronef, int tempsPasse)
         {
 
         }

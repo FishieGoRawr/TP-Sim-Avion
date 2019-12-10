@@ -8,12 +8,13 @@ namespace TP_Aviation___Simulation
 {
     class Observation : EnVol
     {
-        public Observation() : base()
+         
+        public Observation(Aeronef aeronef) : base(aeronef)
         {
-
+            etat = 5;
         }
 
-        public override void avancer()
+        public override void avancer(Aeronef aeronef, int tempsPasse)
         {
 
         }

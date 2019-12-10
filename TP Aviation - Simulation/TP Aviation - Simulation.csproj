@@ -135,5 +135,14 @@
   <ItemGroup>
     <None Include="Resources\worldmap good.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumelle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secours.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
