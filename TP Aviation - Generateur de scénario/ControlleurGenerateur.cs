@@ -11,11 +11,22 @@ namespace TP_Aviation___Generateur_de_scénario
     {
         Scenario scenario;
 
+        /// <summary>
+        /// Constructeur du controlleur de générateur
+        /// </summary>
         public ControlleurGenerateur()
         {
             scenario = Scenario.getScenario;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="achalPass"></param>
+        /// <param name="achalMarch"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public string creerAeroport(string nom, int achalPass, int achalMarch, TextBox position)
         {
             string areoport;
@@ -24,6 +35,18 @@ namespace TP_Aviation___Generateur_de_scénario
             return areoport;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="type"></param>
+        /// <param name="vitesse"></param>
+        /// <param name="entretien"></param>
+        /// <param name="charger"></param>
+        /// <param name="decharger"></param>
+        /// <param name="change"></param>
+        /// <param name="aeroports"></param>
+        /// <returns>Retourne l'aeronef creer</returns>
         public string creerAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, string aeroports)
         {
             string areonef;
@@ -31,11 +54,17 @@ namespace TP_Aviation___Generateur_de_scénario
             return areonef;
         }
 
+        /// <summary>
+        /// Enregistre le scenario dans un fichier
+        /// </summary>
         public void serializeScenario()
         {
             scenario.SerializeScenario();
         }
 
+        /// <summary>
+        /// Génére un scénario selon le fichier choisi
+        /// </summary>
         public void deserializeScenario()
         {
             scenario.DeserializeScenario();

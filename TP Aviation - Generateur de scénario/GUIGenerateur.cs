@@ -197,6 +197,7 @@ namespace TP_Aviation___Generateur_de_scénario
                     messageErreur = "Veuillez entrer un temps de déchargement pour l'aréonef.";
                 }
 
+                //Si toutes les conditions ne sont pas remplies, affiche un message d'erreur
                 if (!areonefValide)
                     MessageBox.Show(messageErreur);
                 else
