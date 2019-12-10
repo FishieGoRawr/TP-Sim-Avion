@@ -8,11 +8,13 @@ using System.Windows.Forms;
 
 namespace TP_Aviation___Simulation
 {
+    public delegate void HorlogeEventHandler(int[] tempsHeureMin);
+
     public class Horloge
     {
         Thread mainThread;
         MethodInvoker invoker;
-        public delegate void HorlogeEventHandler(int[] tempsHeureMin);
+        
         public event HorlogeEventHandler TempsChanged;
 
         int m_heures { get; set; }
@@ -24,7 +26,7 @@ namespace TP_Aviation___Simulation
             m_minutes = 0;
         }
 
-        protected virtual void OnHeureAjoutee()
+        protected virtual void HeureAjoutee()
         {
             int[] temps = new int[2];
             temps[0] = m_heures;
@@ -36,7 +38,7 @@ namespace TP_Aviation___Simulation
         public void ajouteHeure()
         {
             m_heures++;
-            OnHeureAjoutee();
+            HeureAjoutee();
         }
 
         public void ajouteMinutes()
@@ -49,7 +51,7 @@ namespace TP_Aviation___Simulation
             else
                 m_minutes += 5;
 
-            OnHeureAjoutee();
+            HeureAjoutee();
         }
     }
 }

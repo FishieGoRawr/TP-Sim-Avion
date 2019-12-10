@@ -14,15 +14,18 @@ namespace TP_Aviation___Simulation
     public partial class GUISimulateur : Form
     {
         ControllerSimulateur controller;
+        bool simulateurEnMarche;
 
         public GUISimulateur()
         {
             InitializeComponent();
 
+            simulateurEnMarche = false;
             controller = new ControllerSimulateur(this);
+            controller.abonnerOnHeureChanged(OnHeureAjoutee);
         }
 
-        public void updateTimer(int[] temps)
+        public void OnHeureAjoutee(int[] temps)
         {
             MethodInvoker invoker = delegate
             {
@@ -52,7 +55,14 @@ namespace TP_Aviation___Simulation
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            controller.startSpin();
+            controller.changerStatusSpin();
+
+            if (simulateurEnMarche)
+                btnStart.Text = "Démarrer";
+            else
+                btnStart.Text = "Arrêter";
+
+            simulateurEnMarche = !simulateurEnMarche;
 
             //controller.genererPassager();
             //controller.genererMarchandise();

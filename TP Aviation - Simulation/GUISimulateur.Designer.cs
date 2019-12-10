@@ -30,7 +30,6 @@
         {
             this.pcbWorldmap = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnChargerScenario = new System.Windows.Forms.Button();
             this.lsbAreoport = new System.Windows.Forms.ListBox();
@@ -64,22 +63,13 @@
             this.trackBar1.Size = new System.Drawing.Size(296, 69);
             this.trackBar1.TabIndex = 2;
             // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(1065, 11);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(146, 35);
-            this.btnStop.TabIndex = 3;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(914, 11);
+            this.btnStart.Location = new System.Drawing.Point(918, 11);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(146, 35);
+            this.btnStart.Size = new System.Drawing.Size(296, 35);
             this.btnStart.TabIndex = 4;
-            this.btnStart.Text = "Start";
+            this.btnStart.Text = "Démarrer";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
@@ -180,7 +170,6 @@
             this.Controls.Add(this.lsbAreoport);
             this.Controls.Add(this.btnChargerScenario);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pcbWorldmap);
             this.Name = "GUISimulateur";
@@ -197,7 +186,6 @@
 
         private System.Windows.Forms.PictureBox pcbWorldmap;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnChargerScenario;
         private System.Windows.Forms.ListBox lsbAreoport;

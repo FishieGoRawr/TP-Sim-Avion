@@ -13,21 +13,12 @@ namespace TP_Aviation___Simulation
     public class ControllerSimulateur
     {
         Scenario m_scenario;
-        Horloge m_horloge;
         GUISimulateur m_gui;
-        bool m_simulateurEnMarche;
-        Thread mainThread;
 
         public ControllerSimulateur(GUISimulateur p_gui)
         {
             m_scenario = Scenario.getScenario;
-            m_horloge = new Horloge();
             m_gui = p_gui;
-            m_simulateurEnMarche = false;
-
-            mainThread = new Thread(new ThreadStart(spin));
-
-            m_horloge.TempsChanged += m_gui.updateTimer;
         }
 
         //Exemple
@@ -46,35 +37,14 @@ namespace TP_Aviation___Simulation
 
         }
 
-        public void startSpin()
+        public void changerStatusSpin()
         {
-            if (mainThread.IsAlive)
-            {
-                if (m_simulateurEnMarche)
-                {
-                    mainThread.Suspend();
-                    m_simulateurEnMarche = false;
-                }
-                else
-                {
-                    mainThread.Resume();
-                    m_simulateurEnMarche = true;
-                }
-            }
-            else
-            {
-                mainThread.Start();
-                m_simulateurEnMarche = true;
-            }
+            m_scenario.changerStatusSpin();
         }
 
-        public void spin()
+        public void abonnerOnHeureChanged(HorlogeEventHandler handler)
         {
-            while (m_simulateurEnMarche)
-            {
-                Thread.Sleep(1);
-                m_horloge.ajouteMinutes();
-            }
+            m_scenario.abonnerOnHeureChanged(handler);
         }
 
         public void genererPassager()

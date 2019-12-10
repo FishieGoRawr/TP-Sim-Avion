@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    class Scenario
+    public class Scenario
     {
         static Scenario m_scenario;
         public List<Areoport> listAreoport;
         UsineClient usine;
         Random rand;
+        bool m_simulateurEnMarche;
+        Thread mainThread { get; set; }
+        Horloge m_horloge { get; set; }
+        ControllerSimulateur m_controller;
 
         Scenario()
         {
             listAreoport = new List<Areoport>();
             usine = UsineClient.getUsineClient;
             rand = new Random(DateTime.Now.Millisecond);
+            m_simulateurEnMarche = false;
+            mainThread = new Thread(new ThreadStart(spin));
+            m_horloge = new Horloge();
+            
 
             //TEMPO
             listAreoport.Add(new Areoport());
@@ -35,6 +44,42 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        public void changerStatusSpin()
+        {
+
+            if (mainThread.IsAlive)
+            {
+                if (m_simulateurEnMarche)
+                {
+                    mainThread.Suspend();
+                    m_simulateurEnMarche = false;
+                }
+                else
+                {
+                    mainThread.Resume();
+                    m_simulateurEnMarche = true;
+                }
+            }
+            else
+            {
+                mainThread.Start();
+                m_simulateurEnMarche = true;
+            }
+        }
+
+        public void spin()
+        {
+            while (m_simulateurEnMarche)
+            {
+                Thread.Sleep(1);
+                m_horloge.ajouteMinutes();
+            }
+        }
+
+        public void abonnerOnHeureChanged(HorlogeEventHandler handler)
+        {
+            m_horloge.TempsChanged += handler;
+        }
 
         public void ajouterPassager()
         {
