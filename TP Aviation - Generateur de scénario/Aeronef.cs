@@ -8,8 +8,11 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    [XmlInclude(typeof(Distance))]
-    [XmlInclude(typeof(Transport))]
+    [XmlInclude(typeof(AeroPassager))]
+    [XmlInclude(typeof(AeroMarchandise))]
+    [XmlInclude(typeof(AeroObservateur))]
+    [XmlInclude(typeof(AeroSecours))]
+    [XmlInclude(typeof(AeroIncendie))]
     public class Aeronef
     {
         public String m_nom { get; set; }

@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP_Aviation___Simulation
 {
+    [XmlInclude(typeof(AeroPassager))]
+    [XmlInclude(typeof(AeroMarchandise))]
+    [XmlInclude(typeof(AeroObservateur))]
+    [XmlInclude(typeof(AeroSecours))]
+    [XmlInclude(typeof(AeroIncendie))]
     public class Aeronef
     {
         public String m_nom { get; set; }
