@@ -35,6 +35,7 @@ namespace TP_Aviation___Simulation
             }
         }
 
+
         public void ajouterPassager()
         {
             foreach (var areoport in listAreoport)

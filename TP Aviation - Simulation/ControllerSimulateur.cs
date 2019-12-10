@@ -3,22 +3,31 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace TP_Aviation___Simulation
 {
-    class ControllerSimulateur
+    public class ControllerSimulateur
     {
         Scenario m_scenario;
         Horloge m_horloge;
+        GUISimulateur m_gui;
+        bool m_simulateurEnMarche;
+        Thread mainThread;
 
-        public ControllerSimulateur()
+        public ControllerSimulateur(GUISimulateur p_gui)
         {
-            this.m_scenario = Scenario.getScenario;
-            this.m_horloge = new Horloge();
-            //this.m_horloge = new Horloge();
+            m_scenario = Scenario.getScenario;
+            m_horloge = new Horloge();
+            m_gui = p_gui;
+            m_simulateurEnMarche = false;
+
+            mainThread = new Thread(new ThreadStart(spin));
+
+            m_horloge.TempsChanged += m_gui.updateTimer;
         }
 
         //Exemple
@@ -37,9 +46,35 @@ namespace TP_Aviation___Simulation
 
         }
 
+        public void startSpin()
+        {
+            if (mainThread.IsAlive)
+            {
+                if (m_simulateurEnMarche)
+                {
+                    mainThread.Suspend();
+                    m_simulateurEnMarche = false;
+                }
+                else
+                {
+                    mainThread.Resume();
+                    m_simulateurEnMarche = true;
+                }
+            }
+            else
+            {
+                mainThread.Start();
+                m_simulateurEnMarche = true;
+            }
+        }
+
         public void spin()
         {
-
+            while (m_simulateurEnMarche)
+            {
+                Thread.Sleep(1);
+                m_horloge.ajouteMinutes();
+            }
         }
 
         public void genererPassager()

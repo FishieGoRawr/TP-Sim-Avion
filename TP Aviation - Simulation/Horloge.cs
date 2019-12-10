@@ -10,31 +10,46 @@ namespace TP_Aviation___Simulation
 {
     public class Horloge
     {
-        System.Windows.Forms.Timer m_horloge;
+        Thread mainThread;
+        MethodInvoker invoker;
+        public delegate void HorlogeEventHandler(int[] tempsHeureMin);
+        public event HorlogeEventHandler TempsChanged;
+
+        int m_heures { get; set; }
+        int m_minutes { get; set; }
 
         public Horloge()
         {
-             
-            m_horloge = new System.Windows.Forms.Timer();
-            m_horloge.Interval = 15000;
-            m_horloge.Tick += sendUpdatedTimeToGUI;
-            m_horloge.Enabled = true;
-            m_horloge.Start();
+            m_heures = 0;
+            m_minutes = 0;
         }
 
-        public void sendUpdatedTimeToGUI(object senders, EventArgs e)
+        protected virtual void OnHeureAjoutee()
         {
-            Console.WriteLine(m_horloge.ToString());
+            int[] temps = new int[2];
+            temps[0] = m_heures;
+            temps[1] = m_minutes;
+
+            TempsChanged(temps);
         }
 
-        public void convertirHorloge()
+        public void ajouteHeure()
         {
-
+            m_heures++;
+            OnHeureAjoutee();
         }
 
-        public void changerVitesse()
+        public void ajouteMinutes()
         {
+            if (m_minutes + 5 == 60)
+            {
+                ajouteHeure();
+                m_minutes = 0;
+            }
+            else
+                m_minutes += 5;
 
+            OnHeureAjoutee();
         }
     }
 }
