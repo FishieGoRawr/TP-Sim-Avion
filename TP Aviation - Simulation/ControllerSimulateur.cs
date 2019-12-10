@@ -23,7 +23,7 @@ namespace TP_Aviation___Simulation
             m_scenario = Scenario.getScenario;
             m_horloge = new Horloge();
             m_gui = p_gui;
-            m_simulateurEnMarche = true;
+            m_simulateurEnMarche = false;
 
             mainThread = new Thread(new ThreadStart(spin));
 
@@ -48,9 +48,24 @@ namespace TP_Aviation___Simulation
 
         public void startSpin()
         {
-            if (!mainThread.IsAlive)
+            if (mainThread.IsAlive)
+            {
+                if (m_simulateurEnMarche)
+                {
+                    mainThread.Suspend();
+                    m_simulateurEnMarche = false;
+                }
+                else
+                {
+                    mainThread.Resume();
+                    m_simulateurEnMarche = true;
+                }
+            }
+            else
+            {
                 mainThread.Start();
-
+                m_simulateurEnMarche = true;
+            }
         }
 
         public void spin()
