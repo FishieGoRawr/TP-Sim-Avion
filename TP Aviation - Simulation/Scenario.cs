@@ -80,6 +80,12 @@ namespace TP_Aviation___Simulation
         {
             m_horloge.TempsChanged += handler;
         }
+        
+        public List<Areoport> Liste
+        {
+            get { return listAreoport; }
+            set { listAreoport = value; }
+        }
 
         public void ajouterPassager()
         {
@@ -140,7 +146,10 @@ namespace TP_Aviation___Simulation
                 index = trouverPlusProche(listAreoport, tempo);
 
                 if (index != -1)
+                {
                     listAreoport[index].m_listClient.Add(tempo);
+                    Console.WriteLine(tempo);
+                }
             }
         }
 
@@ -236,7 +245,7 @@ namespace TP_Aviation___Simulation
             bool temp = false;
             for (int i = 0; i < areoport.m_listAeronef.Count; i++)
             {
-                if (areoport.m_listAeronef[i].Type == "Incendie")
+                if (areoport.m_listAeronef[i].Type == "Incendies")
                     if(areoport.m_listAeronef[i].Dispo)
                         temp = true;
                 else
@@ -250,7 +259,7 @@ namespace TP_Aviation___Simulation
             bool temp = false;
             for (int i = 0; i < areoport.m_listAeronef.Count; i++)
             {
-                if (areoport.m_listAeronef[i].Type == "Observateur")
+                if (areoport.m_listAeronef[i].Type == "Observateurs")
                     if (areoport.m_listAeronef[i].Dispo)
                         temp = true;
                     else
@@ -268,7 +277,7 @@ namespace TP_Aviation___Simulation
                     if (areoport.m_listAeronef[i].Dispo)
                         temp = true;
                     else
-                    temp = false;
+                        temp = false;
             }
             return temp;
         }

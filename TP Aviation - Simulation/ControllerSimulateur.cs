@@ -31,7 +31,7 @@ namespace TP_Aviation___Simulation
             {
                 using (StreamReader rd = new StreamReader(ofd.FileName))
                 {
-                    List<Areoport> listTest = xs.Deserialize(rd) as List<Areoport>;
+                    m_scenario.Liste = xs.Deserialize(rd) as List<Areoport>;
                 }
             }
 

@@ -63,17 +63,20 @@ namespace TP_Aviation___Simulation
                 btnStart.Text = "Arrêter";
 
             simulateurEnMarche = !simulateurEnMarche;
-
-            //controller.genererPassager();
-            //controller.genererMarchandise();
-            //controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
-            //controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
-            //controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
         }
 
         private void BtnChargerScenario_Click(object sender, EventArgs e)
         {
             controller.deserialize();
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            controller.genererPassager();
+            controller.genererMarchandise();
+            controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
         }
     }
 }

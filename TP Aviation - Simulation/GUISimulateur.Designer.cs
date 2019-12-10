@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblHorloge = new System.Windows.Forms.Label();
+            this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbWorldmap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -156,11 +157,21 @@
             this.lblHorloge.Text = "00 : 00";
             this.lblHorloge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(1434, 361);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(45, 19);
+            this.btnTest.TabIndex = 13;
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // GUISimulateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1526, 1245);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.lblHorloge);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,6 +206,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblHorloge;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 

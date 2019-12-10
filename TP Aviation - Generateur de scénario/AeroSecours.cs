@@ -42,6 +42,7 @@ namespace TP_Aviation___Generateur_de_scénario
             m_nom = "null";
             m_vitesse = 0;
             m_tempsEnt = 0;
+            m_dispo = true;
             m_origine = new PositionGeo();
             m_image = null;
             m_nbAller = 0;
