@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace TP_Aviation___Simulation
@@ -12,28 +13,31 @@ namespace TP_Aviation___Simulation
     {
         Scenario m_scenario;
         Horloge m_horloge;
-        GUISimulateur m_gui;
 
         public ControllerSimulateur()
         {
             this.m_scenario = Scenario.getScenario;
             this.m_horloge = new Horloge();
-            this.m_gui =  new GUISimulateur();
         }
 
         //Exemple
         public void deserialize()
         {
-            XmlSerializer xs = new XmlSerializer(typeof(ControllerSimulateur));
-            using (StreamReader rd = new StreamReader("person.xml"))
+            OpenFileDialog ofd = new OpenFileDialog();
+            XmlSerializer xs = new XmlSerializer(typeof(List<Areoport>));
+
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                ControllerSimulateur p = xs.Deserialize(rd) as ControllerSimulateur;
+                using (StreamReader rd = new StreamReader(ofd.FileName))
+                {
+                    List<Areoport> listTest = xs.Deserialize(rd) as List<Areoport>;
+                }
             }
+
         }
 
         public void spin()
         {
-           
 
         }
 
@@ -46,14 +50,17 @@ namespace TP_Aviation___Simulation
         {
             m_scenario.ajouterMarchandise();
         }
+
         public void genererObservateur(int width, int height)
         {
             m_scenario.ajouterObservateur(width, height);
         }
+
         public void genererFeu(int width, int height)
         {
             m_scenario.ajouterFeu(width, height);
         }
+
         public void genererSecours(int width, int height)
         {
             m_scenario.ajouterSecours(width, height);

@@ -10,32 +10,33 @@ namespace TP_Aviation___Simulation
     {
         protected int m_intensite;
 
-        public Feu(int width, int height) : base()
+        public Feu(int width, int height, Random rand) : base()
         {
             this.m_nom = "Feu";
-            this.m_destination = randomPosition(width, height);
-            this.m_intensite = randomIntensite();
+            this.m_destination = randomPosition(width, height, rand);
+            this.m_intensite = randomIntensite(rand);
         }
 
-        public override PositionGeo randomPosition(int width, int height)
+        public override PositionGeo randomPosition(int width, int height, Random rand)
         {
             PositionGeo position = new PositionGeo();
-
-            Random rand = new Random();
-
             position.PosX = rand.Next(width);
             position.PosY = rand.Next(height);
 
             return position;
         }
 
-        public int randomIntensite()
+        public int randomIntensite(Random rand)
         {
-            Random rand = new Random();
             int intensite = 0;
             intensite = rand.Next(5);
 
             return intensite;
+        }
+
+        public override string ToString()
+        {
+            return m_nom + " " + m_destination + " " + m_intensite;
         }
     }
 }

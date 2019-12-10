@@ -224,14 +224,14 @@ namespace TP_Aviation___Generateur_de_scénario
         /// <param name="e">Event</param>
         private void BtnGenerer_Click(object sender, EventArgs e)
         {
-            //if (lsbAeroports.Items.Count == 0)
-            //    MessageBox.Show("Vous devez au moin avoir un aréoport pour créer un scénario.");
-            //else if (lsbAeronefs.Items.Count == 0)
-            //    MessageBox.Show("Vous devez au moin avoir un aéronef quelquonque pour créer un scénario.");
-            //else
-            //    controller.serializeScenario();
+            if (lsbAeroports.Items.Count == 0)
+                MessageBox.Show("Vous devez au moin avoir un aréoport pour créer un scénario.");
+            else if (lsbAeronefs.Items.Count == 0)
+                MessageBox.Show("Vous devez au moin avoir un aéronef quelquonque pour créer un scénario.");
+            else
+                controller.serializeScenario();
 
-            controller.deserializeScenario();
+            //controller.deserializeScenario();
 
         }
 

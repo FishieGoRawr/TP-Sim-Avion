@@ -7,21 +7,23 @@ using System.Drawing;
 
 namespace TP_Aviation___Simulation
 {
-    public class AreoSecours : Distance
+    public class AeroSecours : Distance
     {
         Bitmap m_image;
 
-        public AreoSecours(string nom, int vitesse, int entretien, PositionGeo origine, int nbAller) : base(nom, vitesse, entretien, origine)
+        public AeroSecours(string nom, string type, int vitesse, int entretien, PositionGeo origine, int nbAller) : base(nom, type, vitesse, entretien, origine)
         {
             this.m_nom = nom;
+            this.m_type = type;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
+            this.m_dispo = true;
             this.m_image = m_image = Properties.Resources.chopper;
             this.m_nbAller = nbAller;
         }
 
-        public AreoSecours() : base()
+        public AeroSecours() : base()
         {
             m_nom = "null";
             m_vitesse = 0;

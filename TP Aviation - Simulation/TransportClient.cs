@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     {
         protected Areoport m_destination;
 
-        public TransportClient(List<Areoport> listAreoport) : base()
+        public TransportClient(List<Areoport> listAreoport, Random rand) : base()
         {
         }
     }

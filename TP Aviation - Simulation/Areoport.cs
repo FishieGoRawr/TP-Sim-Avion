@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     public class Areoport
     {
         public string m_nom { get; set; }
-        public PositionGeo m_localisation { get; set; }
+        public PositionGeo m_localisation { get ; set; }
         public List<Aeronef> m_listAeronef { get; set; }
         public List<Client> m_listClient;
         public int m_achalPassager { get; set; }

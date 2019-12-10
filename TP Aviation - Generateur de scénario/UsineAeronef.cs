@@ -32,19 +32,19 @@ namespace TP_Aviation___Generateur_de_scénario
             switch (type)
             {
                 case "Passagers" :
-                    newAeronef = new AeroPassager(nom, vitesse, entretien, origine, charger, decharger, change);
+                    newAeronef = new AeroPassager(nom, type, vitesse, entretien, origine, charger, decharger, change);
                     break;
                 case "Marchandises" :
-                    newAeronef = new AeroMarchandise(nom, vitesse, entretien, origine, charger, decharger, change);
+                    newAeronef = new AeroMarchandise(nom, type, vitesse, entretien, origine, charger, decharger, change);
                     break;
                 case "Observateurs" :
-                    newAeronef = new AeroObservateur(nom, vitesse, entretien, origine, 1, change);
+                    newAeronef = new AeroObservateur(nom, type, vitesse, entretien, origine, 1, change);
                     break;
                 case "Incendies" :
-                    newAeronef = new AeroIncendie(nom, vitesse, entretien, origine);
+                    newAeronef = new AeroIncendie(nom, type, vitesse, entretien, origine);
                     break;
                 case "Secours" :
-                    newAeronef = new AeroSecours(nom, vitesse, entretien, origine, 1);
+                    newAeronef = new AeroSecours(nom, type, vitesse, entretien, origine, 1);
                     break;
                 default:
                     break;

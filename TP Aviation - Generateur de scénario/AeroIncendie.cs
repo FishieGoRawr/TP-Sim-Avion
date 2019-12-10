@@ -20,12 +20,15 @@ namespace TP_Aviation___Generateur_de_scénario
         /// <param name="vitesse">Vitesse de l'aeronef</param>
         /// <param name="entretien">Temps d'entretien de l'aeronef</param>
         /// <param name="origine">Point d'origine de l'aeronef</param>
-        public AeroIncendie(string nom, int vitesse, int entretien, PositionGeo origine) : base(nom, vitesse, entretien, origine)
+        /// <param name="type">Type de l'areonef</param>
+        public AeroIncendie(string nom, string type, int vitesse, int entretien, PositionGeo origine) : base(nom, type, vitesse, entretien, origine)
         {
             this.m_nom = nom;
+            this.m_type = type;
             this.m_vitesse = vitesse;
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
+            this.m_dispo = true;
             this.m_image = Properties.Resources.incendie;
             this.m_nbAller = 0;
         }
