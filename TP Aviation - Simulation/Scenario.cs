@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     public class Scenario
     {
         static Scenario m_scenario;
-        public List<Areoport> listAreoport;
+        public List<Aeroport> listAreoport;
         UsineClient usine;
         Random rand;
         bool m_simulateurEnMarche;
@@ -20,7 +20,7 @@ namespace TP_Aviation___Simulation
 
         Scenario()
         {
-            listAreoport = new List<Areoport>();
+            listAreoport = new List<Aeroport>();
             usine = UsineClient.getUsineClient;
             rand = new Random(DateTime.Now.Millisecond);
             m_simulateurEnMarche = false;
@@ -29,7 +29,7 @@ namespace TP_Aviation___Simulation
             
 
             //TEMPO
-            listAreoport.Add(new Areoport());
+            listAreoport.Add(new Aeroport());
         }
               
         public static Scenario getScenario
@@ -81,7 +81,7 @@ namespace TP_Aviation___Simulation
             m_horloge.TempsChanged += handler;
         }
         
-        public List<Areoport> Liste
+        public List<Aeroport> Liste
         {
             get { return listAreoport; }
             set { listAreoport = value; }
@@ -153,7 +153,7 @@ namespace TP_Aviation___Simulation
             }
         }
 
-        public int trouverPlusProche(List<Areoport> listAreoport, Client client)
+        public int trouverPlusProche(List<Aeroport> listAreoport, Client client)
         {
             int posX;
             int posY;
@@ -240,42 +240,51 @@ namespace TP_Aviation___Simulation
             return indexAreoport;
         }
 
-        public bool possedeAreoIncendie(Areoport areoport)
+        public bool possedeAreoIncendie(Aeroport areoport)
         {
             bool temp = false;
             for (int i = 0; i < areoport.m_listAeronef.Count; i++)
             {
                 if (areoport.m_listAeronef[i].Type == "Incendies")
-                    if(areoport.m_listAeronef[i].Dispo)
+                    if (areoport.m_listAeronef[i].Dispo)
+                    {
+                        areoport.m_listAeronef[i].Dispo = false;
                         temp = true;
+                    }  
                 else
                     temp = false;
             }
             return temp;
         }
 
-        public bool possedeAreoObservateur(Areoport areoport)
+        public bool possedeAreoObservateur(Aeroport areoport)
         {
             bool temp = false;
             for (int i = 0; i < areoport.m_listAeronef.Count; i++)
             {
                 if (areoport.m_listAeronef[i].Type == "Observateurs")
                     if (areoport.m_listAeronef[i].Dispo)
+                    {
+                        areoport.m_listAeronef[i].Dispo = false;
                         temp = true;
+                    }
                     else
                     temp = false;
             }
             return temp;
         }
 
-        public bool possedeAreoSecours(Areoport areoport)
+        public bool possedeAreoSecours(Aeroport areoport)
         {
             bool temp = false;
             for (int i = 0; i < areoport.m_listAeronef.Count; i++)
             {
                 if (areoport.m_listAeronef[i].Type == "Secours")
                     if (areoport.m_listAeronef[i].Dispo)
+                    {
+                        areoport.m_listAeronef[i].Dispo = false;
                         temp = true;
+                    }
                     else
                         temp = false;
             }

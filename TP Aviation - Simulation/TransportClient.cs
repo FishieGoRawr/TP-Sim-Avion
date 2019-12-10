@@ -8,10 +8,15 @@ namespace TP_Aviation___Simulation
 {
     public abstract class TransportClient : Client
     {
-        protected Areoport m_destination;
+        protected Aeroport m_destination;
 
-        public TransportClient(List<Areoport> listAreoport, Random rand) : base()
+        public TransportClient(List<Aeroport> listAreoport, Random rand) : base()
         {
+        }
+
+        public override PositionGeo Destination
+        {
+            get { return m_destination.Localisation; }
         }
     }
 }

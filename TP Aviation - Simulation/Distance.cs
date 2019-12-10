@@ -24,6 +24,7 @@ namespace TP_Aviation___Simulation
         public override bool Dispo
         {
             get { return m_dispo; }
+            set { m_dispo = value; }
         }
     }
 }

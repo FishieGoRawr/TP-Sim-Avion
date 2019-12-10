@@ -6,40 +6,82 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    class Attente : État
+    class Attente : Etat
     {
-        int tempsRestant;
         public Attente(Aeronef aeronef) : base(aeronef)
         {
             etat = 1;
             this.m_aeronef = aeronef;
-            this.tempsRestant = aeronef.Entretien;
         }
 
-        public override void avancer(Aeronef aeronef, int tempsPasse)
+        public override void avancer(int tempsPasse, List<Client> clients)
         {
-
-            if(tempsRestant <= 0)
+            if (m_aeronef.Dispo)
             {
-                if (aeronef.Type == "Passagers" || aeronef.Type == "Marchandises")
+                if (m_aeronef.Type == "Passagers")
                 {
-                    Etat = 2;
+                    int total = 0;
+                    List<int> iClient = new List<int>();
+
+                    foreach (var client in clients)
+                    {
+                        for (int i = 0; i < clients.Count; i++)
+                        {
+                            if ((clients[i].Nom == "Passager") && (clients[i].Destination == client.Destination))
+                            {
+                                total = total + clients[i].Quantite;
+                                iClient.Add(i);
+                            }
+                        }
+                    }
+
+                    if (total >= (m_aeronef.Capacite * 0.75))
+                    {
+                        for (int i = 0; i < iClient.Count; i++)
+                        {
+                            clients.RemoveAt(iClient[i]);
+                        }
+                        Index = 2;
+                    }
+                    else if (total > m_aeronef.Capacite)
+                    {
+                        //diviser client
+                    }
                 }
-                else if (aeronef.Type == "Incendies" || aeronef.Type == "Secours")
+                else if (m_aeronef.Type == "Marchandises")
                 {
-                    Etat = 5;
+                    double total = 0;
+                    List<int> iClient = new List<int>();
+
+                    foreach (var client in clients)
+                    {
+                        for (int i = 0; i < clients.Count; i++)
+                        {
+                            if ((clients[i].Nom == "Marchandise") && (clients[i].Destination == client.Destination))
+                            {
+                                total = total + clients[i].Quantite;
+                            }
+                        }
+
+                        if (total >= (m_aeronef.Capacite * 0.75))
+                        {
+                            for (int i = 0; i < iClient.Count; i++)
+                            {
+                                clients.RemoveAt(iClient[i]);
+                            }
+                            Index = 2;
+                        }
+                    }
+                }
+                else if (m_aeronef.Type == "Incendies" || m_aeronef.Type == "Secours")
+                {
+                    Index = 5;
                 }
                 else
                 {
-                    Etat = 4;
+                    Index = 4;
                 }
             }
-            else
-            {
-                tempsRestant = tempsRestant - tempsPasse;
-            }
-
-            
         }
     }
 }

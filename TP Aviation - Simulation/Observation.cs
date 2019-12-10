@@ -11,10 +11,11 @@ namespace TP_Aviation___Simulation
          
         public Observation(Aeronef aeronef) : base(aeronef)
         {
-            etat = 5;
+            Index = 5;
+            this.m_aeronef = aeronef;
         }
 
-        public override void avancer(Aeronef aeronef, int tempsPasse)
+        public override void avancer(int tempsPasse, List<Client> clients)
         {
 
         }

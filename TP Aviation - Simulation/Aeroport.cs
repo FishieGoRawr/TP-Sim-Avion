@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace TP_Aviation___Simulation
 {
-    public class Areoport
+    public class Aeroport
     {
         public string m_nom { get; set; }
         public PositionGeo m_localisation { get ; set; }
@@ -17,7 +17,7 @@ namespace TP_Aviation___Simulation
         public int m_achalMarchandise { get; set; }
         public Bitmap m_image;
 
-        public Areoport(string p_nom, int p_achalMarchandise, int p_achalPassager)
+        public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager)
         {
             m_listAeronef = new List<Aeronef>();
             m_listClient = new List<Client>();
@@ -28,13 +28,26 @@ namespace TP_Aviation___Simulation
             m_image = Properties.Resources.airport;
         }
 
-        public Areoport()
+        public Aeroport()
         {
             m_nom = "null";
             m_localisation = new PositionGeo();
             m_listAeronef = new List<Aeronef>();
             m_achalPassager = 0;
             m_achalMarchandise = 0;
+        }
+
+        public void bougerAvion(int temps)
+        {
+            foreach (var aeronef in m_listAeronef)
+            {
+                aeronef.avancerAvion(temps, m_listClient);
+            }
+        }
+
+        public PositionGeo Localisation
+        {
+            get { return m_localisation; }
         }
     }
 }

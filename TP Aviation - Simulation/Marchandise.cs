@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     {
         protected double m_poid;
 
-        public Marchandise(List<Areoport> listAreoport, Areoport origine, Random rand) : base(listAreoport, rand)
+        public Marchandise(List<Aeroport> listAreoport, Aeroport origine, Random rand) : base(listAreoport, rand)
         {
             this.m_nom = "Marchandise";
             this.m_destination = randomAreoport(listAreoport, origine, rand);
@@ -25,7 +25,7 @@ namespace TP_Aviation___Simulation
             return poid;
         }
 
-        public Areoport randomAreoport(List<Areoport> listAreoport, Areoport origine, Random rand)
+        public Aeroport randomAreoport(List<Aeroport> listAreoport, Aeroport origine, Random rand)
         {
             int count = listAreoport.Count();
             bool different = false;
@@ -46,6 +46,11 @@ namespace TP_Aviation___Simulation
         public override string ToString()
         {
             return m_nom + " " + m_destination.m_nom + " " + m_poid;
+        }
+
+        public override double Poid
+        {
+            get { return m_poid; }
         }
     }
 }

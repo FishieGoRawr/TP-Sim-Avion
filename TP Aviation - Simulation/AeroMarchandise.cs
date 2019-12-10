@@ -32,7 +32,7 @@ namespace TP_Aviation___Simulation
             this.m_tempsEmb = charger;
             this.m_tempsDeb = decharger;
             this.m_capacite = change;
-            this.m_image = Properties.Resources.marchandise;
+            this.m_indexClient = -1;
         }
 
         /// <summary>
@@ -48,6 +48,12 @@ namespace TP_Aviation___Simulation
             m_tempsDeb = 0;
             m_capacite = 0;
             m_image = null;
+            this.m_indexClient = -1;
+        }
+
+        public override double DoubleCapacite
+        {
+            get { return m_capacite; }
         }
     }
 }

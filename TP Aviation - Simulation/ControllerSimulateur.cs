@@ -25,13 +25,13 @@ namespace TP_Aviation___Simulation
         public void deserialize()
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            XmlSerializer xs = new XmlSerializer(typeof(List<Areoport>));
+            XmlSerializer xs = new XmlSerializer(typeof(List<Aeroport>));
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 using (StreamReader rd = new StreamReader(ofd.FileName))
                 {
-                    m_scenario.Liste = xs.Deserialize(rd) as List<Areoport>;
+                    m_scenario.Liste = xs.Deserialize(rd) as List<Aeroport>;
                 }
             }
 
