@@ -8,11 +8,10 @@ namespace TP_Aviation___Simulation
 {
     public class PositionGeo
     {
-        int m_posX;
-        int m_posY;
-        string m_posDegreeMin;
+        public int m_posX { get; set; }
+        public int m_posY { get; set; }
+        public string m_posDegreeMin;
 
-        double m_latitude, m_longitude;
 
         //public PositionGeo(TextBox posDegreeMin)
         //{
