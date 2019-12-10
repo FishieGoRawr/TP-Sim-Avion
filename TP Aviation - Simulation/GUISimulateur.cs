@@ -23,7 +23,7 @@ namespace TP_Aviation___Simulation
             m_horloge.Tick += new EventHandler(updateTimer);
             m_horloge.Interval = 1;
             m_horloge.Start();
-            //controller = new ControllerSimulateur();
+            controller = new ControllerSimulateur();
         }
 
         private static void updateTimer(object sender, EventArgs e)
