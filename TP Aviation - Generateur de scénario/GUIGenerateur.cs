@@ -231,9 +231,6 @@ namespace TP_Aviation___Generateur_de_scénario
                 MessageBox.Show("Vous devez au moin avoir un aéronef quelquonque pour créer un scénario.");
             else
                 controller.serializeScenario();
-
-            //controller.deserializeScenario();
-
         }
 
         /// <summary>

@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
     public class PositionGeo
     {
-        int m_posX { get; set; }
-        int m_posY { get; set; }
-        string m_posDegreeMin { get; set; }
+        public int m_posX { get; set; }
+        public int m_posY { get; set; }
+        public string m_posDegreeMin { get; set; }
 
         public PositionGeo(TextBox posDegreeMin)
         {

@@ -23,31 +23,15 @@ namespace TP_Aviation___Simulation
             simulateurEnMarche = false;
             controller = new ControllerSimulateur(this);
             controller.abonnerOnHeureChanged(OnHeureAjoutee);
+
         }
 
-        public void OnHeureAjoutee(int[] temps)
+        public void OnHeureAjoutee(string temps)
         {
             MethodInvoker invoker = delegate
             {
-                int heures = temps[0];
-                int minutes = temps[1];
-
-                if (heures < 10)
-                {
-                    if (minutes < 10)
-                        lblHorloge.Text = $"0{heures} : 0{minutes}";
-                    else
-                        lblHorloge.Text = $"0{heures} : {minutes}";
-                }
-                else
-                {
-                    if (minutes < 10)
-                        lblHorloge.Text = $"{heures} : 0{minutes}";
-                    else
-                        lblHorloge.Text = $"{heures} : {minutes}";
-                }
-
-                this.Refresh();
+                lblHorloge.Text = temps;
+                updateGUI();
             };
 
             this.Invoke(invoker);
@@ -68,15 +52,56 @@ namespace TP_Aviation___Simulation
         private void BtnChargerScenario_Click(object sender, EventArgs e)
         {
             controller.deserialize();
+            dessinerAreoports();
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            controller.genererPassager();
-            controller.genererMarchandise();
-            controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
-            controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
-            controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
+            dessinerAreoports();
+
+
+
+
+            //controller.genererPassager();
+            //controller.genererMarchandise();
+            //controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
+            //controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
+            //controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
+        }
+
+        public void updateGUI()
+        {
+            dessinerAreoports();
+        }
+
+        private void dessinerAreoports()
+        {
+            BufferedGraphicsContext currentContext = BufferedGraphicsManager.Current;
+            BufferedGraphics buffer = currentContext.Allocate(pcbWorldmap.CreateGraphics(), pcbWorldmap.DisplayRectangle);
+
+            Bitmap imgAreoport = Properties.Resources.airport;
+            Bitmap map = Properties.Resources.worldmap_good;
+            
+
+            Graphics g = buffer.Graphics;
+            g.DrawImage(map, 0, 0, map.Width, map.Height);
+
+            int posX = 0, posY = 0;
+            int[,] positionsAreoports = controller.obtenirPositionsAreoports();
+
+
+            for (int i = 0; i < positionsAreoports.GetLength(0); i++)
+            {
+                posX = positionsAreoports[i, 0];
+                posY = positionsAreoports[i, 1];
+
+                Console.WriteLine($"X: {posX} | Y: {posY}");
+                g.DrawImage(imgAreoport, posX - (35/2), posY - (35/2), 35, 35);
+            }
+
+            buffer.Render();
+            buffer.Dispose();
+            g.Dispose();
         }
     }
 }

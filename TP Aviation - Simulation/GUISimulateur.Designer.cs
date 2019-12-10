@@ -46,7 +46,6 @@
             // 
             // pcbWorldmap
             // 
-            this.pcbWorldmap.BackgroundImage = global::TP_Aviation___Simulation.Properties.Resources.worldmap_good;
             this.pcbWorldmap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbWorldmap.Image = global::TP_Aviation___Simulation.Properties.Resources.worldmap_good;
             this.pcbWorldmap.Location = new System.Drawing.Point(12, 386);
