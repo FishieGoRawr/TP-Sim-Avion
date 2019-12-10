@@ -116,8 +116,7 @@ namespace TP_Aviation___Generateur_de_scénario
             {
                 XmlSerializer xs = new XmlSerializer(typeof(List<Areoport>));
                 using (StreamReader rd = new StreamReader(ofd.FileName))
-                {
-                    
+                {                    
                     List<Areoport> listTest = xs.Deserialize(rd) as List<Areoport> ;
                 }
             }
