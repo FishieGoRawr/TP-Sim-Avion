@@ -57,21 +57,67 @@ namespace TP_Aviation___Simulation
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            dessinerAreoports();
+            controller.genererPassager();
+            controller.genererMarchandise();
+            controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
 
-
-
-
-            //controller.genererPassager();
-            //controller.genererMarchandise();
-            //controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
-            //controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
-            //controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.obtenirPositionsClients();
         }
 
         public void updateGUI()
         {
-            dessinerAreoports();
+            BufferedGraphicsContext currentContext = BufferedGraphicsManager.Current;
+            BufferedGraphics buffer = currentContext.Allocate(pcbWorldmap.CreateGraphics(), pcbWorldmap.DisplayRectangle);
+
+            //AREOPORTS
+            Bitmap img = Properties.Resources.airport;
+            Bitmap map = Properties.Resources.worldmap_good;
+            Graphics g = buffer.Graphics;
+            g.DrawImage(map, 0, 0, map.Width, map.Height);
+
+            int posX = 0, posY = 0;
+            int[,] positionsAreoports = controller.obtenirPositionsAreoports();
+
+            for (int i = 0; i < positionsAreoports.GetLength(0); i++)
+            {
+                posX = positionsAreoports[i, 0];
+                posY = positionsAreoports[i, 1];
+
+                Console.WriteLine($"X: {posX} | Y: {posY}");
+                g.DrawImage(img, posX - (35 / 2), posY - (35 / 2), 35, 35);
+            }
+
+            //CLIENTS
+            List<string> listPositionsClients = controller.obtenirPositionsClients();
+
+            foreach (string client in listPositionsClients)
+            {
+                string[] clientSplit = client.Split(' ');
+
+                switch (clientSplit[0])
+                {
+                    case "Feu":
+                        img = Properties.Resources.feu;
+                        break;
+                    case "Observateur":
+                        img = Properties.Resources.jumelle;
+                        break;
+                    case "Secours":
+                        img = Properties.Resources.secours;
+                        break;
+                    default:
+                        img = null;
+                        break;
+                }
+
+                g.DrawImage(img, Convert.ToInt32(clientSplit[1]), Convert.ToInt32(clientSplit[2]), 35, 35);
+            }
+
+            buffer.Render();
+            buffer.Dispose();
+            g.Dispose();
         }
 
         private void dessinerAreoports()
@@ -81,7 +127,7 @@ namespace TP_Aviation___Simulation
 
             Bitmap imgAreoport = Properties.Resources.airport;
             Bitmap map = Properties.Resources.worldmap_good;
-            
+
 
             Graphics g = buffer.Graphics;
             g.DrawImage(map, 0, 0, map.Width, map.Height);
@@ -96,7 +142,47 @@ namespace TP_Aviation___Simulation
                 posY = positionsAreoports[i, 1];
 
                 Console.WriteLine($"X: {posX} | Y: {posY}");
-                g.DrawImage(imgAreoport, posX - (35/2), posY - (35/2), 35, 35);
+                g.DrawImage(imgAreoport, posX - (35 / 2), posY - (35 / 2), 35, 35);
+            }
+
+            buffer.Render();
+            buffer.Dispose();
+            g.Dispose();
+        }
+
+        private void dessinerClients()
+        {
+            Bitmap map = Properties.Resources.worldmap_good;
+            Bitmap img;
+
+            BufferedGraphicsContext currentContext = BufferedGraphicsManager.Current;
+            BufferedGraphics buffer = currentContext.Allocate(pcbWorldmap.CreateGraphics(), pcbWorldmap.DisplayRectangle);
+            Graphics g = buffer.Graphics;
+            g.DrawImage(map, 0, 0, map.Width, map.Height);
+
+            List<string> listPositionsClients = controller.obtenirPositionsClients();
+
+            foreach (string client in listPositionsClients)
+            {
+                string[] clientSplit = client.Split(' ');
+
+                switch (clientSplit[0])
+                {
+                    case "Feu":
+                        img = Properties.Resources.feu;
+                        break;
+                    case "Observateur":
+                        img = Properties.Resources.jumelle;
+                        break;
+                    case "Secours":
+                        img = Properties.Resources.secours;
+                        break;
+                    default:
+                        img = null;
+                        break;
+                }
+
+                g.DrawImage(img, Convert.ToInt32(clientSplit[1]), Convert.ToInt32(clientSplit[2]), 35, 35);
             }
 
             buffer.Render();

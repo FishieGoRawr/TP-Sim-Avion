@@ -31,7 +31,8 @@ namespace TP_Aviation___Simulation
             //TEMPO
             listAreoport.Add(new Areoport());
         }
-              
+
+        //Accesseurs    
         public static Scenario getScenario
         {
             get
@@ -44,6 +45,21 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        
+        public List<Areoport> Liste
+        {
+            get { return listAreoport; }
+            set { listAreoport = value; }
+        }
+        //
+
+        //Events
+        public void abonnerOnHeureChanged(HorlogeEventHandler handler)
+        {
+            m_horloge.TempsChanged += handler;
+        }
+
+        //Méthodes
         public void changerStatusSpin()
         {
 
@@ -71,21 +87,10 @@ namespace TP_Aviation___Simulation
         {
             while (m_simulateurEnMarche)
             {
-                Thread.Sleep(1);
+                Thread.Sleep(50);
                 m_horloge.ajouteMinutes();
             }
-        }
-
-        public void abonnerOnHeureChanged(HorlogeEventHandler handler)
-        {
-            m_horloge.TempsChanged += handler;
-        }
-        
-        public List<Areoport> Liste
-        {
-            get { return listAreoport; }
-            set { listAreoport = value; }
-        }
+        }    
 
         public void ajouterPassager()
         {
@@ -198,7 +203,7 @@ namespace TP_Aviation___Simulation
                             clientPosX = client.PosX;
                             clientPosY = client.PosY;
 
-                            distance = pythagore(clientPosX - posX, clientPosY - posY);
+                            distance = pythagore((clientPosX - (35/2)) - (posX - (35 / 2)), (clientPosY - (35 / 2)) - (posY - (35 / 2)));
 
 
                             if (plusPetit == 0 || distance < plusPetit)
