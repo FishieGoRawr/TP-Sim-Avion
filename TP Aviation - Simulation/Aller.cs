@@ -10,10 +10,11 @@ namespace TP_Aviation___Simulation
     {
         public Aller(Aeronef aeronef) : base(aeronef)
         {
-            etat = 4;
+            Index = 4;
+            this.m_aeronef = aeronef;
         }
 
-        public override void avancer(Aeronef aeronef, int tempsPasse)
+        public override void avancer(int tempsPasse, List<Client> clients)
         {
             
         }

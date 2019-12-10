@@ -29,5 +29,20 @@ namespace TP_Aviation___Simulation
         {
             get { return -1; }
         }
+
+        public virtual int Quantite
+        {
+            get { return 0; }
+        }
+
+        public virtual double Poid
+        {
+            get { return 0; }
+        }
+
+        public virtual PositionGeo Destination
+        {
+            get { return null; }
+        }
     }
 }

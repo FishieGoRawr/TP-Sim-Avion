@@ -30,9 +30,9 @@ namespace TP_Aviation___Simulation
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
             this.m_dispo = true;
-            this.m_image = Properties.Resources.observateur;
             this.m_nbAller = nbAller;
             this.m_rayon = rayon;
+            this.m_indexClient = -1;
         }
 
         /// <summary>
@@ -48,6 +48,7 @@ namespace TP_Aviation___Simulation
             m_image = null;
             m_nbAller = 0;
             m_rayon = 0;
+            this.m_indexClient = -1;
         }
     }
 }

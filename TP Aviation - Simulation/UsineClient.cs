@@ -26,7 +26,7 @@ namespace TP_Aviation___Simulation
             }
         }
 
-        public Client creerPassager(List<Areoport> listAreoport, Areoport origine, Random rand)
+        public Client creerPassager(List<Aeroport> listAreoport, Aeroport origine, Random rand)
         {
             Client newClient = null;
 
@@ -35,7 +35,7 @@ namespace TP_Aviation___Simulation
             return newClient;
         }
 
-        public Client creerMarchandise(List<Areoport> listAreoport, Areoport origine, Random rand)
+        public Client creerMarchandise(List<Aeroport> listAreoport, Aeroport origine, Random rand)
         {
             Client newClient = null;
 

@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    class Maintenance : État
+    class Maintenance : Etat
     {
         public Maintenance(Aeronef aeronef) : base(aeronef)
         {
-            etat = 8;
+            Index = 8;
+            this.m_aeronef = aeronef;
         }
 
-        public override void avancer(Aeronef aeronef, int tempsPasse)
+        public override void avancer(int tempsPasse, List<Client> clients)
         {
 
         }

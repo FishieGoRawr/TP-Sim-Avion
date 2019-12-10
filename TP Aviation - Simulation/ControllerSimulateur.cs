@@ -27,7 +27,7 @@ namespace TP_Aviation___Simulation
         public void deserialize()
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            XmlSerializer xs = new XmlSerializer(typeof(List<Areoport>));
+            XmlSerializer xs = new XmlSerializer(typeof(List<Aeroport>));
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {

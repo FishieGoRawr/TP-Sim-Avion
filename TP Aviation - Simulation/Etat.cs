@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    public abstract class État
+    public class Etat
     {
         protected int etat = 0;
         protected Aeronef m_aeronef;
 
-        public État(Aeronef aeronef)
+        public Etat(Aeronef aeronef)
         {
-            
         }
 
-        public virtual int Etat
+        public virtual int Index
         {
             get { return etat; }
             set { etat = value; }
         }
 
-        public virtual void avancer(Aeronef aeronef, int tempsPasse)
+        public virtual void avancer(int tempsPasse, List<Client> clients)
         {
 
         }

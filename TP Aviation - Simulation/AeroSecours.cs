@@ -19,7 +19,7 @@ namespace TP_Aviation___Simulation
             this.m_tempsEnt = entretien;
             this.m_origine = origine;
             this.m_dispo = true;
-            this.m_image = m_image = Properties.Resources.chopper;
+            this.m_indexClient = -1;
             this.m_nbAller = nbAller;
         }
 
@@ -31,6 +31,7 @@ namespace TP_Aviation___Simulation
             m_dispo = true;
             m_origine = new PositionGeo();
             m_image = null;
+            this.m_indexClient = -1;
             m_nbAller = 0;
         }
     }

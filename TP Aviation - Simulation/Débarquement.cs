@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    class Débarquement : État
+    class Débarquement : Etat
     {
         public Débarquement(Aeronef aeronef) : base(aeronef)
         {
-            etat = 7;
+            Index = 7;
+            this.m_aeronef = aeronef;
         }
 
-        public override void avancer(Aeronef aeronef, int tempsPasse)
+        public override void avancer(int tempsPasse, List<Client> clients)
         {
 
         }

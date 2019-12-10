@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    public abstract class EnVol : État
+    public abstract class EnVol : Etat
     {
-        PositionGeo m_positionActuelle;
+        protected PositionGeo m_positionActuelle;
         public EnVol(Aeronef aeronef) : base(aeronef)
         {
             
         }
 
-        public override void avancer(Aeronef aeronef, int tempsPasse)
+        public override void avancer(int tempsPasse, List<Client> clients)
         {
 
+        }
+
+        public PositionGeo PositionActuelle
+        {
+            get { return m_positionActuelle; }
         }
     }
 }
