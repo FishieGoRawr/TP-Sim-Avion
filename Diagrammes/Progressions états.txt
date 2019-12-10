@@ -1,0 +1,14 @@
+Passager:
+Attente(1) -> Embarquement(2) -> EnVol(3) -> Aller(4) -> Debarquement(9) -> Maintenance(10) ->
+
+Marchandise:
+Attente(1) -> Embarquement(2) -> EnVol(3) -> Aller(4) -> Debarquement(9) -> Maintenance(10) ->
+
+Incendie:
+Attente(1) -> EnVol(3) -> AllerRetour(6) Until Feu = 0 -> Maintenance(10) -> 
+
+Observateur:
+Attente(1) -> EnVol(3) -> Observation(5) -> EnVol(3) -> Maintenance(10) ->
+
+Secours:
+Attente(1) -> EnVol(3) -> AllerRetour(6) -> Maintenance(10) -> 

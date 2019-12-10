@@ -12,7 +12,7 @@ namespace TP_Aviation___Simulation
 {
     public class ControllerSimulateur
     {
-        Scenario m_scenario;
+        public Scenario m_scenario { get; set; }
         GUISimulateur m_gui;
 
         public ControllerSimulateur(GUISimulateur p_gui)
@@ -45,6 +45,20 @@ namespace TP_Aviation___Simulation
         public void abonnerOnHeureChanged(HorlogeEventHandler handler)
         {
             m_scenario.abonnerOnHeureChanged(handler);
+        }
+
+        public int[,] obtenirPositionsAreoports()
+        {
+            int compteAreoports = m_scenario.listAreoport.Count;
+            int[,] positionsAreoports = new int[compteAreoports, 2];
+
+            for (int i = 0; i < compteAreoports; i++)
+            {
+                positionsAreoports[i, 0] = m_scenario.listAreoport[i].m_localisation.m_posX;
+                positionsAreoports[i, 1] = m_scenario.listAreoport[i].m_localisation.m_posY;
+            }
+
+            return positionsAreoports;
         }
 
         public void genererPassager()
