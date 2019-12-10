@@ -8,3 +8,12 @@ C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Si
 C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.pdb
 C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP_Aviation___Simulation.GUISimulateur.resources
 C:\xampp\htdocs\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.csproj.CoreCompileInputs.cache
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\bin\Debug\TP Aviation - Simulation.exe.config
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\bin\Debug\TP Aviation - Simulation.exe
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\bin\Debug\TP Aviation - Simulation.pdb
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.csprojAssemblyReference.cache
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP_Aviation___Simulation.GUISimulateur.resources
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP_Aviation___Simulation.Properties.Resources.resources
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.csproj.GenerateResource.cache
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.exe
+P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.pdb

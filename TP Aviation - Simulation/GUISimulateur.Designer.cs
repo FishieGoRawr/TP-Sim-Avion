@@ -49,16 +49,16 @@
             this.pcbWorldmap.BackgroundImage = global::TP_Aviation___Simulation.Properties.Resources.worldmap_good;
             this.pcbWorldmap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbWorldmap.Image = global::TP_Aviation___Simulation.Properties.Resources.worldmap_good;
-            this.pcbWorldmap.Location = new System.Drawing.Point(12, 385);
+            this.pcbWorldmap.Location = new System.Drawing.Point(12, 386);
             this.pcbWorldmap.Name = "pcbWorldmap";
-            this.pcbWorldmap.Size = new System.Drawing.Size(1800, 860);
+            this.pcbWorldmap.Size = new System.Drawing.Size(1500, 768);
             this.pcbWorldmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbWorldmap.TabIndex = 1;
             this.pcbWorldmap.TabStop = false;
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(1518, 12);
+            this.trackBar1.Location = new System.Drawing.Point(1216, 11);
             this.trackBar1.Maximum = 4;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(296, 69);
@@ -66,7 +66,7 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(1359, 12);
+            this.btnStop.Location = new System.Drawing.Point(1065, 11);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(146, 35);
             this.btnStop.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(1208, 12);
+            this.btnStart.Location = new System.Drawing.Point(914, 11);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(146, 35);
             this.btnStart.TabIndex = 4;
@@ -85,9 +85,9 @@
             // 
             // btnChargerScenario
             // 
-            this.btnChargerScenario.Location = new System.Drawing.Point(12, 12);
+            this.btnChargerScenario.Location = new System.Drawing.Point(12, 11);
             this.btnChargerScenario.Name = "btnChargerScenario";
-            this.btnChargerScenario.Size = new System.Drawing.Size(1190, 35);
+            this.btnChargerScenario.Size = new System.Drawing.Size(896, 35);
             this.btnChargerScenario.TabIndex = 5;
             this.btnChargerScenario.Text = "Télécharger un scénario";
             this.btnChargerScenario.UseVisualStyleBackColor = true;
@@ -97,16 +97,16 @@
             // 
             this.lsbAreoport.FormattingEnabled = true;
             this.lsbAreoport.ItemHeight = 20;
-            this.lsbAreoport.Location = new System.Drawing.Point(12, 92);
+            this.lsbAreoport.Location = new System.Drawing.Point(12, 91);
             this.lsbAreoport.Name = "lsbAreoport";
-            this.lsbAreoport.Size = new System.Drawing.Size(400, 264);
+            this.lsbAreoport.Size = new System.Drawing.Size(262, 264);
             this.lsbAreoport.TabIndex = 6;
             // 
             // lsbClient
             // 
             this.lsbClient.FormattingEnabled = true;
             this.lsbClient.ItemHeight = 20;
-            this.lsbClient.Location = new System.Drawing.Point(435, 92);
+            this.lsbClient.Location = new System.Drawing.Point(297, 91);
             this.lsbClient.Name = "lsbClient";
             this.lsbClient.Size = new System.Drawing.Size(552, 264);
             this.lsbClient.TabIndex = 7;
@@ -115,16 +115,16 @@
             // 
             this.lsbAvion.FormattingEnabled = true;
             this.lsbAvion.ItemHeight = 20;
-            this.lsbAvion.Location = new System.Drawing.Point(1010, 92);
+            this.lsbAvion.Location = new System.Drawing.Point(872, 91);
             this.lsbAvion.Name = "lsbAvion";
-            this.lsbAvion.Size = new System.Drawing.Size(804, 264);
+            this.lsbAvion.Size = new System.Drawing.Size(640, 264);
             this.lsbAvion.TabIndex = 8;
             // 
             // lblAreoport
             // 
             this.lblAreoport.AutoSize = true;
             this.lblAreoport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAreoport.Location = new System.Drawing.Point(14, 60);
+            this.lblAreoport.Location = new System.Drawing.Point(7, 59);
             this.lblAreoport.Name = "lblAreoport";
             this.lblAreoport.Size = new System.Drawing.Size(118, 29);
             this.lblAreoport.TabIndex = 9;
@@ -134,7 +134,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(430, 60);
+            this.label1.Location = new System.Drawing.Point(292, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 29);
             this.label1.TabIndex = 10;
@@ -144,7 +144,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(1005, 62);
+            this.label2.Location = new System.Drawing.Point(867, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 29);
             this.label2.TabIndex = 11;
@@ -158,7 +158,7 @@
             this.lblHorloge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHorloge.Font = new System.Drawing.Font("MS PGothic", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHorloge.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHorloge.Location = new System.Drawing.Point(816, 1168);
+            this.lblHorloge.Location = new System.Drawing.Point(685, 1160);
             this.lblHorloge.Name = "lblHorloge";
             this.lblHorloge.Padding = new System.Windows.Forms.Padding(20, 9, 20, 9);
             this.lblHorloge.Size = new System.Drawing.Size(230, 76);
@@ -170,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1825, 1262);
+            this.ClientSize = new System.Drawing.Size(1526, 1245);
             this.Controls.Add(this.lblHorloge);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

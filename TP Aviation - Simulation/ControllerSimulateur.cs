@@ -18,6 +18,7 @@ namespace TP_Aviation___Simulation
         {
             this.m_scenario = Scenario.getScenario;
             this.m_horloge = new Horloge();
+            //this.m_horloge = new Horloge();
         }
 
         //Exemple
