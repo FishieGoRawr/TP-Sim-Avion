@@ -16,7 +16,7 @@ namespace TP_Aviation___Simulation
         bool m_simulateurEnMarche;
         Thread mainThread { get; set; }
         Horloge m_horloge { get; set; }
-        ControllerSimulateur m_controller;
+        public int derniereHeure { get; set; }
 
         Scenario()
         {
@@ -26,6 +26,7 @@ namespace TP_Aviation___Simulation
             m_simulateurEnMarche = false;
             mainThread = new Thread(new ThreadStart(spin));
             m_horloge = new Horloge();
+            derniereHeure = 0;
             
 
             //TEMPO
@@ -62,7 +63,6 @@ namespace TP_Aviation___Simulation
         //Méthodes
         public void changerStatusSpin()
         {
-
             if (mainThread.IsAlive)
             {
                 if (m_simulateurEnMarche)
@@ -87,10 +87,32 @@ namespace TP_Aviation___Simulation
         {
             while (m_simulateurEnMarche)
             {
-                Thread.Sleep(50);
+                Thread.Sleep(150);
                 m_horloge.ajouteMinutes();
+
+                if (derniereHeure != m_horloge.m_heures)
+                {
+                    if (m_horloge.m_heures % 2 == 0)
+                    {
+                        ajouterFeu(1500, 768);
+                        ajouterSecours(1500, 768);
+                        ajouterObservateur(1500, 768);
+                    }
+                    else
+                    {
+                        ajouterPassager();
+                        ajouterMarchandise();
+                    }
+
+                    derniereHeure = m_horloge.m_heures;
+                }                
             }
         }    
+
+        public int obtenirHeure()
+        {
+            return m_horloge.m_heures;
+        }
 
         public void ajouterPassager()
         {

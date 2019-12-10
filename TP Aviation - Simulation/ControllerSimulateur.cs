@@ -14,11 +14,13 @@ namespace TP_Aviation___Simulation
     {
         public Scenario m_scenario { get; set; }
         GUISimulateur m_gui;
+        public int derniereHeure { get; set; }
 
         public ControllerSimulateur(GUISimulateur p_gui)
         {
             m_scenario = Scenario.getScenario;
             m_gui = p_gui;
+            derniereHeure = 0;
         }
 
         //Exemple
@@ -32,9 +34,11 @@ namespace TP_Aviation___Simulation
                 using (StreamReader rd = new StreamReader(ofd.FileName))
                 {
                     m_scenario.Liste = xs.Deserialize(rd) as List<Areoport>;
+                    m_gui.enableStartButton();
                 }
             }
 
+            ofd.Dispose();
         }
 
         public void changerStatusSpin()
@@ -59,6 +63,24 @@ namespace TP_Aviation___Simulation
             }
 
             return positionsAreoports;
+        }
+
+        public void genererClients()
+        {
+            int heureHorloge = m_scenario.obtenirHeure();
+
+            if (heureHorloge % 2 == 0)
+            {
+                int[] tailleCarte = m_gui.obtenirTailleCarte();
+                genererFeu(tailleCarte[0], tailleCarte[1]);
+                genererSecours(tailleCarte[0], tailleCarte[1]);
+                genererObservateur(tailleCarte[0], tailleCarte[1]);
+            }
+            else
+            {
+                genererPassager();
+                genererMarchandise();
+            }
         }
 
         public List<string> obtenirPositionsClients()

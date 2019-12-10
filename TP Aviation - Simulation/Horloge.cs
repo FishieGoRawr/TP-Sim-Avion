@@ -17,8 +17,8 @@ namespace TP_Aviation___Simulation
 
         public event HorlogeEventHandler TempsChanged;
 
-        int m_heures { get; set; }
-        int m_minutes { get; set; }
+        public int m_heures { get; set; }
+        public int m_minutes { get; set; }
 
         public Horloge()
         {
