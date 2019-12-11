@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    class Feu : DistanceClient
+    public class Feu : DistanceClient
     {
         protected int m_intensite;
 
@@ -29,7 +29,7 @@ namespace TP_Aviation___Simulation
         public int randomIntensite(Random rand)
         {
             int intensite = 0;
-            intensite = rand.Next(5);
+            intensite = rand.Next(1,5);
 
             return intensite;
         }

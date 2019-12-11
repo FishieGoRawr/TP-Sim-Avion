@@ -28,7 +28,7 @@ namespace TP_Aviation___Simulation
         }
         public override int PosY
         {
-            get { return m_destination.PosX; }
+            get { return m_destination.PosY; }
         }
 
     }

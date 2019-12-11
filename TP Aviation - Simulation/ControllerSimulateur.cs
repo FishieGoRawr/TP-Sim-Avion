@@ -18,6 +18,7 @@ namespace TP_Aviation___Simulation
         public ControllerSimulateur(GUISimulateur p_gui)
         {
             m_scenario = Scenario.getScenario;
+            m_scenario.setController(this);
             m_gui = p_gui;
         }
 
@@ -59,6 +60,48 @@ namespace TP_Aviation___Simulation
             }
 
             return positionsAreoports;
+        }
+
+        public List<string> obtenirPositionsClients()
+        {
+            int nbClients = obtenirNombreClients();
+            int nbAreoports = m_scenario.listAreoport.Count;
+            List<string> positionsClients = new List<string>();
+
+            //for (int i = 0; i < nbAreoports; i++)
+            //{
+            //    for (int j = 0; j < m_scenario.listAreoport[i].m_listClient.Count; j++)
+            //    {
+            //        if (m_scenario.listAreoport[i].m_listClient[j].Nom != "Passager" && m_scenario.listAreoport[i].m_listClient[j].Nom != "Marchandise")
+            //        {
+            //            Client currClient = m_scenario.listAreoport[i].m_listClient[j];
+            //            positionsClients.Add($"{currClient.Nom} {currClient.PosX} {currClient.PosY}");
+            //        }
+            //    }
+            //}
+
+            foreach (Client client in m_scenario.m_listClients)
+            {
+                positionsClients.Add($"{client.Nom} {client.PosX} {client.PosY}");
+            }
+
+            return positionsClients;
+        }
+
+        public int obtenirNombreClients()
+        {
+            int compteurClients = 0;
+            for (int i = 0; i < m_scenario.listAreoport.Count; i++)
+            {
+                compteurClients += m_scenario.listAreoport[i].m_listClient.Count;
+            }
+
+            return compteurClients;
+        }
+
+        public int[] obtenirTailleMap()
+        {
+            return m_gui.obtenirTalleMap();
         }
 
         public void genererPassager()

@@ -53,13 +53,10 @@ namespace TP_Aviation___Simulation
             return newClient;
         }
 
-        public Client creerFeu(int width, int height, Random rand)
+        public Feu creerFeu(int width, int height, Random rand)
         {
-            Client newClient = null;
-
-            newClient = new Feu(width, height, rand);
-
-            return newClient;
+            Feu newFeu = new Feu(width, height, rand);
+            return newFeu;
         }
 
         public Client creerSecours(int width, int height, Random rand)
