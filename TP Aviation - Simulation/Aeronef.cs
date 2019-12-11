@@ -118,5 +118,11 @@ namespace TP_Aviation___Simulation
         {
             get { return 0; }
         }
+
+        public virtual int IndexClient
+        {
+            get { return m_indexClient; }
+            set { m_indexClient = value; }
+        }
     }
 }

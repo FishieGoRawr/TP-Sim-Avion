@@ -31,6 +31,7 @@ namespace TP_Aviation___Simulation
                             {
                                 total = total + clients[i].Quantite;
                                 iClient.Add(i);
+                                m_aeronef.IndexClient = i;
                             }
                         }
                     }
@@ -46,6 +47,10 @@ namespace TP_Aviation___Simulation
                     else if (total > m_aeronef.Capacite)
                     {
                         //diviser client
+                    }
+                    else
+                    {
+                        m_aeronef.IndexClient = -1;
                     }
                 }
                 else if (m_aeronef.Type == "Marchandises")

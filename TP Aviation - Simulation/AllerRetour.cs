@@ -17,15 +17,28 @@ namespace TP_Aviation___Simulation
 
         public override void avancer(int tempsPasse, List<Client> clients)
         {
-            m_positionActuelle = distanceParcourue(tempsPasse);
+            int clientX;
+            int clientY;
 
+            int x;
+            int y;
+
+            x = m_positionActuelle.PosX;
+            y = m_positionActuelle.PosY;
+
+            clientX = clients[m_aeronef.IndexClient].Destination.PosX;
+            clientY = clients[m_aeronef.IndexClient].Destination.PosY;
+
+            double distance = pythagore(clientX - x, clientY - y);
+
+            m_positionActuelle = distanceParcourue(tempsPasse);
 
             switch (m_aeronef.Type)
             {
                 case "Secours":
-                    if (m_positionActuelle.Equals(clients[0].Destination))
+                    if ()
                     {
-
+                        
                     }
                     else
                     {
@@ -46,6 +59,17 @@ namespace TP_Aviation___Simulation
 
 
             return nouvellePosition;
+        }
+
+        public double pythagore(int a, int b)
+        {
+            double c = 0;
+
+            a = a * a;
+            b = b * b;
+            c = Math.Sqrt(a + b);
+
+            return c;
         }
     }
 }
