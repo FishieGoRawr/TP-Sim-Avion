@@ -12,7 +12,7 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public partial class GUIGenerateur : Form
     {
-        ControlleurGenerateur controller;
+        ControlleurGenerateur controller; //Controller du logiciel
 
         /// <summary>
         /// Constructeur de base du GUI principal. Initie la donnée membre 'controller'.

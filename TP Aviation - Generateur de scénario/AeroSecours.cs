@@ -8,10 +8,13 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe enfant d'Aeronef, ajoute un avion secours
+    /// </summary>
     public class AeroSecours : Distance
     {
         [XmlIgnore]
-        Bitmap m_image;
+        Bitmap m_image; //Image de l'aeronef
 
         /// <summary>
         ///  Constructeur d'Aeronef de secours

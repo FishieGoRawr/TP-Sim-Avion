@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Xml.Serialization;
 
+
+
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe enfant d'Aeronef, ajoute un avion marchandise
+    /// </summary>
+    
     public class AeroMarchandise : Transport
     {
-        float m_capacite { get; set; }
+        float m_capacite { get; set; } //Capacité de l'aeronef
         [XmlIgnore]
-        Bitmap m_image;
+        Bitmap m_image; //Image de l'aeronef
 
         /// <summary>
         /// Constructeur complex d'AeroMarchandise

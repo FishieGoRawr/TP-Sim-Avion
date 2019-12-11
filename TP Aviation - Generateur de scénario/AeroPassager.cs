@@ -8,11 +8,15 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe enfant d'Aeronef, ajoute un avion passager
+    /// </summary>
+    
     public class AeroPassager : Transport
     {
-        int m_capacite { get; set; }
+        int m_capacite { get; set; } //Capacité de l'aeronef
         [XmlIgnore]
-        Bitmap m_image;
+        Bitmap m_image; //Image de l'aeronef
 
         /// <summary>
         /// Constructeur d'AeroPassager

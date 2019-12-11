@@ -9,15 +9,19 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe aréoport, génère des areoports pour pouvoir y stocker des aeronefs.
+    /// </summary>
+
     public class Aeroport
     {
-        public string m_nom { get; set; }
-        public PositionGeo m_localisation { get; set; }
-        public List<Aeronef> m_listAeronef { get; set; }
-        public int m_achalPassager { get; set; }
-        public int m_achalMarchandise { get; set; }
+        public string m_nom { get; set; } //Nom de l'areoport
+        public PositionGeo m_localisation { get; set; } //Localisation de l'areoport
+        public List<Aeronef> m_listAeronef { get; set; } //Liste d'aeronefs appartenant a l'areoport
+        public int m_achalPassager { get; set; } //Achalandage de passager de l'areoport
+        public int m_achalMarchandise { get; set; } //Achalandage de marchandise de l'areoport
         [XmlIgnore]
-        public Bitmap m_image;
+        public Bitmap m_image; //Image de l'aeronef
 
         /// <summary>
         /// Constructeur d'Aeroport

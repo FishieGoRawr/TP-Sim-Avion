@@ -8,11 +8,15 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe enfant d'Aeronef, ajoute un avion observateur
+    /// </summary>
+
     public class AeroObservateur : Distance
     {
         [XmlIgnore]
-        Bitmap m_image;
-        int m_rayon { get; set; }
+        Bitmap m_image; //Image de l'aeronef
+        int m_rayon { get; set; } //Rayon du cercle que l'aeronef doit faire a la fin de sa destination
 
         /// <summary>
         /// Constructeur complex d'AeroObservateur

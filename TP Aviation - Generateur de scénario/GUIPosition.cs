@@ -10,16 +10,29 @@ using System.Windows.Forms;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe qui gère la position géographique
+    /// </summary>
+    
     public partial class GUIPosition : Form
     {
-        GUIGenerateur guigen;
+        GUIGenerateur guigen; //GUI général du logiciel
 
+        /// <summary>
+        /// Constructeur du GUIPosition
+        /// </summary>
+        /// <param name="gui">GUI Général du logiciel</param>
         public GUIPosition(GUIGenerateur gui)
         {
             guigen = gui;
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event lorsqu'on clique sur la map
+        /// </summary>
+        /// <param name="sender">PictureBox de la carte</param>
+        /// <param name="e">Args du clic de la souris</param>
         private void PcbWorldmap_MouseClick(object sender, MouseEventArgs e)
         {
             string coordString = "";
@@ -29,6 +42,12 @@ namespace TP_Aviation___Generateur_de_scénario
             this.Dispose();
         }
 
+        /// <summary>
+        /// Convertit une position XY en DegreeMin
+        /// </summary>
+        /// <param name="x">posX cliquée</param>
+        /// <param name="y">posY cliquée</param>
+        /// <returns>Retourne un string consistant de la postion degreeMin du clic</returns>
         private string convertPosToMinSec(double x, double y)
         {
             string coords = "";

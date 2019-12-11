@@ -8,10 +8,14 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Rajoute nbAller a un aeronef
+    /// </summary>    
+
     public abstract class Distance : Aeronef
     {
-        public int m_nbAller { get; set; }
-        public bool m_dispo { get; set; }
+        public int m_nbAller { get; set; } //Nb d'aller qu'un aeronef doit faire
+        public bool m_dispo { get; set; } //Si l'aeronef est dispo ou non
 
         /// <summary>
         /// Constructuer de la classe parente des aeronefs de secours, observation et incendie

@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// L'usine permet la création d'aeronefs
+    /// </summary>
+
     public sealed class UsineAeronef
     {
-        private static UsineAeronef m_usineAeronef = null;
+        private static UsineAeronef m_usineAeronef = null; //Singleton de l'usine
 
+        /// <summary>
+        /// Constructeur vide de l'usine
+        /// </summary>
         UsineAeronef()
         {
         }
 
+        /// <summary>
+        /// Crée un nouvel usine si non existant, sinon, retourne l'instance de l'usine
+        /// </summary>
         public static UsineAeronef getUsineAeronef
         {
             get
@@ -26,6 +36,18 @@ namespace TP_Aviation___Generateur_de_scénario
             }
         }
 
+        /// <summary>
+        /// Crée un aeronef avec les parametres voulu.
+        /// </summary>
+        /// <param name="nom">Nom de l'aeronef</param>
+        /// <param name="type">Type de l'aeronef</param>
+        /// <param name="vitesse">Vitesse de l'aeronef</param>
+        /// <param name="entretien">Temps d'entretient de l'aeronef</param>
+        /// <param name="charger">Temps de chargement de l'aeronef</param>
+        /// <param name="decharger">Temps de déchargement de l'aeronef</param>
+        /// <param name="change">Parametre qui change selon le type (Capacité, rayon)</param>
+        /// <param name="origine">Point d'origine de l'aeronef</param>
+        /// <returns></returns>
         public Aeronef creerAvion(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, PositionGeo origine)
         {
             Aeronef newAeronef = null;
