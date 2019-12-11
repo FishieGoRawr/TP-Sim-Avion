@@ -38,5 +38,11 @@ namespace TP_Aviation___Simulation
         {
             return m_nom + " " + m_destination + " " + m_intensite;
         }
+        public override PositionGeo Destination
+        {
+            get { return m_destination; }
+            set { m_destination = value; }
+        }
+
     }
 }

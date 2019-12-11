@@ -53,5 +53,11 @@ namespace TP_Aviation___Simulation
         {
             get { return m_quantite; }
         }
+
+        public override PositionGeo Destination
+        {
+            get { return m_destination.Localisation; }
+            set { m_destination.Localisation = value; }
+        }
     }
 }
