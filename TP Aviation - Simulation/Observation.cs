@@ -19,5 +19,10 @@ namespace TP_Aviation___Simulation
         {
 
         }
+
+        public void tourner()
+        {
+
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     {
         public Aller(Aeronef aeronef) : base(aeronef)
         {
-            Index = 4;
+            Index = 3;
             this.m_aeronef = aeronef;
         }
 

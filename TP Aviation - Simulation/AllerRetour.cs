@@ -10,33 +10,30 @@ namespace TP_Aviation___Simulation
     {
         public AllerRetour(Aeronef aeronef) : base(aeronef)
         {
-            Index = 6;
+            Index = 4;
             this.m_aeronef = aeronef;
             this.m_positionActuelle = aeronef.Origine;
         }
 
         public override void avancer(int tempsPasse, List<Client> clients)
         {
-            int clientX;
-            int clientY;
 
-            int x;
-            int y;
+            int x = m_positionActuelle.PosX;
+            int y = m_positionActuelle.PosY;
 
-            x = m_positionActuelle.PosX;
-            y = m_positionActuelle.PosY;
-
-            clientX = clients[m_aeronef.IndexClient].Destination.PosX;
-            clientY = clients[m_aeronef.IndexClient].Destination.PosY;
+            int clientX = clients[m_aeronef.IndexClient].Destination.PosX;
+            int clientY = clients[m_aeronef.IndexClient].Destination.PosY;
 
             double distance = pythagore(clientX - x, clientY - y);
+            double ticks = distance / (m_aeronef.Vitesse * tempsPasse);
 
-            m_positionActuelle = distanceParcourue(tempsPasse);
+            m_positionActuelle.PosX += Convert.ToInt32((clientX - x) / ticks);
+            m_positionActuelle.PosY += Convert.ToInt32((clientY - y) / ticks);
 
             switch (m_aeronef.Type)
             {
                 case "Secours":
-                    if ()
+                    if (true)
                     {
                         
                     }
@@ -46,19 +43,14 @@ namespace TP_Aviation___Simulation
                     }
                     break;
                 case "Incendies":
+                    if (true)
+                    {
+
+                    }
                     break;
                 default:
                     break;
             }
-        }
-
-        public PositionGeo distanceParcourue(int temps)
-        {
-            PositionGeo nouvellePosition = new PositionGeo();
-
-
-
-            return nouvellePosition;
         }
 
         public double pythagore(int a, int b)

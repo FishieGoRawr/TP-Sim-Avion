@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     {
         public Maintenance(Aeronef aeronef) : base(aeronef)
         {
-            Index = 8;
+            Index = 7;
             this.m_aeronef = aeronef;
         }
 

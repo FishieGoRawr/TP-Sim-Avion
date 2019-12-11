@@ -10,7 +10,7 @@ namespace TP_Aviation___Simulation
     {
         public Débarquement(Aeronef aeronef) : base(aeronef)
         {
-            Index = 7;
+            Index = 6;
             this.m_aeronef = aeronef;
         }
 
