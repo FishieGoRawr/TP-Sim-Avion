@@ -52,47 +52,81 @@ namespace TP_Aviation___Simulation
         private void BtnChargerScenario_Click(object sender, EventArgs e)
         {
             controller.deserialize();
-            dessinerAreoports();
+            updateGUI();
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-
+            controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
+            controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
         }
 
         public void updateGUI()
         {
+            Bitmap img = Properties.Resources.worldmap_good;
+            BufferedGraphicsContext currentContext;
+            BufferedGraphics buffer;
 
-        }
+            currentContext = BufferedGraphicsManager.Current;
+            buffer = currentContext.Allocate(pcbWorldmap.CreateGraphics(), pcbWorldmap.DisplayRectangle);
 
-        private void dessinerAreoports()
-        {
-            BufferedGraphicsContext currentContext = BufferedGraphicsManager.Current;
-            BufferedGraphics buffer = currentContext.Allocate(pcbWorldmap.CreateGraphics(), pcbWorldmap.DisplayRectangle);
-
-            Bitmap imgAreoport = Properties.Resources.airport;
-            Bitmap map = Properties.Resources.worldmap_good;
+            
             
 
+            //MAP
             Graphics g = buffer.Graphics;
-            g.DrawImage(map, 0, 0, map.Width, map.Height);
+            g.DrawImage(img, 0, 0, img.Width, img.Height);
 
-            int posX = 0, posY = 0;
-            int[,] positionsAreoports = controller.obtenirPositionsAreoports();
-
-
-            for (int i = 0; i < positionsAreoports.GetLength(0); i++)
+            //AÉROPORTS
+            img = new Bitmap(Properties.Resources.airport);
+            //int[,] pos = controller.obtenirPositionsAreoports();
+            for (int i = 0; i < controller.m_scenario.listAreoport.Count; i++)
             {
-                posX = positionsAreoports[i, 0];
-                posY = positionsAreoports[i, 1];
+                //g.DrawImage(img, controller.m_scenario.listAreoport[i].Localisation.m_posX / 2, controller.m_scenario.listAreoport[i].Localisation.m_posY / 2, 35, 35);
+                //g.DrawImage(img, pos[i, 0] - (35 / 2), pos[i, 1] - (35 / 2), 35, 35);
+                //img.Dispose();
+            }
 
-                Console.WriteLine($"X: {posX} | Y: {posY}");
-                g.DrawImage(imgAreoport, posX - (35/2), posY - (35/2), 35, 35);
+            ////CLIENTS
+            List<string> listPositionsClients = controller.obtenirPositionsClients();
+
+            foreach (string client in listPositionsClients)
+            {
+                string[] clientSplit = client.Split(' ');
+
+                if (clientSplit[0] == "Feu")
+                {
+                    //using (Bitmap img = new Bitmap(Properties.Resources.feu))
+                    img = new Bitmap(Properties.Resources.feu);
+                }
+                else if (clientSplit[0] == "Observateur")
+                {
+                    //using (Bitmap img = new Bitmap(Properties.Resources.jumelle))
+                    img = new Bitmap(Properties.Resources.jumelle);
+                }
+                else if (clientSplit[0] == "Secours")
+                {
+                    //using (Bitmap img = new Bitmap(Properties.Resources.secours))
+                    img = new Bitmap(Properties.Resources.secours);
+                }
+
+                g.DrawImage(img, Convert.ToInt32(clientSplit[1]) - (15/2), Convert.ToInt32(clientSplit[2]) - (15/2), 15, 15);
+                img.Dispose();
             }
 
             buffer.Render();
             buffer.Dispose();
             g.Dispose();
+            GC.Collect();
+        }
+
+        public int[] obtenirTalleMap()
+        {
+            int[] temp = new int[2];
+            temp[0] = pcbWorldmap.Width;
+            temp[1] = pcbWorldmap.Height;
+            return temp;
         }
     }
 }
