@@ -13,12 +13,12 @@ namespace TP_Aviation___Generateur_de_scénario
     public class Scenario
     {
         static Scenario m_scenario;
-        public List<Areoport> listAreoport;
+        public List<Aeroport> listAreoport;
         UsineAeronef usine;
 
         Scenario()
         {
-            listAreoport = new List<Areoport>();
+            listAreoport = new List<Aeroport>();
             usine = UsineAeronef.getUsineAeronef;
         }
 
@@ -34,7 +34,7 @@ namespace TP_Aviation___Generateur_de_scénario
             }
         }
 
-        public Areoport this[int index]
+        public Aeroport this[int index]
         {
             get { return listAreoport[index]; }
             set { listAreoport.Add(value); }
@@ -42,7 +42,7 @@ namespace TP_Aviation___Generateur_de_scénario
 
         public string ajoutAeroport(string nom, int achalPass, int achalMarch, TextBox position)
         {
-            listAreoport.Add(new Areoport(nom, achalPass, achalMarch, position));
+            listAreoport.Add(new Aeroport(nom, achalPass, achalMarch, position));
 
             string areoport = listAreoport.Last().m_nom + "   |   (" + listAreoport.Last().m_localisation + ")   |   Achanlandage passager: " + listAreoport.Last().m_achalPassager + "   |   Achanlandage marchandise: " + listAreoport.Last().m_achalMarchandise;
             return areoport;
@@ -90,7 +90,7 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             Stream stream;
             SaveFileDialog sfg = new SaveFileDialog();
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Areoport>));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Aeroport>));
 
             sfg.InitialDirectory = @".\Scénarios\";
             sfg.Filter = "XML File (*.xml)|*.xml";
@@ -114,10 +114,10 @@ namespace TP_Aviation___Generateur_de_scénario
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                XmlSerializer xs = new XmlSerializer(typeof(List<Areoport>));
+                XmlSerializer xs = new XmlSerializer(typeof(List<Aeroport>));
                 using (StreamReader rd = new StreamReader(ofd.FileName))
                 {                    
-                    List<Areoport> listTest = xs.Deserialize(rd) as List<Areoport> ;
+                    List<Aeroport> listTest = xs.Deserialize(rd) as List<Aeroport> ;
                 }
             }
         }

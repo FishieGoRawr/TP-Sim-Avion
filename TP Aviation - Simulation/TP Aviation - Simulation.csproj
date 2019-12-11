@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aeroport.cs" />
     <Compile Include="Aller.cs" />
     <Compile Include="AllerRetour.cs" />
     <Compile Include="AeroIncendie.cs" />
@@ -56,7 +57,6 @@
     <Compile Include="Aeronef.cs" />
     <Compile Include="AeroObservateur.cs" />
     <Compile Include="AeroPassager.cs" />
-    <Compile Include="Areoport.cs" />
     <Compile Include="AeroSecours.cs" />
     <Compile Include="Attente.cs" />
     <Compile Include="Client.cs" />
@@ -66,6 +66,7 @@
     <Compile Include="Débarquement.cs" />
     <Compile Include="Embarquement.cs" />
     <Compile Include="EnVol.cs" />
+    <Compile Include="Etat.cs" />
     <Compile Include="Feu.cs" />
     <Compile Include="GUISimulateur.cs">
       <SubType>Form</SubType>
@@ -87,7 +88,6 @@
     <Compile Include="Transport.cs" />
     <Compile Include="TransportClient.cs" />
     <Compile Include="UsineClient.cs" />
-    <Compile Include="État.cs" />
     <EmbeddedResource Include="GUISimulateur.resx">
       <DependentUpon>GUISimulateur.cs</DependentUpon>
     </EmbeddedResource>

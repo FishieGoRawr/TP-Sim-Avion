@@ -16,7 +16,7 @@ namespace TP_Aviation___Simulation
         bool m_simulateurEnMarche;
         Thread mainThread { get; set; }
         Horloge m_horloge { get; set; }
-        public int derniereHeure { get; set; }
+        ControllerSimulateur m_controller;
 
         Scenario()
         {
@@ -26,14 +26,12 @@ namespace TP_Aviation___Simulation
             m_simulateurEnMarche = false;
             mainThread = new Thread(new ThreadStart(spin));
             m_horloge = new Horloge();
-            derniereHeure = 0;
             
 
             //TEMPO
             listAreoport.Add(new Aeroport());
         }
-
-        //Accesseurs    
+              
         public static Scenario getScenario
         {
             get
@@ -46,23 +44,9 @@ namespace TP_Aviation___Simulation
             }
         }
 
-        
-        public List<Areoport> Liste
-        {
-            get { return listAreoport; }
-            set { listAreoport = value; }
-        }
-        //
-
-        //Events
-        public void abonnerOnHeureChanged(HorlogeEventHandler handler)
-        {
-            m_horloge.TempsChanged += handler;
-        }
-
-        //Méthodes
         public void changerStatusSpin()
         {
+
             if (mainThread.IsAlive)
             {
                 if (m_simulateurEnMarche)
@@ -87,31 +71,20 @@ namespace TP_Aviation___Simulation
         {
             while (m_simulateurEnMarche)
             {
-                Thread.Sleep(150);
+                Thread.Sleep(1);
                 m_horloge.ajouteMinutes();
-
-                if (derniereHeure != m_horloge.m_heures)
-                {
-                    if (m_horloge.m_heures % 2 == 0)
-                    {
-                        ajouterFeu(1500, 768);
-                        ajouterSecours(1500, 768);
-                        ajouterObservateur(1500, 768);
-                    }
-                    else
-                    {
-                        ajouterPassager();
-                        ajouterMarchandise();
-                    }
-
-                    derniereHeure = m_horloge.m_heures;
-                }                
             }
-        }    
+        }
 
-        public int obtenirHeure()
+        public void abonnerOnHeureChanged(HorlogeEventHandler handler)
         {
-            return m_horloge.m_heures;
+            m_horloge.TempsChanged += handler;
+        }
+        
+        public List<Aeroport> Liste
+        {
+            get { return listAreoport; }
+            set { listAreoport = value; }
         }
 
         public void ajouterPassager()
@@ -225,7 +198,7 @@ namespace TP_Aviation___Simulation
                             clientPosX = client.PosX;
                             clientPosY = client.PosY;
 
-                            distance = pythagore((clientPosX - (35/2)) - (posX - (35 / 2)), (clientPosY - (35 / 2)) - (posY - (35 / 2)));
+                            distance = pythagore(clientPosX - posX, clientPosY - posY);
 
 
                             if (plusPetit == 0 || distance < plusPetit)

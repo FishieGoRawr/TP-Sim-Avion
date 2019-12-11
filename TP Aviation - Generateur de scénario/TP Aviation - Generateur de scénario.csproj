@@ -54,7 +54,7 @@
     <Compile Include="Aeronef.cs" />
     <Compile Include="AeroObservateur.cs" />
     <Compile Include="AeroPassager.cs" />
-    <Compile Include="Areoport.cs" />
+    <Compile Include="Aeroport.cs" />
     <Compile Include="AeroSecours.cs" />
     <Compile Include="ControlleurGenerateur.cs" />
     <Compile Include="Distance.cs" />

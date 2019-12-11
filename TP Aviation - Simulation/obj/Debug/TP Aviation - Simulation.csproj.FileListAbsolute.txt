@@ -17,3 +17,12 @@ P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Deb
 P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.csproj.GenerateResource.cache
 P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.exe
 P:\École\Automne 2019\Prog III\TP\TP-Sim-Avion\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.pdb
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.csprojAssemblyReference.cache
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\obj\Debug\TP_Aviation___Simulation.GUISimulateur.resources
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\obj\Debug\TP_Aviation___Simulation.Properties.Resources.resources
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.csproj.GenerateResource.cache
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.exe
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\obj\Debug\TP Aviation - Simulation.pdb
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\bin\Debug\TP Aviation - Simulation.exe.config
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\bin\Debug\TP Aviation - Simulation.exe
+C:\Users\1511238\Desktop\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP-Sim-Avion-2136669808792665f6086d596c05c60f37c3c7c6\TP Aviation - Simulation\bin\Debug\TP Aviation - Simulation.pdb

@@ -20,8 +20,11 @@ namespace TP_Aviation___Simulation
         public int m_tempsEnt { get; set; }
         public PositionGeo m_localisation { get; set; }
         public PositionGeo m_origine { get; set; }
+        [XmlIgnore]
         public bool m_dispo { get; set; }
+        [XmlIgnore]
         public Etat m_etat { get; set; }
+        [XmlIgnore]
         public int m_indexClient { get; set; }
 
         /// <summary>
