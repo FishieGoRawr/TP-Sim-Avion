@@ -58,5 +58,15 @@ namespace TP_Aviation___Simulation
         {
             get { return m_capacite; }
         }
+
+        public override int Embarquement
+        {
+            get { return m_tempsEmb; }
+        }
+
+        public override int Debarquement
+        {
+            get { return m_tempsDeb; }
+        }
     }
 }

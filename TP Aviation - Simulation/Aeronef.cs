@@ -67,25 +67,32 @@ namespace TP_Aviation___Simulation
             switch (m_etat.Index)
             {
                 case 1:
-                    m_etat = new Attente(this);
+                    if(m_etat.GetType() != typeof(Attente))
+                        m_etat = new Attente(this);
                     break;
                 case 2:
-                    m_etat = new Embarquement(this);
+                    if (m_etat.GetType() != typeof(Embarquement))
+                        m_etat = new Embarquement(this);
                     break;
                 case 3:
-                    m_etat = new Aller(this);
+                    if (m_etat.GetType() != typeof(Aller))
+                        m_etat = new Aller(this);
                     break;
                 case 4:
-                    m_etat = new AllerRetour(this);
+                    if (m_etat.GetType() != typeof(AllerRetour))
+                        m_etat = new AllerRetour(this);
                     break;
                 case 5:
-                    m_etat = new Observation(this);
+                    if (m_etat.GetType() != typeof(Observation))
+                        m_etat = new Observation(this);
                     break;
                 case 6:
-                    m_etat = new Débarquement(this);
+                    if (m_etat.GetType() != typeof(Débarquement))
+                        m_etat = new Débarquement(this);
                     break;
                 case 7:
-                    m_etat = new Maintenance(this);
+                    if (m_etat.GetType() != typeof(Maintenance))
+                        m_etat = new Maintenance(this);
                     break;
                 default:
                     break;

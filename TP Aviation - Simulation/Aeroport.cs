@@ -48,6 +48,7 @@ namespace TP_Aviation___Simulation
         public PositionGeo Localisation
         {
             get { return m_localisation; }
+            set { m_localisation = value; }
         }
     }
 }

@@ -43,6 +43,7 @@ namespace TP_Aviation___Simulation
         public virtual PositionGeo Destination
         {
             get { return null; }
+            set {  }
         }
     }
 }

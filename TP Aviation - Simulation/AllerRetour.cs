@@ -17,7 +17,6 @@ namespace TP_Aviation___Simulation
 
         public override void avancer(int tempsPasse, List<Client> clients)
         {
-
             int x = m_positionActuelle.PosX;
             int y = m_positionActuelle.PosY;
 
@@ -33,9 +32,11 @@ namespace TP_Aviation___Simulation
             switch (m_aeronef.Type)
             {
                 case "Secours":
-                    if (true)
+                    if (m_positionActuelle.Equals(clients[m_aeronef.IndexClient].Destination))
                     {
-                        
+                        PositionGeo tempo = m_aeronef.Origine;
+                        m_aeronef.Origine = clients[m_aeronef.IndexClient].Destination;
+                        clients[m_aeronef.IndexClient].Destination = tempo;
                     }
                     else
                     {

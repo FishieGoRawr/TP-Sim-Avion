@@ -13,7 +13,7 @@ namespace TP_Aviation___Simulation
         {
             etat = 2;
             this.m_aeronef = aeronef;
-            this.tempsRestant = aeronef.Entretien;
+            this.tempsRestant = aeronef.Embarquement;
         }
 
         public override void avancer(int tempsPasse, List<Client> clients)

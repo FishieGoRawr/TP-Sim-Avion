@@ -28,5 +28,11 @@ namespace TP_Aviation___Simulation
         {
             return m_nom + " X: " + m_destination.PosX + " Y: " + m_destination.PosY;
         }
+
+        public override PositionGeo Destination
+        {
+            get { return m_destination; }
+            set { m_destination = value; }
+        }
     }
 }
