@@ -9,10 +9,6 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
-    /// <summary>
-    /// Contient une liste d'aréoports, qui eux meme contiennent une liste d'aeronefs.
-    /// </summary>
-
     public class Scenario
     {
         static Scenario m_scenario; //Singleton scénario
@@ -20,7 +16,7 @@ namespace TP_Aviation___Generateur_de_scénario
         UsineAeronef usine; //Usine pour créer des aeronefs
 
         /// <summary>
-        /// Constructeur d'un scénario. Intinie la liste d'aréoports et set l'usine a aeronefs
+        /// Constructeur d'un scénario
         /// </summary>
         Scenario()
         {
@@ -29,7 +25,7 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Singleton: Retourne l'usine, la crée si non initiée.
+        /// Constructeur vide d'un scénario
         /// </summary>
         public static Scenario getScenario
         {
@@ -44,10 +40,10 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Accesseur de la liste d'areoports
+        /// Ascesseur de l'aréoport a l'indice dans la liste d'aréoports
         /// </summary>
-        /// <param name="index">Index de l'areoport qu'on veut.</param>
-        /// <returns>Retourne l'areoport passé en index.</returns>
+        /// <param name="index">Indice dans la liste</param>
+        /// <returns></returns>
         public Aeroport this[int index]
         {
             get { return listAreoport[index]; }
@@ -55,12 +51,12 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Ajoute un aréoport a la liste.
+        /// Ajoute un aéroport au scnénario
         /// </summary>
-        /// <param name="nom">Nom de l'aréoport</param>
-        /// <param name="achalPass">Achalandage de passager de l'areoport</param>
-        /// <param name="achalMarch">Achalandage de marchandise de l'areoport</param>
-        /// <param name="position">La propriété Text contient une string de la pos DegreeMin, la propriété Tag contient la pos X et Y.</param>
+        /// <param name="nom">Nom de l'aéroport</param>
+        /// <param name="achalPass">Indice d'achalandage de passagers de l'aéroport</param>
+        /// <param name="achalMarch">Indice d'achalandage de marchandises de l'aéroport</param>
+        /// <param name="position">Posiition géographique de l'aéroport</param>
         /// <returns></returns>
         public string ajoutAeroport(string nom, int achalPass, int achalMarch, TextBox position)
         {
@@ -71,17 +67,17 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Ajoute un aeronef a l'areoport spécifié
+        /// Ajoute un aéronef dans l'aéroport sélectionner
         /// </summary>
-        /// <param name="nom">Nom de l'avion</param>
-        /// <param name="type">Type de l'avion</param>
-        /// <param name="vitesse">Vitesse de l'avion</param>
-        /// <param name="entretien">Temps d'entretien de l'avion</param>
-        /// <param name="charger">Temps de chargement de l'avion</param>
-        /// <param name="decharger">Temps de déchargement de l'avion</param>
-        /// <param name="change">Parametre changant selon le type de l'avion (Capacité, rayon)</param>
-        /// <param name="aeroports"></param>
-        /// <returns></returns>
+        /// <param name="nom">Nom de l'aéronef</param>
+        /// <param name="type">Type de l'aéronef</param>
+        /// <param name="vitesse">Vitesse de l'aéronef</param>
+        /// <param name="entretien">Temps de maintenance de l'aéronef</param>
+        /// <param name="charger">Temps d'embarquement de l'aéronef</param>
+        /// <param name="decharger">Temps de débarquement de l'aéronef</param>
+        /// <param name="change">Nombre qui représente la capacité ou le rayon de l'aéronef selon le type</param>
+        /// <param name="aeroports">Nom de l'aéroport de l'aéronef</param>
+        /// <returns>Retourne l'aéronef avec ses informations sous forme de texte</returns>
         public string ajouterAeronef(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, string aeroports)
         {
             PositionGeo origine = null;
@@ -101,6 +97,8 @@ namespace TP_Aviation___Generateur_de_scénario
             string changement;
             listAreoport[temp][0] = usine.creerAvion(nom, type, vitesse, entretien, charger, decharger, change, origine);
 
+
+            //Transforme l'aéronef sous forme de texte
             if ((type == "Passagers") | (type == "Marchandises"))
             {
                 changement = "Capacité";
@@ -112,8 +110,9 @@ namespace TP_Aviation___Generateur_de_scénario
             return areonef;
         }
 
+
         /// <summary>
-        /// Permet la sérialisation XML du scénario
+        /// Sérialise le scénario dans le fichier
         /// </summary>
         public void SerializeScenario()
         {
@@ -130,6 +129,26 @@ namespace TP_Aviation___Generateur_de_scénario
                 {
                     serializer.Serialize(stream, this.listAreoport);
                     stream.Close();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Désérialise un scnénario à partir d'un fichier sélectionner
+        /// </summary>
+        public void DeserializeScenario()
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.InitialDirectory = @".\Scénarios\";
+            ofd.Filter = "XML File (*.xml)|*.xml";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                XmlSerializer xs = new XmlSerializer(typeof(List<Aeroport>));
+                using (StreamReader rd = new StreamReader(ofd.FileName))
+                {                    
+                    List<Aeroport> listTest = xs.Deserialize(rd) as List<Aeroport> ;
                 }
             }
         }

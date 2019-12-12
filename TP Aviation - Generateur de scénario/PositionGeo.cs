@@ -19,9 +19,9 @@ namespace TP_Aviation___Generateur_de_scénario
         public string m_posDegreeMin { get; set; } //Position sous format degree/minute
 
         /// <summary>
-        /// Constructeur d'une position géo
+        /// Constructeur d'une position géographique
         /// </summary>
-        /// <param name="posDegreeMin">Textbox en parametres. Le text contient la string format posDegreeMin, le Tag contient la position X,Y</param>
+        /// <param name="posDegreeMin">Position avec les degrées et cardinalité</param>
         public PositionGeo(TextBox posDegreeMin)
         {
             string[] pos = posDegreeMin.Tag.ToString().Split(' ');
@@ -32,7 +32,7 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Constructeur de base de positionGeo au position x0y0.
+        /// Constructeur vide d'une position géographique
         /// </summary>
         public PositionGeo()
         {
@@ -41,9 +41,9 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Permet d'obtenir le string sous forme degreeMin
+        /// Affiche en texte la position géographique
         /// </summary>
-        /// <returns>Retourne la position sous forme degreeMin</returns>
+        /// <returns></returns>
         public override string ToString()
         {
             return m_posDegreeMin;

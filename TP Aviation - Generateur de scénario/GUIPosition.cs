@@ -19,9 +19,9 @@ namespace TP_Aviation___Generateur_de_scénario
         GUIGenerateur guigen; //GUI général du logiciel
 
         /// <summary>
-        /// Constructeur du GUIPosition
+        /// Cosntructeur du GUI de sélection de position
         /// </summary>
-        /// <param name="gui">GUI Général du logiciel</param>
+        /// <param name="gui">Variable qui contient le GUI du générateur</param>
         public GUIPosition(GUIGenerateur gui)
         {
             guigen = gui;
@@ -29,10 +29,10 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Event lorsqu'on clique sur la map
+        /// Sélectionne les positions X et Y de la souris lorsqu'on clique sur la window
         /// </summary>
-        /// <param name="sender">PictureBox de la carte</param>
-        /// <param name="e">Args du clic de la souris</param>
+        /// <param name="sender">Objet d'évènement</param>
+        /// <param name="e">Objet souris</param>
         private void PcbWorldmap_MouseClick(object sender, MouseEventArgs e)
         {
             string coordString = "";
@@ -43,11 +43,11 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Convertit une position XY en DegreeMin
+        /// Convertit les positiosn de la souris en coordonnée géograpgique en degrée
         /// </summary>
-        /// <param name="x">posX cliquée</param>
-        /// <param name="y">posY cliquée</param>
-        /// <returns>Retourne un string consistant de la postion degreeMin du clic</returns>
+        /// <param name="x">Position X de la souris</param>
+        /// <param name="y">Position Y de la souris</param>
+        /// <returns>Retourne la coordonnée géographique avec les valeurs Nord, Sud, Est, Ouest</returns>
         private string convertPosToMinSec(double x, double y)
         {
             string coords = "";

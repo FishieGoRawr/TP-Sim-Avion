@@ -15,14 +15,14 @@ namespace TP_Aviation___Generateur_de_scénario
         private static UsineAeronef m_usineAeronef = null; //Singleton de l'usine
 
         /// <summary>
-        /// Constructeur vide de l'usine
+        /// Cosntructeur de l'usine
         /// </summary>
         UsineAeronef()
         {
         }
 
         /// <summary>
-        /// Crée un nouvel usine si non existant, sinon, retourne l'instance de l'usine
+        /// Appelle de l'usine par les autres classes, si non initialiser il se crée lui-même
         /// </summary>
         public static UsineAeronef getUsineAeronef
         {
@@ -37,16 +37,16 @@ namespace TP_Aviation___Generateur_de_scénario
         }
 
         /// <summary>
-        /// Crée un aeronef avec les parametres voulu.
+        /// Crée un nouvel aéronef, selon le type reçu et avec bonnes les informations
         /// </summary>
-        /// <param name="nom">Nom de l'aeronef</param>
-        /// <param name="type">Type de l'aeronef</param>
-        /// <param name="vitesse">Vitesse de l'aeronef</param>
-        /// <param name="entretien">Temps d'entretient de l'aeronef</param>
-        /// <param name="charger">Temps de chargement de l'aeronef</param>
-        /// <param name="decharger">Temps de déchargement de l'aeronef</param>
-        /// <param name="change">Parametre qui change selon le type (Capacité, rayon)</param>
-        /// <param name="origine">Point d'origine de l'aeronef</param>
+        /// <param name="nom">Nom de l'aéronef</param>
+        /// <param name="type">Type de l'aéronef</param>
+        /// <param name="vitesse">Vitesse de l'aéronef</param>
+        /// <param name="entretien">Temps de maintenance de l'aéronef</param>
+        /// <param name="charger">Temps de débarquement de l'aéronef</param>
+        /// <param name="decharger">Temps d'embarquement de l'aéronef</param>
+        /// <param name="change">Nombre qui représente la capacité ou le rayon de l'aéronef selon le type</param>
+        /// <param name="origine">Position d'origine de l'aéronef, qui est la position de l'aéroport</param>
         /// <returns></returns>
         public Aeronef creerAvion(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, PositionGeo origine)
         {

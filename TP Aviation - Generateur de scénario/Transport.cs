@@ -18,22 +18,22 @@ namespace TP_Aviation___Generateur_de_scénario
         public int m_tempsDeb { get; set; } //Temps de débarquement
 
         /// <summary>
-        /// Constructeur d'un Transport
+        /// Constructeur de la classe abstraite d'avions de transports (Passager, Marchandise)
         /// </summary>
-        /// <param name="nom">Nom de l'aeronef</param>
-        /// <param name="type">Type de l'aeronef</param>
-        /// <param name="vitesse">Vitesse de l'aeronef</param>
-        /// <param name="entretien">Temps d'entretien de l'aeronef</param>
-        /// <param name="origine">Position d'origine de l'aeronef</param>
-        /// <param name="charger">Temps de chargement de l'aeronef</param>
-        /// <param name="decharger">Temps de déchargement de l'aeronef</param>
+        ///<param name = "nom" >Nom de l'aéronef</param>
+        /// <param name="type">Type de l'aéronef</param>
+        /// <param name="vitesse">Vitesse de l'aéronef</param>
+        /// <param name="origine">Position d'origine de l'aéronef, qui est la position de l'aéroport</param>
+        /// <param name="entretien">Temps de maintenance de l'aéronef</param>
+        /// <param name="charger">Temps d'embarquement de l'aéronef</param>
+        /// <param name="decharger">Temps de débarquement de l'aéronef</param>
         public Transport(string nom, string type, int vitesse, int entretien, PositionGeo origine, int charger, int decharger) : base(nom, type, vitesse, entretien, origine)
         {
 
         }
 
         /// <summary>
-        /// Constructeur vide d'un Transport
+        /// Constructeur vide de la classe abstraite d'avions de transports (Passager, Marchandise)
         /// </summary>
         public Transport()
         {
