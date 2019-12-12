@@ -17,6 +17,12 @@ namespace TP_Aviation___Simulation
         public int m_achalMarchandise { get; set; }
         public Bitmap m_image;
 
+        /// <summary>
+        /// Cosntructeur d'un aéroport
+        /// </summary>
+        /// <param name="p_nom">Nom de l'aeroport</param>
+        /// <param name="p_achalMarchandise">Nombre représentant l'achalandage des marchandises de l'aeroport</param>
+        /// <param name="p_achalPassager">Nombre représentant l'achalandage des passagers de l'aeroport</param>
         public Aeroport(string p_nom, int p_achalMarchandise, int p_achalPassager)
         {
             m_listAeronef = new List<Aeronef>();
@@ -28,6 +34,9 @@ namespace TP_Aviation___Simulation
             m_image = Properties.Resources.airport;
         }
 
+        /// <summary>
+        /// Cosntructeur vide d'un aéroport
+        /// </summary>
         public Aeroport()
         {
             m_nom = "null";
@@ -37,6 +46,10 @@ namespace TP_Aviation___Simulation
             m_achalMarchandise = 0;
         }
 
+        /// <summary>
+        /// Demande a tous les aviosn dans la liste d'avancer
+        /// </summary>
+        /// <param name="temps"></param>
         public void bougerAvion(int temps)
         {
             foreach (var aeronef in m_listAeronef)
@@ -45,6 +58,9 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        /// <summary>
+        /// Ascesseur de la position de l'aéroport
+        /// </summary>
         public PositionGeo Localisation
         {
             get { return m_localisation; }

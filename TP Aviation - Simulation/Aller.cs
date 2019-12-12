@@ -8,12 +8,21 @@ namespace TP_Aviation___Simulation
 {
     class Aller : EnVol
     {
+        /// <summary>
+        /// Constructeur de l'état aller
+        /// </summary>
+        /// <param name="aeronef">Aéronef auquel l'état appartient</param>
         public Aller(Aeronef aeronef) : base(aeronef)
         {
             Index = 3;
             this.m_aeronef = aeronef;
         }
 
+        /// <summary>
+        /// Avance l'avion vers sa destination
+        /// </summary>
+        /// <param name="tempsPasse">Minute passée dans la simulation pendant le tick</param>
+        /// <param name="clients">Liste des clients dans l'aéroport auquel appartient l'aéronef</param>
         public override void avancer(int tempsPasse, List<Client> clients)
         {
             int x = m_positionActuelle.PosX;
@@ -36,6 +45,12 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        /// <summary>
+        /// Calcule la distance entre la position de départ avec la position de destination grâce au X,Y
+        /// </summary>
+        /// <param name="a">Distance entre les X des positions</param>
+        /// <param name="b">Distance entre les Y des positions</param>
+        /// <returns>Retourne la distance entre les positions</returns>
         public double pythagore(int a, int b)
         {
             double c = 0;

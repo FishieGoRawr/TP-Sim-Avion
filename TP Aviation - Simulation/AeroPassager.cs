@@ -54,16 +54,26 @@ namespace TP_Aviation___Simulation
             this.m_indexClient = -1;
 
         }
+
+        /// <summary>
+        /// Ascesseur de la capacité de l'aéronef
+        /// </summary>
         public override int Capacite
         {
             get { return m_capacite; }
         }
 
+        /// <summary>
+        /// Ascesseur du temps de d'embarquement type de l'aéronef
+        /// </summary>
         public override int Embarquement
         {
             get { return m_tempsEmb; }
         }
 
+        /// <summary>
+        /// Ascesseur du temps de debarquement type de l'aéronef
+        /// </summary>
         public override int Debarquement
         {
             get { return m_tempsDeb; }

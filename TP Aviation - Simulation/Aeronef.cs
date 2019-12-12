@@ -62,6 +62,11 @@ namespace TP_Aviation___Simulation
             this.m_etat = null;
         }
 
+        /// <summary>
+        /// Appelle le bon état pour faire avancer l'aéronef ou changer l'état
+        /// </summary>
+        /// <param name="temps">Temps passer dans la simulation en minute</param>
+        /// <param name="clients">Liste des clients de l'aéroport auquel l'aéronef appartient</param>
         public void avancerAvion(int temps, List<Client> clients)
         {
             switch (m_etat.Index)
@@ -101,58 +106,92 @@ namespace TP_Aviation___Simulation
             m_etat.avancer(temps, clients);
         }
 
+        /// <summary>
+        /// Ascesseur du type de l'aéronef
+        /// </summary>
         public String Type
         {
             get { return m_type; }
         }
 
+        /// <summary>
+        /// Ascesseur du booléen de la disponibilité de l'aéronef
+        /// </summary>
         public virtual bool Dispo
         {
             get { return m_dispo; }
             set { m_dispo = value; }
         }
 
+        /// <summary>
+        /// Ascesseur du temps de maintenance de l'aéronef
+        /// </summary>
         public virtual int Entretien
         {
             get { return m_tempsEnt; }
         }
 
+        /// <summary>
+        /// Ascesseur de la vitesse de l'aéronef
+        /// </summary>
         public virtual int Vitesse
         {
             get { return m_vitesse; }
         }
 
+        /// <summary>
+        /// Ascesseur de la localisation actuelle de l'aéronef
+        /// </summary>
         public virtual PositionGeo Localisation
         {
             get { return m_localisation; }
+            set { m_localisation = value; }
         }
 
+        /// <summary>
+        /// Ascesseur de la position d'origine de l'aéronef
+        /// </summary>
         public virtual PositionGeo Origine
         {
             get { return m_origine; }
             set { m_origine = value; }
         }
 
+        /// <summary>
+        /// Ascesseur de la capacité de l'aéronef 
+        /// </summary>
         public virtual int Capacite
         {
             get { return 0; }
         }
 
+        /// <summary>
+        /// Ascesseur de la capacité type de l'aéronef
+        /// </summary>
         public virtual double DoubleCapacite
         {
             get { return 0; }
         }
 
+        /// <summary>
+        /// Ascesseur du temps d'embarquement de l'aéronef
+        /// </summary>
         public virtual int Embarquement
         {
             get { return 0; }
         }
 
+        /// <summary>
+        /// Ascesseur du temps de debarquement type de l'aéronef
+        /// </summary>
         public virtual int Debarquement
         {
             get { return 0; }
         }
 
+        /// <summary>
+        /// Ascesseur de l'indice du client que desert l'aéronef actuellement
+        /// </summary>
         public virtual int IndexClient
         {
             get { return m_indexClient; }

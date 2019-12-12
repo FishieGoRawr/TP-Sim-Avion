@@ -8,12 +8,21 @@ namespace TP_Aviation___Simulation
 {
     class Attente : Etat
     {
+        /// <summary>
+        /// Constructeur de l'état allerRetour
+        /// </summary>
+        /// <param name="aeronef">Aéronef auquel l'état appartient</param>
         public Attente(Aeronef aeronef) : base(aeronef)
         {
             etat = 1;
             this.m_aeronef = aeronef;
         }
 
+        /// <summary>
+        /// Vérifie s'il y a assez de client dans l'aéroport pour décoller
+        /// </summary>
+        /// <param name="tempsPasse">Minute passée dans la simulation pendant le tick</param>
+        /// <param name="clients">Liste des clients dans l'aéroport auquel appartient l'aéronef</param>
         public override void avancer(int tempsPasse, List<Client> clients)
         {
             if (m_aeronef.Dispo)
@@ -36,6 +45,7 @@ namespace TP_Aviation___Simulation
                         }
                     }
 
+                    //Si plus de 75% ed l'aéronef est rempli
                     if (total >= (m_aeronef.Capacite * 0.75))
                     {
                         for (int i = 0; i < iClient.Count; i++)
@@ -68,6 +78,7 @@ namespace TP_Aviation___Simulation
                             }
                         }
 
+                        //Si plus de 75% ed l'aéronef est rempli
                         if (total >= (m_aeronef.Capacite * 0.75))
                         {
                             for (int i = 0; i < iClient.Count; i++)

@@ -51,16 +51,25 @@ namespace TP_Aviation___Simulation
             this.m_indexClient = -1;
         }
 
+        /// <summary>
+        /// Ascesseur de la capacité des aéronefs de types marchandises
+        /// </summary>
         public override double DoubleCapacite
         {
             get { return m_capacite; }
         }
 
+        /// <summary>
+        /// Ascesseur du temps d'embarquement des aéronefs de types marchandises et passagers
+        /// </summary>
         public override int Embarquement
         {
             get { return m_tempsEmb; }
         }
 
+        /// <summary>
+        /// Ascesseur du temps d'embarquement des aéronefs de types marchandises et passagers
+        /// </summary>
         public override int Debarquement
         {
             get { return m_tempsDeb; }
