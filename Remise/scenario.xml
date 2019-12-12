@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<ArrayOfAeroport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Aeroport>
+    <m_nom>Areo 1</m_nom>
+    <m_localisation>
+      <m_posX>226</m_posX>
+      <m_posY>115</m_posY>
+      <m_posDegreeMin>48° 20' N, 98° 38' O</m_posDegreeMin>
+    </m_localisation>
+    <m_listAeronef>
+      <Aeronef xsi:type="AeroPassager">
+        <m_nom>avion 1</m_nom>
+        <m_type>Passagers</m_type>
+        <m_vitesse>1</m_vitesse>
+        <m_tempsEnt>1</m_tempsEnt>
+        <m_tempsEmb>1</m_tempsEmb>
+        <m_tempsDeb>1</m_tempsDeb>
+      </Aeronef>
+      <Aeronef xsi:type="AeroMarchandise">
+        <m_nom>avion 2</m_nom>
+        <m_type>Marchandises</m_type>
+        <m_vitesse>2</m_vitesse>
+        <m_tempsEnt>2</m_tempsEnt>
+        <m_tempsEmb>2</m_tempsEmb>
+        <m_tempsDeb>2</m_tempsDeb>
+      </Aeronef>
+      <Aeronef xsi:type="AeroObservateur">
+        <m_nom>avion</m_nom>
+        <m_type>Observateurs</m_type>
+        <m_vitesse>1</m_vitesse>
+        <m_tempsEnt>11</m_tempsEnt>
+        <m_nbAller>1</m_nbAller>
+        <m_dispo>true</m_dispo>
+      </Aeronef>
+      <Aeronef xsi:type="AeroIncendie">
+        <m_nom>avion 3</m_nom>
+        <m_type>Incendies</m_type>
+        <m_vitesse>1</m_vitesse>
+        <m_tempsEnt>1</m_tempsEnt>
+        <m_nbAller>0</m_nbAller>
+        <m_dispo>true</m_dispo>
+        <NbAller>0</NbAller>
+      </Aeronef>
+      <Aeronef xsi:type="AeroSecours">
+        <m_nom>avion 4</m_nom>
+        <m_type>Secours</m_type>
+        <m_vitesse>4</m_vitesse>
+        <m_tempsEnt>4</m_tempsEnt>
+        <m_nbAller>1</m_nbAller>
+        <m_dispo>true</m_dispo>
+      </Aeronef>
+    </m_listAeronef>
+    <m_achalPassager>1</m_achalPassager>
+    <m_achalMarchandise>1</m_achalMarchandise>
+  </Aeroport>
+  <Aeroport>
+    <m_nom>Aero 2</m_nom>
+    <m_localisation>
+      <m_posX>279</m_posX>
+      <m_posY>338</m_posY>
+      <m_posDegreeMin>32° 6' S, 79° 33' O</m_posDegreeMin>
+    </m_localisation>
+    <m_listAeronef />
+    <m_achalPassager>2</m_achalPassager>
+    <m_achalMarchandise>2</m_achalMarchandise>
+  </Aeroport>
+  <Aeroport>
+    <m_nom>Aero 3</m_nom>
+    <m_localisation>
+      <m_posX>889</m_posX>
+      <m_posY>380</m_posY>
+      <m_posDegreeMin>47° 15' S, 140° 2' E</m_posDegreeMin>
+    </m_localisation>
+    <m_listAeronef />
+    <m_achalPassager>3</m_achalPassager>
+    <m_achalMarchandise>3</m_achalMarchandise>
+  </Aeroport>
+</ArrayOfAeroport>
