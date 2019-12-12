@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pcbWorldmap = new System.Windows.Forms.PictureBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnChargerScenario = new System.Windows.Forms.Button();
             this.lsbAreoport = new System.Windows.Forms.ListBox();
@@ -41,7 +40,6 @@
             this.lblHorloge = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbWorldmap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // pcbWorldmap
@@ -55,19 +53,11 @@
             this.pcbWorldmap.TabIndex = 1;
             this.pcbWorldmap.TabStop = false;
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(1216, 11);
-            this.trackBar1.Maximum = 4;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(296, 69);
-            this.trackBar1.TabIndex = 2;
-            // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(918, 11);
+            this.btnStart.Location = new System.Drawing.Point(872, 11);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(296, 35);
+            this.btnStart.Size = new System.Drawing.Size(640, 35);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "Démarrer";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -77,7 +67,7 @@
             // 
             this.btnChargerScenario.Location = new System.Drawing.Point(12, 11);
             this.btnChargerScenario.Name = "btnChargerScenario";
-            this.btnChargerScenario.Size = new System.Drawing.Size(896, 35);
+            this.btnChargerScenario.Size = new System.Drawing.Size(837, 35);
             this.btnChargerScenario.TabIndex = 5;
             this.btnChargerScenario.Text = "Télécharger un scénario";
             this.btnChargerScenario.UseVisualStyleBackColor = true;
@@ -180,13 +170,11 @@
             this.Controls.Add(this.lsbAreoport);
             this.Controls.Add(this.btnChargerScenario);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pcbWorldmap);
             this.Name = "GUISimulateur";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pcbWorldmap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +183,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pcbWorldmap;
-        private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnChargerScenario;
         private System.Windows.Forms.ListBox lsbAreoport;
