@@ -25,7 +25,6 @@ namespace TP_Aviation___Simulation
         /// <param name="type">Type de l'areonef</param>
         public AeroPassager(string nom, string type, int vitesse, int entretien, PositionGeo origine, int charger, int decharger, int change) : base(nom, type, vitesse, entretien, origine, charger, decharger)
         {
-
             this.m_nom = nom;
             this.m_type = type;
             this.m_vitesse = vitesse;
@@ -35,6 +34,8 @@ namespace TP_Aviation___Simulation
             this.m_tempsDeb = decharger;
             this.m_capacite = change;
             this.m_indexClient = -1;
+            this.m_etat = new Etat(this);
+            m_clientDestination = new PositionGeo();
         }
 
         /// <summary>
@@ -52,7 +53,47 @@ namespace TP_Aviation___Simulation
             m_capacite = 0;
             m_image = null;
             this.m_indexClient = -1;
+            m_clientDestination = new PositionGeo();
 
+        }
+
+        public override void avancerAvion(int temps, List<Client> clients)
+        {
+            switch (m_etat.Index)
+            {
+                case 1:
+                    if (m_etat.GetType() != typeof(Attente))
+                        m_etat = new Attente(this);
+                    break;
+                case 2:
+                    if (m_etat.GetType() != typeof(Embarquement))
+                        m_etat = new Embarquement(this);
+                    break;
+                case 3:
+                    if (m_etat.GetType() != typeof(Aller))
+                        m_etat = new Aller(this);
+                    break;
+                case 4:
+                    if (m_etat.GetType() != typeof(AllerRetour))
+                        m_etat = new AllerRetour(this);
+                    break;
+                case 5:
+                    if (m_etat.GetType() != typeof(Observation))
+                        m_etat = new Observation(this);
+                    break;
+                case 6:
+                    if (m_etat.GetType() != typeof(Débarquement))
+                        m_etat = new Débarquement(this);
+                    break;
+                case 7:
+                    if (m_etat.GetType() != typeof(Maintenance))
+                        m_etat = new Maintenance(this);
+                    break;
+                default:
+                    break;
+            }
+
+            m_etat.avancer(temps, clients);
         }
 
         /// <summary>

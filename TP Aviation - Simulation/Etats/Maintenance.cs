@@ -6,26 +6,24 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Simulation
 {
-    class Embarquement : Etat
+    class Maintenance : Etat
     {
         int tempsRestant;
-        public Embarquement(Aeronef aeronef) : base(aeronef)
+        public Maintenance(Aeronef aeronef) : base(aeronef)
         {
-            etat = 2;
+            Index = 7;
             this.m_aeronef = aeronef;
-            this.tempsRestant = aeronef.Embarquement;
+            this.tempsRestant = aeronef.Entretien;
         }
 
         public override void avancer(int tempsPasse, List<Client> clients)
         {
+            tempsRestant = tempsRestant - tempsPasse;
+
             if (tempsRestant <= 0)
             {
 
-                Index = 3;
-            }
-            else
-            {
-                tempsRestant = tempsRestant - tempsPasse;
+                Index = 1;
             }
         }
     }

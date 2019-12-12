@@ -21,6 +21,10 @@ namespace TP_Aviation___Simulation
 
         }
 
+        public override void avancerAvion(int temps, List<Client> clients)
+        {
+        }
+
         public override int Embarquement
         {
             get { return m_tempsEmb; }

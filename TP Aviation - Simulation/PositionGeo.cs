@@ -12,20 +12,18 @@ namespace TP_Aviation___Simulation
         public int m_posY { get; set; }
         public string m_posDegreeMin;
 
-
-        //public PositionGeo(TextBox posDegreeMin)
-        //{
-        //    string[] pos = posDegreeMin.Tag.ToString().Split(' ');
-
-        //    m_posX = Convert.ToInt32(pos[0]);
-        //    m_posY = Convert.ToInt32(pos[1]);
-        //    m_posDegreeMin = posDegreeMin.Text;
-        //}
+        public PositionGeo(int x, int y)
+        {
+            m_posX = x;
+            m_posY = y;
+            m_posDegreeMin = "";
+        }
 
         public PositionGeo()
         {
             m_posX = 0;
             m_posY = 0;
+            m_posDegreeMin = "";
         }
 
         public int PosY

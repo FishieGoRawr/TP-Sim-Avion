@@ -41,13 +41,6 @@
             this.txtAchPassager = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lsbAeroports = new System.Windows.Forms.ListBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enregistrerLeScénarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enregistrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enregistrerSousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scénarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.effacerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpAeronefs = new System.Windows.Forms.GroupBox();
             this.txtChange = new System.Windows.Forms.TextBox();
             this.lblChange = new System.Windows.Forms.Label();
@@ -68,7 +61,6 @@
             this.lsbAeronefs = new System.Windows.Forms.ListBox();
             this.btnGenerer = new System.Windows.Forms.Button();
             this.grpAeroports.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.grpAeronefs.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +78,7 @@
             this.grpAeroports.Controls.Add(this.txtAchPassager);
             this.grpAeroports.Controls.Add(this.label1);
             this.grpAeroports.Controls.Add(this.lsbAeroports);
-            this.grpAeroports.Location = new System.Drawing.Point(12, 35);
+            this.grpAeroports.Location = new System.Drawing.Point(12, 12);
             this.grpAeroports.Name = "grpAeroports";
             this.grpAeroports.Size = new System.Drawing.Size(1070, 348);
             this.grpAeroports.TabIndex = 0;
@@ -96,7 +88,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(652, 212);
+            this.label4.Location = new System.Drawing.Point(652, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 12;
@@ -104,7 +96,7 @@
             // 
             // txtPosition
             // 
-            this.txtPosition.Location = new System.Drawing.Point(657, 235);
+            this.txtPosition.Location = new System.Drawing.Point(657, 232);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.ReadOnly = true;
             this.txtPosition.Size = new System.Drawing.Size(204, 26);
@@ -112,7 +104,7 @@
             // 
             // btnAnnulerAeroport
             // 
-            this.btnAnnulerAeroport.Location = new System.Drawing.Point(10, 309);
+            this.btnAnnulerAeroport.Location = new System.Drawing.Point(10, 306);
             this.btnAnnulerAeroport.Name = "btnAnnulerAeroport";
             this.btnAnnulerAeroport.Size = new System.Drawing.Size(1052, 31);
             this.btnAnnulerAeroport.TabIndex = 10;
@@ -122,7 +114,7 @@
             // 
             // btnAjouterAeroport
             // 
-            this.btnAjouterAeroport.Location = new System.Drawing.Point(10, 272);
+            this.btnAjouterAeroport.Location = new System.Drawing.Point(10, 269);
             this.btnAjouterAeroport.Name = "btnAjouterAeroport";
             this.btnAjouterAeroport.Size = new System.Drawing.Size(1052, 31);
             this.btnAjouterAeroport.TabIndex = 9;
@@ -132,7 +124,7 @@
             // 
             // btnPosition
             // 
-            this.btnPosition.Location = new System.Drawing.Point(868, 234);
+            this.btnPosition.Location = new System.Drawing.Point(868, 231);
             this.btnPosition.Name = "btnPosition";
             this.btnPosition.Size = new System.Drawing.Size(183, 34);
             this.btnPosition.TabIndex = 8;
@@ -142,7 +134,7 @@
             // 
             // txtNomAeroport
             // 
-            this.txtNomAeroport.Location = new System.Drawing.Point(30, 235);
+            this.txtNomAeroport.Location = new System.Drawing.Point(30, 232);
             this.txtNomAeroport.Name = "txtNomAeroport";
             this.txtNomAeroport.Size = new System.Drawing.Size(176, 26);
             this.txtNomAeroport.TabIndex = 7;
@@ -150,7 +142,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(422, 212);
+            this.label3.Location = new System.Drawing.Point(422, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 20);
             this.label3.TabIndex = 6;
@@ -158,7 +150,7 @@
             // 
             // txtAchMarchandise
             // 
-            this.txtAchMarchandise.Location = new System.Drawing.Point(426, 235);
+            this.txtAchMarchandise.Location = new System.Drawing.Point(426, 232);
             this.txtAchMarchandise.Name = "txtAchMarchandise";
             this.txtAchMarchandise.Size = new System.Drawing.Size(204, 26);
             this.txtAchMarchandise.TabIndex = 5;
@@ -166,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(222, 212);
+            this.label2.Location = new System.Drawing.Point(222, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 20);
             this.label2.TabIndex = 4;
@@ -174,7 +166,7 @@
             // 
             // txtAchPassager
             // 
-            this.txtAchPassager.Location = new System.Drawing.Point(226, 235);
+            this.txtAchPassager.Location = new System.Drawing.Point(226, 232);
             this.txtAchPassager.Name = "txtAchPassager";
             this.txtAchPassager.Size = new System.Drawing.Size(176, 26);
             this.txtAchPassager.TabIndex = 3;
@@ -182,7 +174,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 212);
+            this.label1.Location = new System.Drawing.Point(26, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 2;
@@ -192,65 +184,10 @@
             // 
             this.lsbAeroports.FormattingEnabled = true;
             this.lsbAeroports.ItemHeight = 20;
-            this.lsbAeroports.Location = new System.Drawing.Point(6, 25);
+            this.lsbAeroports.Location = new System.Drawing.Point(6, 22);
             this.lsbAeroports.Name = "lsbAeroports";
             this.lsbAeroports.Size = new System.Drawing.Size(1057, 184);
             this.lsbAeroports.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem,
-            this.scénarioToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1095, 33);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fichierToolStripMenuItem
-            // 
-            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enregistrerLeScénarioToolStripMenuItem,
-            this.enregistrerToolStripMenuItem,
-            this.enregistrerSousToolStripMenuItem});
-            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
-            this.fichierToolStripMenuItem.Text = "Fichier";
-            // 
-            // enregistrerLeScénarioToolStripMenuItem
-            // 
-            this.enregistrerLeScénarioToolStripMenuItem.Name = "enregistrerLeScénarioToolStripMenuItem";
-            this.enregistrerLeScénarioToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.enregistrerLeScénarioToolStripMenuItem.Text = "Ouvrir...";
-            // 
-            // enregistrerToolStripMenuItem
-            // 
-            this.enregistrerToolStripMenuItem.Name = "enregistrerToolStripMenuItem";
-            this.enregistrerToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.enregistrerToolStripMenuItem.Text = "Enregistrer";
-            // 
-            // enregistrerSousToolStripMenuItem
-            // 
-            this.enregistrerSousToolStripMenuItem.Name = "enregistrerSousToolStripMenuItem";
-            this.enregistrerSousToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.enregistrerSousToolStripMenuItem.Text = "Enregistrer sous...";
-            // 
-            // scénarioToolStripMenuItem
-            // 
-            this.scénarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.effacerToolStripMenuItem});
-            this.scénarioToolStripMenuItem.Name = "scénarioToolStripMenuItem";
-            this.scénarioToolStripMenuItem.Size = new System.Drawing.Size(95, 29);
-            this.scénarioToolStripMenuItem.Text = "Scénario";
-            // 
-            // effacerToolStripMenuItem
-            // 
-            this.effacerToolStripMenuItem.Name = "effacerToolStripMenuItem";
-            this.effacerToolStripMenuItem.Size = new System.Drawing.Size(167, 34);
-            this.effacerToolStripMenuItem.Text = "Effacer";
             // 
             // grpAeronefs
             // 
@@ -271,7 +208,7 @@
             this.grpAeronefs.Controls.Add(this.label5);
             this.grpAeronefs.Controls.Add(this.label6);
             this.grpAeronefs.Controls.Add(this.lsbAeronefs);
-            this.grpAeronefs.Location = new System.Drawing.Point(12, 405);
+            this.grpAeronefs.Location = new System.Drawing.Point(12, 382);
             this.grpAeronefs.Name = "grpAeronefs";
             this.grpAeronefs.Size = new System.Drawing.Size(1070, 348);
             this.grpAeronefs.TabIndex = 11;
@@ -280,7 +217,7 @@
             // 
             // txtChange
             // 
-            this.txtChange.Location = new System.Drawing.Point(856, 235);
+            this.txtChange.Location = new System.Drawing.Point(856, 232);
             this.txtChange.Name = "txtChange";
             this.txtChange.Size = new System.Drawing.Size(97, 26);
             this.txtChange.TabIndex = 23;
@@ -289,7 +226,7 @@
             // lblChange
             // 
             this.lblChange.AutoSize = true;
-            this.lblChange.Location = new System.Drawing.Point(851, 212);
+            this.lblChange.Location = new System.Drawing.Point(851, 209);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(65, 20);
             this.lblChange.TabIndex = 22;
@@ -298,21 +235,21 @@
             // 
             // txtEntretient
             // 
-            this.txtEntretient.Location = new System.Drawing.Point(744, 235);
+            this.txtEntretient.Location = new System.Drawing.Point(744, 232);
             this.txtEntretient.Name = "txtEntretient";
             this.txtEntretient.Size = new System.Drawing.Size(97, 26);
             this.txtEntretient.TabIndex = 21;
             // 
             // txtUnload
             // 
-            this.txtUnload.Location = new System.Drawing.Point(630, 235);
+            this.txtUnload.Location = new System.Drawing.Point(630, 232);
             this.txtUnload.Name = "txtUnload";
             this.txtUnload.Size = new System.Drawing.Size(97, 26);
             this.txtUnload.TabIndex = 20;
             // 
             // txtLoad
             // 
-            this.txtLoad.Location = new System.Drawing.Point(518, 235);
+            this.txtLoad.Location = new System.Drawing.Point(518, 232);
             this.txtLoad.Name = "txtLoad";
             this.txtLoad.Size = new System.Drawing.Size(97, 26);
             this.txtLoad.TabIndex = 19;
@@ -320,7 +257,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(514, 212);
+            this.label10.Location = new System.Drawing.Point(514, 209);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 20);
             this.label10.TabIndex = 18;
@@ -329,7 +266,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(628, 212);
+            this.label9.Location = new System.Drawing.Point(628, 209);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 20);
             this.label9.TabIndex = 16;
@@ -338,7 +275,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(740, 212);
+            this.label8.Location = new System.Drawing.Point(740, 209);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 20);
             this.label8.TabIndex = 14;
@@ -346,7 +283,7 @@
             // 
             // txtVitesse
             // 
-            this.txtVitesse.Location = new System.Drawing.Point(406, 235);
+            this.txtVitesse.Location = new System.Drawing.Point(406, 232);
             this.txtVitesse.Name = "txtVitesse";
             this.txtVitesse.Size = new System.Drawing.Size(97, 26);
             this.txtVitesse.TabIndex = 13;
@@ -354,7 +291,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(401, 212);
+            this.label7.Location = new System.Drawing.Point(401, 209);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 20);
             this.label7.TabIndex = 12;
@@ -363,7 +300,7 @@
             // cmbTypeAeronef
             // 
             this.cmbTypeAeronef.FormattingEnabled = true;
-            this.cmbTypeAeronef.Location = new System.Drawing.Point(208, 234);
+            this.cmbTypeAeronef.Location = new System.Drawing.Point(208, 231);
             this.cmbTypeAeronef.Name = "cmbTypeAeronef";
             this.cmbTypeAeronef.Size = new System.Drawing.Size(176, 28);
             this.cmbTypeAeronef.TabIndex = 11;
@@ -371,7 +308,7 @@
             // 
             // btnAnnulerAeronef
             // 
-            this.btnAnnulerAeronef.Location = new System.Drawing.Point(10, 309);
+            this.btnAnnulerAeronef.Location = new System.Drawing.Point(10, 306);
             this.btnAnnulerAeronef.Name = "btnAnnulerAeronef";
             this.btnAnnulerAeronef.Size = new System.Drawing.Size(1052, 31);
             this.btnAnnulerAeronef.TabIndex = 10;
@@ -381,7 +318,7 @@
             // 
             // btnAjouterAeronef
             // 
-            this.btnAjouterAeronef.Location = new System.Drawing.Point(10, 272);
+            this.btnAjouterAeronef.Location = new System.Drawing.Point(10, 269);
             this.btnAjouterAeronef.Name = "btnAjouterAeronef";
             this.btnAjouterAeronef.Size = new System.Drawing.Size(1052, 31);
             this.btnAjouterAeronef.TabIndex = 9;
@@ -391,7 +328,7 @@
             // 
             // txtNomAeronef
             // 
-            this.txtNomAeronef.Location = new System.Drawing.Point(12, 235);
+            this.txtNomAeronef.Location = new System.Drawing.Point(12, 232);
             this.txtNomAeronef.Name = "txtNomAeronef";
             this.txtNomAeronef.Size = new System.Drawing.Size(176, 26);
             this.txtNomAeronef.TabIndex = 7;
@@ -399,7 +336,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(204, 212);
+            this.label5.Location = new System.Drawing.Point(204, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 20);
             this.label5.TabIndex = 4;
@@ -408,7 +345,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 212);
+            this.label6.Location = new System.Drawing.Point(8, 209);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 20);
             this.label6.TabIndex = 2;
@@ -418,14 +355,14 @@
             // 
             this.lsbAeronefs.FormattingEnabled = true;
             this.lsbAeronefs.ItemHeight = 20;
-            this.lsbAeronefs.Location = new System.Drawing.Point(6, 25);
+            this.lsbAeronefs.Location = new System.Drawing.Point(6, 22);
             this.lsbAeronefs.Name = "lsbAeronefs";
             this.lsbAeronefs.Size = new System.Drawing.Size(1057, 184);
             this.lsbAeronefs.TabIndex = 0;
             // 
             // btnGenerer
             // 
-            this.btnGenerer.Location = new System.Drawing.Point(22, 758);
+            this.btnGenerer.Location = new System.Drawing.Point(22, 735);
             this.btnGenerer.Name = "btnGenerer";
             this.btnGenerer.Size = new System.Drawing.Size(1052, 31);
             this.btnGenerer.TabIndex = 22;
@@ -437,36 +374,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 798);
+            this.ClientSize = new System.Drawing.Size(1095, 778);
             this.Controls.Add(this.btnGenerer);
             this.Controls.Add(this.grpAeronefs);
             this.Controls.Add(this.grpAeroports);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUIGenerateur";
             this.Text = "Générateur de scénarios";
             this.Load += new System.EventHandler(this.GUIGenerateur_Load);
             this.grpAeroports.ResumeLayout(false);
             this.grpAeroports.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.grpAeronefs.ResumeLayout(false);
             this.grpAeronefs.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox grpAeroports;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enregistrerLeScénarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scénarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enregistrerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enregistrerSousToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem effacerToolStripMenuItem;
         private System.Windows.Forms.Button btnAnnulerAeroport;
         private System.Windows.Forms.Button btnAjouterAeroport;
         private System.Windows.Forms.Button btnPosition;

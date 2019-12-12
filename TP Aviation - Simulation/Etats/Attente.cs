@@ -25,7 +25,7 @@ namespace TP_Aviation___Simulation
         /// <param name="clients">Liste des clients dans l'aéroport auquel appartient l'aéronef</param>
         public override void avancer(int tempsPasse, List<Client> clients)
         {
-            if (m_aeronef.Dispo)
+            if (this.m_aeronef.Dispo && clients.Count > 0)
             {
                 if (m_aeronef.Type == "Passagers")
                 {
@@ -40,7 +40,7 @@ namespace TP_Aviation___Simulation
                             {
                                 total = total + clients[i].Quantite;
                                 iClient.Add(i);
-                                m_aeronef.IndexClient = i;
+                                this.m_aeronef.IndexClient = i;
                             }
                         }
                     }
@@ -48,10 +48,14 @@ namespace TP_Aviation___Simulation
                     //Si plus de 75% ed l'aéronef est rempli
                     if (total >= (m_aeronef.Capacite * 0.75))
                     {
-                        for (int i = 0; i < iClient.Count; i++)
+                        for (int i = 0; i < clients.Count; i++)
                         {
-                            clients.RemoveAt(iClient[i]);
+                            this.m_aeronef.m_clientDestination = new PositionGeo(clients[i].Destination.PosX, clients[i].Destination.PosY);
+                            //m_aeronef.m_clientDestination = clients[i].Destination;
+                            //clients.RemoveAt(iClient[i]);
                         }
+
+                        m_aeronef.Dispo = false;
                         Index = 2;
                     }
                     else if (total > m_aeronef.Capacite)

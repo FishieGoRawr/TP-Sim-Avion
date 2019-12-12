@@ -7,9 +7,13 @@ using System.Windows.Forms;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Controlleur du générateur, permet de creer des areoports, ajouté des avions au areoports, serialiser le scenario, etc...
+    /// </summary>
+    
     public class ControlleurGenerateur
     {
-        Scenario scenario;
+        Scenario scenario; //Scénario à modifier
 
         /// <summary>
         /// Constructeur du controlleur de générateur
@@ -60,14 +64,6 @@ namespace TP_Aviation___Generateur_de_scénario
         public void serializeScenario()
         {
             scenario.SerializeScenario();
-        }
-
-        /// <summary>
-        /// Génére un scénario selon le fichier choisi
-        /// </summary>
-        public void deserializeScenario()
-        {
-            scenario.DeserializeScenario();
         }
     }
 }

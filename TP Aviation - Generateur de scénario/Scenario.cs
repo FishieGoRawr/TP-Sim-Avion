@@ -11,9 +11,9 @@ namespace TP_Aviation___Generateur_de_scénario
 {
     public class Scenario
     {
-        static Scenario m_scenario;
-        public List<Aeroport> listAreoport;
-        UsineAeronef usine;
+        static Scenario m_scenario; //Singleton scénario
+        public List<Aeroport> listAreoport; //Liste d'areoport du scénario
+        UsineAeronef usine; //Usine pour créer des aeronefs
 
         /// <summary>
         /// Constructeur d'un scénario

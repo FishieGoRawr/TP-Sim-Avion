@@ -8,6 +8,10 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe parent de tout les types d'avions
+    /// </summary>
+
     [XmlInclude(typeof(AeroPassager))]
     [XmlInclude(typeof(AeroMarchandise))]
     [XmlInclude(typeof(AeroObservateur))]
@@ -15,12 +19,12 @@ namespace TP_Aviation___Generateur_de_scénario
     [XmlInclude(typeof(AeroIncendie))]
     public class Aeronef
     {
-        public String m_nom { get; set; }
-        public String m_type { get; set; }
-        public int m_vitesse { get; set; }
-        public int m_tempsEnt { get; set; }
-        public PositionGeo m_localisation { get; set; }
-        public PositionGeo m_origine { get; set; }
+        public String m_nom { get; set; } //Nom de l'aeronef
+        public String m_type { get; set; } //Type de l'aeronef
+        public int m_vitesse { get; set; } //Vitesse de l'aeronef
+        public int m_tempsEnt { get; set; } //Temps d'entretient de l'aeronef
+        public PositionGeo m_localisation { get; set; } //Localisation d'origine de l'aeronef
+        public PositionGeo m_origine { get; set; } //Localisation d'origine de l'aeronef
 
         /// <summary>
         /// Constructeur d'aeronef.

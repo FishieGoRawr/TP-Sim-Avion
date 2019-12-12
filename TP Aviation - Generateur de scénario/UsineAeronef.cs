@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// L'usine permet la création d'aeronefs
+    /// </summary>
+
     public sealed class UsineAeronef
     {
-        private static UsineAeronef m_usineAeronef = null;
+        private static UsineAeronef m_usineAeronef = null; //Singleton de l'usine
 
         /// <summary>
         /// Cosntructeur de l'usine

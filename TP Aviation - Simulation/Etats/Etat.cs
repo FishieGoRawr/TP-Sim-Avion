@@ -8,11 +8,12 @@ namespace TP_Aviation___Simulation
 {
     public class Etat
     {
-        protected int etat = 0;
+        protected int etat = 1;
         protected Aeronef m_aeronef;
 
         public Etat(Aeronef aeronef)
         {
+            m_aeronef = aeronef;
         }
 
         public virtual int Index

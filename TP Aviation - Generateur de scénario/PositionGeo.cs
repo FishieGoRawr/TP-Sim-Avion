@@ -8,11 +8,15 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe pour obtenir la position géoraphique d'un aréoport
+    /// </summary>
+    
     public class PositionGeo
     {
-        public int m_posX { get; set; }
-        public int m_posY { get; set; }
-        public string m_posDegreeMin { get; set; }
+        public int m_posX { get; set; } //Position en X sur la carte
+        public int m_posY { get; set; } //Position en Y sur la carte
+        public string m_posDegreeMin { get; set; } //Position sous format degree/minute
 
         /// <summary>
         /// Constructeur d'une position géographique

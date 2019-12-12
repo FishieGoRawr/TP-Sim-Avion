@@ -8,10 +8,14 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Rajoute tempsEmb et tempsDeb a un aeronef
+    /// </summary>
+
     public abstract class Transport : Aeronef
     {
-        public int m_tempsEmb { get; set; }
-        public int m_tempsDeb { get; set; }
+        public int m_tempsEmb { get; set; } //Temps d'embarquement
+        public int m_tempsDeb { get; set; } //Temps de débarquement
 
         /// <summary>
         /// Constructeur de la classe abstraite d'avions de transports (Passager, Marchandise)

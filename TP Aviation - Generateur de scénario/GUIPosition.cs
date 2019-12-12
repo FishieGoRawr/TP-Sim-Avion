@@ -10,9 +10,13 @@ using System.Windows.Forms;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe qui gère la position géographique
+    /// </summary>
+    
     public partial class GUIPosition : Form
     {
-        GUIGenerateur guigen;
+        GUIGenerateur guigen; //GUI général du logiciel
 
         /// <summary>
         /// Cosntructeur du GUI de sélection de position

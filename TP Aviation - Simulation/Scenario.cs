@@ -76,6 +76,13 @@ namespace TP_Aviation___Simulation
             {
                 Thread.Sleep(50);
                 genererClients();
+                
+
+                foreach (Aeroport airport in listAreoport)
+                {
+                    airport.bougerAvion(5);
+                }
+
                 m_horloge.ajouteMinutes();
             }
         }
@@ -106,8 +113,8 @@ namespace TP_Aviation___Simulation
                 }
                 else
                 {
-                    //ajouterPassager();
-                    //ajouterMarchandise();
+                    ajouterPassager();
+                    ajouterMarchandise();
                 }
                 m_derniereHeure = heure;
             }
@@ -298,7 +305,6 @@ namespace TP_Aviation___Simulation
                 if (areoport.m_listAeronef[i].Type == "Incendies")
                     if (areoport.m_listAeronef[i].Dispo)
                     {
-                        areoport.m_listAeronef[i].Dispo = false;
                         temp = 1;
                     }
                     else
@@ -317,7 +323,6 @@ namespace TP_Aviation___Simulation
                 if (areoport.m_listAeronef[i].Type == "Observateurs")
                     if (areoport.m_listAeronef[i].Dispo)
                     {
-                        areoport.m_listAeronef[i].Dispo = false;
                         temp = 1;
                     }
                     else
@@ -336,7 +341,6 @@ namespace TP_Aviation___Simulation
                 if (areoport.m_listAeronef[i].Type == "Secours")
                     if (areoport.m_listAeronef[i].Dispo)
                     {
-                        areoport.m_listAeronef[i].Dispo = false;
                         temp = 1;
                     }
                     else

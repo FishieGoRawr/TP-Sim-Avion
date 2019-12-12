@@ -8,10 +8,14 @@ using System.Xml.Serialization;
 
 namespace TP_Aviation___Generateur_de_scénario
 {
+    /// <summary>
+    /// Classe enfant d'Aeronef, ajoute un avion incendie
+    /// </summary>
+    
     public class AeroIncendie : Distance
     {
         [XmlIgnore]
-        Bitmap m_image;
+        Bitmap m_image; //Image de l'aeroincendie
 
         /// <summary>
         /// Constructeur complex AeroIncendie.

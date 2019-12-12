@@ -33,6 +33,7 @@ namespace TP_Aviation___Simulation
             this.m_tempsDeb = decharger;
             this.m_capacite = change;
             this.m_indexClient = -1;
+            m_clientDestination = new PositionGeo();
         }
 
         /// <summary>
@@ -49,6 +50,7 @@ namespace TP_Aviation___Simulation
             m_capacite = 0;
             m_image = null;
             this.m_indexClient = -1;
+            m_clientDestination = new PositionGeo();
         }
 
         /// <summary>

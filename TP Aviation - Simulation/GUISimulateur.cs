@@ -23,7 +23,7 @@ namespace TP_Aviation___Simulation
             simulateurEnMarche = false;
             controller = new ControllerSimulateur(this);
             controller.abonnerOnHeureChanged(OnHeureAjoutee);
-
+            controller.deserialize();
         }
 
         public void OnHeureAjoutee(string temps)
@@ -71,21 +71,19 @@ namespace TP_Aviation___Simulation
             currentContext = BufferedGraphicsManager.Current;
             buffer = currentContext.Allocate(pcbWorldmap.CreateGraphics(), pcbWorldmap.DisplayRectangle);
 
-            
-            
-
             //MAP
             Graphics g = buffer.Graphics;
             g.DrawImage(img, 0, 0, img.Width, img.Height);
 
             //AÉROPORTS
-            img = new Bitmap(Properties.Resources.airport);
-            //int[,] pos = controller.obtenirPositionsAreoports();
-            for (int i = 0; i < controller.m_scenario.listAreoport.Count; i++)
+            foreach (Aeroport aeroport in controller.m_scenario.listAreoport)
             {
-                //g.DrawImage(img, controller.m_scenario.listAreoport[i].Localisation.m_posX / 2, controller.m_scenario.listAreoport[i].Localisation.m_posY / 2, 35, 35);
-                //g.DrawImage(img, pos[i, 0] - (35 / 2), pos[i, 1] - (35 / 2), 35, 35);
-                //img.Dispose();
+                img = new Bitmap(Properties.Resources.airport);
+                int areoPosX = aeroport.Localisation.PosX - (35 / 2);
+                int areoPosY = aeroport.Localisation.PosY - (35 / 2);
+
+                g.DrawImage(img, areoPosX, areoPosY, 35, 35);
+                img.Dispose();
             }
 
             ////CLIENTS
@@ -96,23 +94,32 @@ namespace TP_Aviation___Simulation
                 string[] clientSplit = client.Split(' ');
 
                 if (clientSplit[0] == "Feu")
-                {
-                    //using (Bitmap img = new Bitmap(Properties.Resources.feu))
                     img = new Bitmap(Properties.Resources.feu);
-                }
                 else if (clientSplit[0] == "Observateur")
-                {
-                    //using (Bitmap img = new Bitmap(Properties.Resources.jumelle))
                     img = new Bitmap(Properties.Resources.jumelle);
-                }
                 else if (clientSplit[0] == "Secours")
-                {
-                    //using (Bitmap img = new Bitmap(Properties.Resources.secours))
                     img = new Bitmap(Properties.Resources.secours);
-                }
 
-                g.DrawImage(img, Convert.ToInt32(clientSplit[1]) - (15/2), Convert.ToInt32(clientSplit[2]) - (15/2), 15, 15);
+                g.DrawImage(img, Convert.ToInt32(clientSplit[1]) - (15 / 2), Convert.ToInt32(clientSplit[2]) - (15 / 2), 15, 15);
                 img.Dispose();
+            }
+
+            //AVIONS
+            foreach (Aeroport airport in controller.m_scenario.listAreoport)
+            {
+                foreach (Aeronef avion in airport.m_listAeronef)
+                {
+                    if (!avion.Dispo)
+                    {
+                        if (avion.Type == "Passagers")
+                        {
+                            img = new Bitmap(Properties.Resources.passager);
+                            g.DrawImage(img, avion.Localisation.PosX, avion.Localisation.PosY, 25, 25);
+                            img.Dispose();
+                        }
+                    }
+
+                }
             }
 
             buffer.Render();
