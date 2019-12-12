@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ArrayOfAreoport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Areoport>
+    <m_nom>P-E-T</m_nom>
+    <m_localisation />
+    <m_listAeronef>
+      <Aeronef xsi:type="AeroPassager">
+        <m_nom>Avion Un</m_nom>
+		<m_type>Passager</m_type>
+        <m_vitesse>1</m_vitesse>
+        <m_tempsEnt>4</m_tempsEnt>
+        <m_origine />
+        <m_tempsEmb>2</m_tempsEmb>
+        <m_tempsDeb>3</m_tempsDeb>
+		<m_capacite>3</m_capacite>	
+      </Aeronef>
+      <Aeronef xsi:type="AeroObservateur">
+        <m_nom>Avion Deux</m_nom>
+        <m_vitesse>1</m_vitesse>
+        <m_tempsEnt>4</m_tempsEnt>
+        <m_origine />
+        <m_nbAller>1</m_nbAller>
+		<type>Passager</type>
+      </Aeronef>
+    </m_listAeronef>
+    <m_achalPassager>7</m_achalPassager>
+    <m_achalMarchandise>8</m_achalMarchandise>
+  </Areoport>
+</ArrayOfAreoport>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ArrayOfAreoport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Areoport>
+    <m_nom>aeroport1</m_nom>
+    <m_localisation />
+    <m_listAeronef>
+      <Aeronef xsi:type="AeroPassager">
+        <m_nom>av1</m_nom>
+        <m_type>Passagers</m_type>
+        <m_vitesse>1</m_vitesse>
+        <m_tempsEnt>1</m_tempsEnt>
+        <m_origine />
+        <m_tempsEmb>1</m_tempsEmb>
+        <m_tempsDeb>1</m_tempsDeb>
+      </Aeronef>
+    </m_listAeronef>
+    <m_achalPassager>1</m_achalPassager>
+    <m_achalMarchandise>1</m_achalMarchandise>
+  </Areoport>
+</ArrayOfAreoport>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<ArrayOfAreoport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Areoport>
+    <m_nom>Aeroport1</m_nom>
+    <m_localisation />
+    <m_listAeronef>
+      <Aeronef xsi:type="AeroPassager">
+        <m_nom>Passager</m_nom>
+        <m_type>Passagers</m_type>
+        <m_vitesse>1</m_vitesse>
+        <m_tempsEnt>1</m_tempsEnt>
+        <m_origine />
+        <m_tempsEmb>1</m_tempsEmb>
+        <m_tempsDeb>1</m_tempsDeb>
+      </Aeronef>
+      <Aeronef xsi:type="AeroMarchandise">
+        <m_nom>2</m_nom>
+        <m_type>Marchandises</m_type>
+        <m_vitesse>2</m_vitesse>
+        <m_tempsEnt>2</m_tempsEnt>
+        <m_origine />
+        <m_tempsEmb>2</m_tempsEmb>
+        <m_tempsDeb>2</m_tempsDeb>
+      </Aeronef>
+      <Aeronef xsi:type="AeroObservateur">
+        <m_nom>3</m_nom>
+        <m_type>Observateurs</m_type>
+        <m_vitesse>3</m_vitesse>
+        <m_tempsEnt>3</m_tempsEnt>
+        <m_origine />
+        <m_nbAller>1</m_nbAller>
+        <m_dispo>true</m_dispo>
+      </Aeronef>
+      <Aeronef xsi:type="AeroIncendie">
+        <m_nom>4</m_nom>
+        <m_type>Incendies</m_type>
+        <m_vitesse>4</m_vitesse>
+        <m_tempsEnt>4</m_tempsEnt>
+        <m_origine />
+        <m_nbAller>0</m_nbAller>
+        <m_dispo>true</m_dispo>
+        <NbAller>0</NbAller>
+      </Aeronef>
+      <Aeronef xsi:type="AeroSecours">
+        <m_nom>5</m_nom>
+        <m_type>Secours</m_type>
+        <m_vitesse>5</m_vitesse>
+        <m_tempsEnt>5</m_tempsEnt>
+        <m_origine />
+        <m_nbAller>1</m_nbAller>
+        <m_dispo>true</m_dispo>
+      </Aeronef>
+    </m_listAeronef>
+    <m_achalPassager>1</m_achalPassager>
+    <m_achalMarchandise>1</m_achalMarchandise>
+  </Areoport>
+</ArrayOfAreoport>

@@ -1,0 +1,519 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_scenario}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_scenario}\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_acee6ae0cc5b4ab81131d4a395ad037af}{changer\+Status\+Spin}} ()
+\begin{DoxyCompactList}\small\item\em Permet de mettre en pause/resume la boucle principale \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a2689b2eef01b00732f85e3e50321fcde}{spin}} ()
+\begin{DoxyCompactList}\small\item\em Boucle principale du logiciel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_afe8e4fde156fc06f6238d93a1454ff0a}{abonner\+On\+Heure\+Changed}} (\mbox{\hyperlink{namespace_t_p___aviation_______simulation_ab5db512dc3e9bf2d1ce440124e59dcd6}{Horloge\+Event\+Handler}} handler)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}abonner une méthode a l\textquotesingle{}evenement \char`\"{}\+Temps\+Changed\char`\"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_aad1059f6c318157ebb12f10d139ed2a8}{generer\+Clients}} ()
+\begin{DoxyCompactList}\small\item\em Genere des clients lorsque les heures passent \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a1489eaf3345caa8034d13194015b5d5a}{set\+Controller}} (\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_controller_simulateur}{Controller\+Simulateur}} controller)
+\begin{DoxyCompactList}\small\item\em Crée un lien avec le constructeur principal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a49e4c38f9e687db6dc447b7941d28fa9}{ajouter\+Passager}} ()
+\begin{DoxyCompactList}\small\item\em Permet de créer des clients passager \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_abdf3544b8ae38ad6367fd66e3218b169}{ajouter\+Marchandise}} ()
+\begin{DoxyCompactList}\small\item\em Permet de créer des clients marchandise \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_abc43209acd56aa2405bd632d0fdda51a}{ajouter\+Observateur}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Permet de créer des clients observateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a15e3665bfc0dc5a7b1754f5e7fafbf29}{ajouter\+Feu}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Permet de créer des clients incendie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_abe925fa9bd18f05544d316505002121f}{ajouter\+Secours}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Permet de créer des clients secours \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_ae02d1cc5f328427c57b0e7e43347c557}{trouver\+Plus\+Proche}} (List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}} $>$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a870c434ef4aeb6f4994d9ee584d45016}{list\+Areoport}}, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} client)
+\begin{DoxyCompactList}\small\item\em Trouve l\textquotesingle{}aréoport, qui a un avion disponible pour la situation, le plus proche d\textquotesingle{}un client \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a436d4064947d388def0705de8643f51d}{possede\+Areo\+Incendie}} (\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}} areoport)
+\begin{DoxyCompactList}\small\item\em Vérifie si l\textquotesingle{}areoport passé possède un avion incendie de dispo \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a95bc1a0c2041f13d90f0191fc3c1ff19}{possede\+Areo\+Observateur}} (\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}} areoport)
+\begin{DoxyCompactList}\small\item\em Vérifie si l\textquotesingle{}areoport passé possède un avion observateur de dispo \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_ac93654da90242c8a4345409d29ee4615}{possede\+Areo\+Secours}} (\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}} areoport)
+\begin{DoxyCompactList}\small\item\em Vérifie si l\textquotesingle{}areoport passé possède un avion secours de dispo \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a8b324246d0e80d733f6725da5b5732bf}{pythagore}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Obtient une ligne droite vers la destination \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}} $>$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a870c434ef4aeb6f4994d9ee584d45016}{list\+Areoport}}
+\item 
+List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_ab81cd6ed43476781cc4c8de474c93b95}{m\+\_\+list\+Clients}} = new List$<$\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Thread \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a7f3cf3e1011c6ed3b9d4b8cd7c94c9a0}{main\+Thread}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge}{Horloge}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a55ff808a618fe59360d77c1a35c9ec4b}{m\+\_\+horloge}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_aca4dfbb9aab2f57362762d27c0d7a1f0}{m\+\_\+derniere\+Heure}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_controller_simulateur}{Controller\+Simulateur}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a0d7977edb3b03afbb836c73e205c0939}{m\+\_\+controller}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario}{Scenario}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a3c5b141eaabbdf4ebc88cba8339b10d9}{get\+Scenario}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}} $>$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a296ed29423f85ae2319df0f500f50c2f}{Liste}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Accesseur de la liste d\textquotesingle{}aeroport \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a823e819638a996626e4710f1e8b10374}{Scenario}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_usine_client}{Usine\+Client}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a3f6feab7e941f103be96d29fc381beae}{usine}}
+\item 
+Random \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_aa646d823c7b0ee6438f6c5fffb5a374b}{rand}}
+\item 
+bool \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_aca6760595c713f4b2e2ae267d045cdfd}{m\+\_\+simulateur\+En\+Marche}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario}{Scenario}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario_a8040db359416f348a07aaf76a1103740}{m\+\_\+scenario}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a823e819638a996626e4710f1e8b10374}\label{class_t_p___aviation_______simulation_1_1_scenario_a823e819638a996626e4710f1e8b10374}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!Scenario@{Scenario}}
+\index{Scenario@{Scenario}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{Scenario()}{Scenario()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+Scenario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_afe8e4fde156fc06f6238d93a1454ff0a}\label{class_t_p___aviation_______simulation_1_1_scenario_afe8e4fde156fc06f6238d93a1454ff0a}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!abonnerOnHeureChanged@{abonnerOnHeureChanged}}
+\index{abonnerOnHeureChanged@{abonnerOnHeureChanged}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{abonnerOnHeureChanged()}{abonnerOnHeureChanged()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+abonner\+On\+Heure\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_t_p___aviation_______simulation_ab5db512dc3e9bf2d1ce440124e59dcd6}{Horloge\+Event\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}abonner une méthode a l\textquotesingle{}evenement \char`\"{}\+Temps\+Changed\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a15e3665bfc0dc5a7b1754f5e7fafbf29}\label{class_t_p___aviation_______simulation_1_1_scenario_a15e3665bfc0dc5a7b1754f5e7fafbf29}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!ajouterFeu@{ajouterFeu}}
+\index{ajouterFeu@{ajouterFeu}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{ajouterFeu()}{ajouterFeu()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+ajouter\+Feu (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Permet de créer des clients incendie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width de la carte\\
+\hline
+{\em height} & Height de la carte\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 199 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_abdf3544b8ae38ad6367fd66e3218b169}\label{class_t_p___aviation_______simulation_1_1_scenario_abdf3544b8ae38ad6367fd66e3218b169}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!ajouterMarchandise@{ajouterMarchandise}}
+\index{ajouterMarchandise@{ajouterMarchandise}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{ajouterMarchandise()}{ajouterMarchandise()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+ajouter\+Marchandise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de créer des clients marchandise 
+
+
+
+Definition at line 163 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_abc43209acd56aa2405bd632d0fdda51a}\label{class_t_p___aviation_______simulation_1_1_scenario_abc43209acd56aa2405bd632d0fdda51a}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!ajouterObservateur@{ajouterObservateur}}
+\index{ajouterObservateur@{ajouterObservateur}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{ajouterObservateur()}{ajouterObservateur()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+ajouter\+Observateur (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Permet de créer des clients observateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width de la carte\\
+\hline
+{\em height} & Height de la carte\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 176 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a49e4c38f9e687db6dc447b7941d28fa9}\label{class_t_p___aviation_______simulation_1_1_scenario_a49e4c38f9e687db6dc447b7941d28fa9}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!ajouterPassager@{ajouterPassager}}
+\index{ajouterPassager@{ajouterPassager}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{ajouterPassager()}{ajouterPassager()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+ajouter\+Passager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de créer des clients passager 
+
+
+
+Definition at line 152 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_abe925fa9bd18f05544d316505002121f}\label{class_t_p___aviation_______simulation_1_1_scenario_abe925fa9bd18f05544d316505002121f}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!ajouterSecours@{ajouterSecours}}
+\index{ajouterSecours@{ajouterSecours}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{ajouterSecours()}{ajouterSecours()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+ajouter\+Secours (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Permet de créer des clients secours 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width de la carte\\
+\hline
+{\em height} & Height de la carte\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 223 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_acee6ae0cc5b4ab81131d4a395ad037af}\label{class_t_p___aviation_______simulation_1_1_scenario_acee6ae0cc5b4ab81131d4a395ad037af}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!changerStatusSpin@{changerStatusSpin}}
+\index{changerStatusSpin@{changerStatusSpin}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{changerStatusSpin()}{changerStatusSpin()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+changer\+Status\+Spin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de mettre en pause/resume la boucle principale 
+
+
+
+Definition at line 53 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_aad1059f6c318157ebb12f10d139ed2a8}\label{class_t_p___aviation_______simulation_1_1_scenario_aad1059f6c318157ebb12f10d139ed2a8}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!genererClients@{genererClients}}
+\index{genererClients@{genererClients}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{genererClients()}{genererClients()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+generer\+Clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Genere des clients lorsque les heures passent 
+
+
+
+Definition at line 117 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a436d4064947d388def0705de8643f51d}\label{class_t_p___aviation_______simulation_1_1_scenario_a436d4064947d388def0705de8643f51d}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!possedeAreoIncendie@{possedeAreoIncendie}}
+\index{possedeAreoIncendie@{possedeAreoIncendie}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{possedeAreoIncendie()}{possedeAreoIncendie()}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+possede\+Areo\+Incendie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}}}]{areoport }\end{DoxyParamCaption})}
+
+
+
+Vérifie si l\textquotesingle{}areoport passé possède un avion incendie de dispo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em areoport} & Areoport a verifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si oui, 0 si non
+\end{DoxyReturn}
+
+
+Definition at line 349 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a95bc1a0c2041f13d90f0191fc3c1ff19}\label{class_t_p___aviation_______simulation_1_1_scenario_a95bc1a0c2041f13d90f0191fc3c1ff19}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!possedeAreoObservateur@{possedeAreoObservateur}}
+\index{possedeAreoObservateur@{possedeAreoObservateur}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{possedeAreoObservateur()}{possedeAreoObservateur()}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+possede\+Areo\+Observateur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}}}]{areoport }\end{DoxyParamCaption})}
+
+
+
+Vérifie si l\textquotesingle{}areoport passé possède un avion observateur de dispo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em areoport} & Areoport a verifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si oui, 0 si non
+\end{DoxyReturn}
+
+
+Definition at line 372 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_ac93654da90242c8a4345409d29ee4615}\label{class_t_p___aviation_______simulation_1_1_scenario_ac93654da90242c8a4345409d29ee4615}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!possedeAreoSecours@{possedeAreoSecours}}
+\index{possedeAreoSecours@{possedeAreoSecours}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{possedeAreoSecours()}{possedeAreoSecours()}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+possede\+Areo\+Secours (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}}}]{areoport }\end{DoxyParamCaption})}
+
+
+
+Vérifie si l\textquotesingle{}areoport passé possède un avion secours de dispo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em areoport} & Areoport a verifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si oui, 0 si non
+\end{DoxyReturn}
+
+
+Definition at line 395 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a8b324246d0e80d733f6725da5b5732bf}\label{class_t_p___aviation_______simulation_1_1_scenario_a8b324246d0e80d733f6725da5b5732bf}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!pythagore@{pythagore}}
+\index{pythagore@{pythagore}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{pythagore()}{pythagore()}}
+{\footnotesize\ttfamily double T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+pythagore (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Obtient une ligne droite vers la destination 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & x2 -\/ x1\\
+\hline
+{\em b} & y2 -\/ y1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne l\textquotesingle{}hypotenuse distance jusqu\textquotesingle{}au client
+\end{DoxyReturn}
+
+
+Definition at line 419 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a1489eaf3345caa8034d13194015b5d5a}\label{class_t_p___aviation_______simulation_1_1_scenario_a1489eaf3345caa8034d13194015b5d5a}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!setController@{setController}}
+\index{setController@{setController}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{setController()}{setController()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+set\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_controller_simulateur}{Controller\+Simulateur}}}]{controller }\end{DoxyParamCaption})}
+
+
+
+Crée un lien avec le constructeur principal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 144 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a2689b2eef01b00732f85e3e50321fcde}\label{class_t_p___aviation_______simulation_1_1_scenario_a2689b2eef01b00732f85e3e50321fcde}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!spin@{spin}}
+\index{spin@{spin}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{spin()}{spin()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+spin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Boucle principale du logiciel 
+
+
+
+Definition at line 79 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_ae02d1cc5f328427c57b0e7e43347c557}\label{class_t_p___aviation_______simulation_1_1_scenario_ae02d1cc5f328427c57b0e7e43347c557}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!trouverPlusProche@{trouverPlusProche}}
+\index{trouverPlusProche@{trouverPlusProche}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{trouverPlusProche()}{trouverPlusProche()}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+trouver\+Plus\+Proche (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}} $>$}]{list\+Areoport,  }\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}}}]{client }\end{DoxyParamCaption})}
+
+
+
+Trouve l\textquotesingle{}aréoport, qui a un avion disponible pour la situation, le plus proche d\textquotesingle{}un client 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Areoport} & Liste d\textquotesingle{}aréoport\\
+\hline
+{\em client} & \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} a verifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 247 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a870c434ef4aeb6f4994d9ee584d45016}\label{class_t_p___aviation_______simulation_1_1_scenario_a870c434ef4aeb6f4994d9ee584d45016}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!listAreoport@{listAreoport}}
+\index{listAreoport@{listAreoport}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{listAreoport}{listAreoport}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}}$>$ T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+list\+Areoport}
+
+
+
+Definition at line 13 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_ab81cd6ed43476781cc4c8de474c93b95}\label{class_t_p___aviation_______simulation_1_1_scenario_ab81cd6ed43476781cc4c8de474c93b95}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!m\_listClients@{m\_listClients}}
+\index{m\_listClients@{m\_listClients}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{m\_listClients}{m\_listClients}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}}$>$ T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+m\+\_\+list\+Clients = new List$<$\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}}$>$()}
+
+
+
+Definition at line 14 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a8040db359416f348a07aaf76a1103740}\label{class_t_p___aviation_______simulation_1_1_scenario_a8040db359416f348a07aaf76a1103740}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!m\_scenario@{m\_scenario}}
+\index{m\_scenario@{m\_scenario}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{m\_scenario}{m\_scenario}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario}{Scenario}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+m\+\_\+scenario\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 12 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_aca6760595c713f4b2e2ae267d045cdfd}\label{class_t_p___aviation_______simulation_1_1_scenario_aca6760595c713f4b2e2ae267d045cdfd}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!m\_simulateurEnMarche@{m\_simulateurEnMarche}}
+\index{m\_simulateurEnMarche@{m\_simulateurEnMarche}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{m\_simulateurEnMarche}{m\_simulateurEnMarche}}
+{\footnotesize\ttfamily bool T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+m\+\_\+simulateur\+En\+Marche\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_aa646d823c7b0ee6438f6c5fffb5a374b}\label{class_t_p___aviation_______simulation_1_1_scenario_aa646d823c7b0ee6438f6c5fffb5a374b}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!rand@{rand}}
+\index{rand@{rand}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{rand}{rand}}
+{\footnotesize\ttfamily Random T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+rand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a3f6feab7e941f103be96d29fc381beae}\label{class_t_p___aviation_______simulation_1_1_scenario_a3f6feab7e941f103be96d29fc381beae}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!usine@{usine}}
+\index{usine@{usine}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{usine}{usine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_usine_client}{Usine\+Client}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+usine\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a3c5b141eaabbdf4ebc88cba8339b10d9}\label{class_t_p___aviation_______simulation_1_1_scenario_a3c5b141eaabbdf4ebc88cba8339b10d9}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!getScenario@{getScenario}}
+\index{getScenario@{getScenario}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{getScenario}{getScenario}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_scenario}{Scenario}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+get\+Scenario\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Definition at line 38 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a296ed29423f85ae2319df0f500f50c2f}\label{class_t_p___aviation_______simulation_1_1_scenario_a296ed29423f85ae2319df0f500f50c2f}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!Liste@{Liste}}
+\index{Liste@{Liste}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{Liste}{Liste}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport}{Aeroport}}$>$ T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+Liste\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Accesseur de la liste d\textquotesingle{}aeroport 
+
+
+
+Definition at line 109 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a0d7977edb3b03afbb836c73e205c0939}\label{class_t_p___aviation_______simulation_1_1_scenario_a0d7977edb3b03afbb836c73e205c0939}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!m\_controller@{m\_controller}}
+\index{m\_controller@{m\_controller}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{m\_controller}{m\_controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_controller_simulateur}{Controller\+Simulateur}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+m\+\_\+controller\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 21 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_aca4dfbb9aab2f57362762d27c0d7a1f0}\label{class_t_p___aviation_______simulation_1_1_scenario_aca4dfbb9aab2f57362762d27c0d7a1f0}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!m\_derniereHeure@{m\_derniereHeure}}
+\index{m\_derniereHeure@{m\_derniereHeure}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{m\_derniereHeure}{m\_derniereHeure}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+m\+\_\+derniere\+Heure\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 20 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a55ff808a618fe59360d77c1a35c9ec4b}\label{class_t_p___aviation_______simulation_1_1_scenario_a55ff808a618fe59360d77c1a35c9ec4b}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!m\_horloge@{m\_horloge}}
+\index{m\_horloge@{m\_horloge}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{m\_horloge}{m\_horloge}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge}{Horloge}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+m\+\_\+horloge\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [private]}}
+
+
+
+Definition at line 19 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_scenario_a7f3cf3e1011c6ed3b9d4b8cd7c94c9a0}\label{class_t_p___aviation_______simulation_1_1_scenario_a7f3cf3e1011c6ed3b9d4b8cd7c94c9a0}} 
+\index{TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}!mainThread@{mainThread}}
+\index{mainThread@{mainThread}!TP\_Aviation\_\_\_Simulation.Scenario@{TP\_Aviation\_\_\_Simulation.Scenario}}
+\doxysubsubsection{\texorpdfstring{mainThread}{mainThread}}
+{\footnotesize\ttfamily Thread T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Scenario.\+main\+Thread\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [private]}}
+
+
+
+Definition at line 18 of file Scenario.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_scenario_8cs}{Scenario.\+cs}}\end{DoxyCompactItemize}
