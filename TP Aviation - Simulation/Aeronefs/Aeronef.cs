@@ -69,7 +69,7 @@ namespace TP_Aviation___Simulation
         /// </summary>
         /// <param name="temps">Temps passer dans la simulation en minute</param>
         /// <param name="clients">Liste des clients de l'aéroport auquel l'aéronef appartient</param>
-        public void avancerAvion(int temps, List<Client> clients)
+        public virtual void avancerAvion(int temps, List<Client> clients)
         {
         }
 

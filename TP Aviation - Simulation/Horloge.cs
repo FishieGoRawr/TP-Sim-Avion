@@ -20,23 +20,35 @@ namespace TP_Aviation___Simulation
         public int m_heures { get; set; }
         public int m_minutes { get; set; }
 
+        /// <summary>
+        /// Constructeur d'horloge par défaut
+        /// </summary>
         public Horloge()
         {
             m_heures = 0;
             m_minutes = 0;
         }
 
+        /// <summary>
+        /// Appelle tout ceux qui sont subscribe a l'event "TempsChanged"
+        /// </summary>
         protected virtual void HeureAjoutee()
         {
             TempsChanged(this.ToString());
         }
 
+        /// <summary>
+        /// Ajoute une heure a l'horloge
+        /// </summary>
         public void ajouteHeure()
         {
             m_heures++;
             HeureAjoutee();
         }
 
+        /// <summary>
+        /// Ajoute 5 minutes a l'horloge
+        /// </summary>
         public void ajouteMinutes()
         {
             if (m_minutes + 5 == 60)
@@ -50,6 +62,10 @@ namespace TP_Aviation___Simulation
             HeureAjoutee();
         }
 
+        /// <summary>
+        /// Obtient une version stringifier de l'horloge
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             string temps = "";

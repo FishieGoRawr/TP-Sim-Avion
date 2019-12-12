@@ -46,7 +46,10 @@ namespace TP_Aviation___Simulation
                 return m_scenario;
             }
         }
-
+               
+        /// <summary>
+        /// Permet de mettre en pause/resume la boucle principale
+        /// </summary>
         public void changerStatusSpin()
         {
 
@@ -70,6 +73,9 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        /// <summary>
+        /// Boucle principale du logiciel
+        /// </summary>
         public void spin()
         {
             while (m_simulateurEnMarche)
@@ -87,17 +93,27 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        /// <summary>
+        /// Permet d'abonner une méthode a l'evenement "TempsChanged"
+        /// </summary>
+        /// <param name="handler"></param>
         public void abonnerOnHeureChanged(HorlogeEventHandler handler)
         {
             m_horloge.TempsChanged += handler;
         }
         
+        /// <summary>
+        /// Accesseur de la liste d'aeroport
+        /// </summary>
         public List<Aeroport> Liste
         {
             get { return listAreoport; }
             set { listAreoport = value; }
         }
 
+        /// <summary>
+        /// Genere des clients lorsque les heures passent
+        /// </summary>
         public void genererClients()
         {
             int heure = m_horloge.m_heures;
@@ -121,11 +137,18 @@ namespace TP_Aviation___Simulation
 
         }
 
+        /// <summary>
+        /// Crée un lien avec le constructeur principal
+        /// </summary>
+        /// <param name="controller"></param>
         public void setController(ControllerSimulateur controller)
         {
             m_controller = controller;
         }
 
+        /// <summary>
+        /// Permet de créer des clients passager
+        /// </summary>
         public void ajouterPassager()
         {
             foreach (var areoport in listAreoport)
@@ -134,6 +157,9 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        /// <summary>
+        /// Permet de créer des clients marchandise
+        /// </summary>
         public void ajouterMarchandise()
         {
             foreach (var areoport in listAreoport)
@@ -142,6 +168,11 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        /// <summary>
+        /// Permet de créer des clients observateur
+        /// </summary>
+        /// <param name="width">Width de la carte</param>
+        /// <param name="height">Height de la carte</param>
         public void ajouterObservateur(int width, int height)
         {
             int index;
@@ -151,7 +182,6 @@ namespace TP_Aviation___Simulation
             if(index != -1)
             {
                 listAreoport[index].m_listClient.Add(tempo);
-                Console.WriteLine(tempo);
                 m_listClients.Add(tempo);
             }
             else
@@ -161,6 +191,11 @@ namespace TP_Aviation___Simulation
                 
         }
 
+        /// <summary>
+        /// Permet de créer des clients incendie
+        /// </summary>
+        /// <param name="width">Width de la carte</param>
+        /// <param name="height">Height de la carte</param>
         public void ajouterFeu(int width, int height)
         {
             Random nbFeu = new Random();
@@ -172,7 +207,6 @@ namespace TP_Aviation___Simulation
                 if (index != -1)
                 {
                     listAreoport[index].m_listClient.Add(tempo);
-                    Console.WriteLine(tempo);
                     m_listClients.Add(tempo);
                 }
                 else
@@ -181,6 +215,11 @@ namespace TP_Aviation___Simulation
                 }
         }
 
+        /// <summary>
+        /// Permet de créer des clients secours
+        /// </summary>
+        /// <param name="width">Width de la carte</param>
+        /// <param name="height">Height de la carte</param>
         public void ajouterSecours(int width, int height)
         {
             Random nbSecours = new Random();
@@ -191,7 +230,6 @@ namespace TP_Aviation___Simulation
                 if (index != -1)
                 {
                     listAreoport[index].m_listClient.Add(tempo);
-                    Console.WriteLine(tempo);
                     m_listClients.Add(tempo);
                 }
                 else
@@ -200,6 +238,12 @@ namespace TP_Aviation___Simulation
                 }
         }
 
+        /// <summary>
+        /// Trouve l'aréoport, qui a un avion disponible pour la situation, le plus proche d'un client
+        /// </summary>
+        /// <param name="listAreoport">Liste d'aréoport</param>
+        /// <param name="client">Client a verifier</param>
+        /// <returns></returns>
         public int trouverPlusProche(List<Aeroport> listAreoport, Client client)
         {
             int posX;
@@ -297,6 +341,11 @@ namespace TP_Aviation___Simulation
             return indexAreoport;
         }
 
+        /// <summary>
+        /// Vérifie si l'areoport passé possède un avion incendie de dispo
+        /// </summary>
+        /// <param name="areoport">Areoport a verifier</param>
+        /// <returns>1 si oui, 0 si non</returns>
         public int possedeAreoIncendie(Aeroport areoport)
         {
             int temp = -1;
@@ -315,6 +364,11 @@ namespace TP_Aviation___Simulation
             return temp;
         }
 
+        /// <summary>
+        /// Vérifie si l'areoport passé possède un avion observateur de dispo
+        /// </summary>
+        /// <param name="areoport">Areoport a verifier</param>
+        /// <returns>1 si oui, 0 si non</returns>
         public int possedeAreoObservateur(Aeroport areoport)
         {
             int temp = -1;
@@ -333,6 +387,11 @@ namespace TP_Aviation___Simulation
             return temp;
         }
 
+        /// <summary>
+        /// Vérifie si l'areoport passé possède un avion secours de dispo
+        /// </summary>
+        /// <param name="areoport">Areoport a verifier</param>
+        /// <returns>1 si oui, 0 si non</returns>
         public int possedeAreoSecours(Aeroport areoport)
         {
             int temp = -1;
@@ -351,6 +410,12 @@ namespace TP_Aviation___Simulation
             return temp;
         }
 
+        /// <summary>
+        /// Obtient une ligne droite vers la destination
+        /// </summary>
+        /// <param name="a">x2 - x1</param>
+        /// <param name="b">y2 - y1</param>
+        /// <returns>Retourne l'hypotenuse distance jusqu'au client</returns>
         public double pythagore(int a, int b)
         {
             double c = 0;

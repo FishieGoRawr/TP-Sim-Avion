@@ -9,6 +9,11 @@ namespace TP_Aviation___Simulation
     class Maintenance : Etat
     {
         int tempsRestant;
+
+        /// <summary>
+        /// Constructeur de base de l'etat maintenance
+        /// </summary>
+        /// <param name="aeronef">Aeronef a qui affecter l'etat</param>
         public Maintenance(Aeronef aeronef) : base(aeronef)
         {
             Index = 7;
@@ -16,6 +21,11 @@ namespace TP_Aviation___Simulation
             this.tempsRestant = aeronef.Entretien;
         }
 
+        /// <summary>
+        /// Doit etre overrider, avance d'un cycle
+        /// </summary>
+        /// <param name="tempsPasse">temps passé dans le cycle</param>
+        /// <param name="clients">Liste de clients du scénario</param>
         public override void avancer(int tempsPasse, List<Client> clients)
         {
             tempsRestant = tempsRestant - tempsPasse;

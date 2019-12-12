@@ -8,7 +8,10 @@ namespace TP_Aviation___Simulation
 {
     class Observation : EnVol
     {
-         
+        /// <summary>
+        /// Constructeur de l'état Observation
+        /// </summary>
+        /// <param name="aeronef">Aeronef a qui affecter l'etat observation</param>
         public Observation(Aeronef aeronef) : base(aeronef)
         {
             Index = 5;
@@ -16,6 +19,11 @@ namespace TP_Aviation___Simulation
             this.m_positionActuelle = aeronef.Origine;
         }
 
+        /// <summary>
+        /// Ce qui se produit dans un cycle
+        /// </summary>
+        /// <param name="tempsPasse">temps passé dans le cycle</param>
+        /// <param name="clients">liste de clients</param>
         public override void avancer(int tempsPasse, List<Client> clients)
         {
             int x = m_positionActuelle.PosX;
@@ -55,11 +63,12 @@ namespace TP_Aviation___Simulation
             }
         }
 
-        public void tourner()
-        {
-            
-        }
-
+        /// <summary>
+        /// Trouve la ligne droite jusqu'a destination
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public double pythagore(int a, int b)
         {
             double c = 0;

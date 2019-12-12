@@ -10,10 +10,16 @@ namespace TP_Aviation___Simulation
     {
         private static UsineClient m_usineClient = null;
 
+        /// <summary>
+        /// Constructeur de base d'un usine client
+        /// </summary>
         UsineClient()
         {
         }
 
+        /// <summary>
+        /// Singleton: Obtient l'instance de l'usineClient
+        /// </summary>
         public static UsineClient getUsineClient
         {
             get
@@ -26,6 +32,13 @@ namespace TP_Aviation___Simulation
             }
         }
 
+        /// <summary>
+        /// Creer clients passager
+        /// </summary>
+        /// <param name="listAreoport">Liste d'areoport</param>
+        /// <param name="origine">Position d'origine de l'areoport</param>
+        /// <param name="rand"></param>
+        /// <returns></returns>
         public Client creerPassager(List<Aeroport> listAreoport, Aeroport origine, Random rand)
         {
             Client newClient = null;
@@ -35,6 +48,13 @@ namespace TP_Aviation___Simulation
             return newClient;
         }
 
+        /// <summary>
+        /// Creer clients marchandise
+        /// </summary>
+        /// <param name="listAreoport">Liste d'areoport</param>
+        /// <param name="origine">Position d'origine de l'areoport</param>
+        /// <param name="rand"></param>
+        /// <returns></returns>
         public Client creerMarchandise(List<Aeroport> listAreoport, Aeroport origine, Random rand)
         {
             Client newClient = null;
@@ -44,6 +64,13 @@ namespace TP_Aviation___Simulation
             return newClient;
         }
 
+        /// <summary>
+        /// Creer clients observateur
+        /// </summary>
+        /// <param name="width">Width de la map</param>
+        /// <param name="height">Height de la map</param>
+        /// <param name="rand"></param>
+        /// <returns></returns>
         public Client creerObservateur(int width, int height, Random rand) 
         {
             Client newClient = null;
@@ -53,12 +80,26 @@ namespace TP_Aviation___Simulation
             return newClient;
         }
 
+        /// <summary>
+        /// Creer clients incendie
+        /// </summary>
+        /// <param name="width">Width de la map</param>
+        /// <param name="height">Height de la map</param>
+        /// <param name="rand"></param>
+        /// <returns></returns>
         public Feu creerFeu(int width, int height, Random rand)
         {
             Feu newFeu = new Feu(width, height, rand);
             return newFeu;
         }
 
+        /// <summary>
+        /// Creer clients secours
+        /// </summary>
+        /// <param name="width">Width de la map</param>
+        /// <param name="height">Height de la map</param>
+        /// <param name="rand"></param>
+        /// <returns></returns>
         public Client creerSecours(int width, int height, Random rand)
         {
             Client newClient = null;

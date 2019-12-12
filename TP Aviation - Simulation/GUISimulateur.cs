@@ -16,6 +16,9 @@ namespace TP_Aviation___Simulation
         ControllerSimulateur controller;
         bool simulateurEnMarche;
 
+        /// <summary>
+        /// Constructeur du GUISimulateur
+        /// </summary>
         public GUISimulateur()
         {
             InitializeComponent();
@@ -26,6 +29,10 @@ namespace TP_Aviation___Simulation
             controller.deserialize();
         }
 
+        /// <summary>
+        /// Event lorsque le temps change.
+        /// </summary>
+        /// <param name="temps">Temps de l'horloge</param>        
         public void OnHeureAjoutee(string temps)
         {
             MethodInvoker invoker = delegate
@@ -37,6 +44,11 @@ namespace TP_Aviation___Simulation
             this.Invoke(invoker);
         }
 
+        /// <summary>
+        /// EventHandler du bouton "BtnStart" lors d'un click. Permet de stopper et de continuer la simulation.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnStart_Click(object sender, EventArgs e)
         {
             controller.changerStatusSpin();
@@ -48,20 +60,33 @@ namespace TP_Aviation___Simulation
 
             simulateurEnMarche = !simulateurEnMarche;
         }
-
+        
+        /// <summary>
+        /// Permet de changer le scénario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnChargerScenario_Click(object sender, EventArgs e)
         {
             controller.deserialize();
             updateGUI();
         }
-
+        
+        /// <summary>
+        /// Ajoute des clients sur demande, on le laisse au cas ou.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTest_Click(object sender, EventArgs e)
         {
             controller.genererObservateur(pcbWorldmap.Width, pcbWorldmap.Height);
             controller.genererFeu(pcbWorldmap.Width, pcbWorldmap.Height);
             controller.genererSecours(pcbWorldmap.Width, pcbWorldmap.Height);
         }
-
+        
+        /// <summary>
+        /// Permet d'actualiser le GUI avec tout les items nécessaire.
+        /// </summary>
         public void updateGUI()
         {
             Bitmap img = Properties.Resources.worldmap_good;
@@ -127,7 +152,11 @@ namespace TP_Aviation___Simulation
             g.Dispose();
             GC.Collect();
         }
-
+        
+        /// <summary>
+        /// Obtient la taille de la carte
+        /// </summary>
+        /// <returns></returns>
         public int[] obtenirTalleMap()
         {
             int[] temp = new int[2];
