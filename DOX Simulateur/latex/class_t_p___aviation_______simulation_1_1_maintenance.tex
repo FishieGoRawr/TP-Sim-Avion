@@ -1,0 +1,96 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_maintenance}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Maintenance Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_maintenance}\index{TP\_Aviation\_\_\_Simulation.Maintenance@{TP\_Aviation\_\_\_Simulation.Maintenance}}
+Inheritance diagram for T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Maintenance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_t_p___aviation_______simulation_1_1_maintenance}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_maintenance_ade9e523cd4669c220efe3c6c004bffb0}{Maintenance}} (\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}} aeronef)
+\begin{DoxyCompactList}\small\item\em Constructeur de base de l\textquotesingle{}etat maintenance \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_maintenance_a70d6f6e3c7a3b4114c6bc4ca3ab34670}{avancer}} (int temps\+Passe, List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$ clients)
+\begin{DoxyCompactList}\small\item\em Doit etre overrider, avance d\textquotesingle{}un cycle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_maintenance_a8c94f620f016e3900e21c58356cae609}{temps\+Restant}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Maintenance.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_maintenance_ade9e523cd4669c220efe3c6c004bffb0}\label{class_t_p___aviation_______simulation_1_1_maintenance_ade9e523cd4669c220efe3c6c004bffb0}} 
+\index{TP\_Aviation\_\_\_Simulation.Maintenance@{TP\_Aviation\_\_\_Simulation.Maintenance}!Maintenance@{Maintenance}}
+\index{Maintenance@{Maintenance}!TP\_Aviation\_\_\_Simulation.Maintenance@{TP\_Aviation\_\_\_Simulation.Maintenance}}
+\doxysubsubsection{\texorpdfstring{Maintenance()}{Maintenance()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Maintenance.\+Maintenance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}}}]{aeronef }\end{DoxyParamCaption})}
+
+
+
+Constructeur de base de l\textquotesingle{}etat maintenance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aeronef} & \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}} a qui affecter l\textquotesingle{}etat\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file Maintenance.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_maintenance_a70d6f6e3c7a3b4114c6bc4ca3ab34670}\label{class_t_p___aviation_______simulation_1_1_maintenance_a70d6f6e3c7a3b4114c6bc4ca3ab34670}} 
+\index{TP\_Aviation\_\_\_Simulation.Maintenance@{TP\_Aviation\_\_\_Simulation.Maintenance}!avancer@{avancer}}
+\index{avancer@{avancer}!TP\_Aviation\_\_\_Simulation.Maintenance@{TP\_Aviation\_\_\_Simulation.Maintenance}}
+\doxysubsubsection{\texorpdfstring{avancer()}{avancer()}}
+{\footnotesize\ttfamily override void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Maintenance.\+avancer (\begin{DoxyParamCaption}\item[{int}]{temps\+Passe,  }\item[{List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$}]{clients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Doit etre overrider, avance d\textquotesingle{}un cycle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temps\+Passe} & temps passé dans le cycle\\
+\hline
+{\em clients} & Liste de clients du scénario\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_etat_a7a142e28ade64321a1f279eca1b1b567}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat}}.
+
+
+
+Definition at line 29 of file Maintenance.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_maintenance_a8c94f620f016e3900e21c58356cae609}\label{class_t_p___aviation_______simulation_1_1_maintenance_a8c94f620f016e3900e21c58356cae609}} 
+\index{TP\_Aviation\_\_\_Simulation.Maintenance@{TP\_Aviation\_\_\_Simulation.Maintenance}!tempsRestant@{tempsRestant}}
+\index{tempsRestant@{tempsRestant}!TP\_Aviation\_\_\_Simulation.Maintenance@{TP\_Aviation\_\_\_Simulation.Maintenance}}
+\doxysubsubsection{\texorpdfstring{tempsRestant}{tempsRestant}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Maintenance.\+temps\+Restant\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file Maintenance.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_maintenance_8cs}{Maintenance.\+cs}}\end{DoxyCompactItemize}

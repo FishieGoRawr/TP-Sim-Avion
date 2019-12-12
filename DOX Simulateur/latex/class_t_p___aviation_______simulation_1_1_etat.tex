@@ -1,0 +1,129 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_etat}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_etat}\index{TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}}
+Inheritance diagram for T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.333333cm]{class_t_p___aviation_______simulation_1_1_etat}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_etat_a7e71d4d9aa12131d58a320f38c89667d}{Etat}} (\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}} aeronef)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un état \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_etat_a7a142e28ade64321a1f279eca1b1b567}{avancer}} (int temps\+Passe, List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$ clients)
+\begin{DoxyCompactList}\small\item\em Methode qui doit etre override, permet d\textquotesingle{}avancer d\textquotesingle{}un cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_etat_a4c2e7ac3a62ee0b3086a197140aaffce}{etat}} = 1
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_etat_a4b4656c1ebf9fc13f1ea395b4f443fd4}{m\+\_\+aeronef}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_etat_a7f523bace9b342eeae1b6d57ae5bb6e9}{Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}etat ou est rnedu l\textquotesingle{}aeronef \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Etat.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_etat_a7e71d4d9aa12131d58a320f38c89667d}\label{class_t_p___aviation_______simulation_1_1_etat_a7e71d4d9aa12131d58a320f38c89667d}} 
+\index{TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}!Etat@{Etat}}
+\index{Etat@{Etat}!TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}}
+\doxysubsubsection{\texorpdfstring{Etat()}{Etat()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat.\+Etat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}}}]{aeronef }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}un état 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aeronef} & \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}} a qui est associé l\textquotesingle{}état\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Etat.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_etat_a7a142e28ade64321a1f279eca1b1b567}\label{class_t_p___aviation_______simulation_1_1_etat_a7a142e28ade64321a1f279eca1b1b567}} 
+\index{TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}!avancer@{avancer}}
+\index{avancer@{avancer}!TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}}
+\doxysubsubsection{\texorpdfstring{avancer()}{avancer()}}
+{\footnotesize\ttfamily virtual void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat.\+avancer (\begin{DoxyParamCaption}\item[{int}]{temps\+Passe,  }\item[{List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$}]{clients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Methode qui doit etre override, permet d\textquotesingle{}avancer d\textquotesingle{}un cycle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temps\+Passe} & Temps passé dans le cycle\\
+\hline
+{\em clients} & Liste de clients du scénario\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_d_xC3_xA9barquement_a8401f7d4d925eac213347e6cda36e197}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Débarquement}}, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_embarquement_aa09b4aaa4fbcfd0466035dfdffa74845}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Embarquement}}, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_maintenance_a70d6f6e3c7a3b4114c6bc4ca3ab34670}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Maintenance}}, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aller_retour_acbbb5e69fa11dd1059a0c8eac5bfb6e3}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aller\+Retour}}, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_en_vol_abd3ea9f3803dae62435ee09c9a3db48c}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+En\+Vol}}, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_observation_ae1faf8d6725aacd7a6d9f18492c70268}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observation}}, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_attente_a4f7d070a3258b398d45e171df1350aa6}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Attente}}, and \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aller_a3a0277db59032341fbe0f6686e570164}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aller}}.
+
+
+
+Definition at line 37 of file Etat.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_etat_a4c2e7ac3a62ee0b3086a197140aaffce}\label{class_t_p___aviation_______simulation_1_1_etat_a4c2e7ac3a62ee0b3086a197140aaffce}} 
+\index{TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}!etat@{etat}}
+\index{etat@{etat}!TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}}
+\doxysubsubsection{\texorpdfstring{etat}{etat}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat.\+etat = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Etat.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_etat_a4b4656c1ebf9fc13f1ea395b4f443fd4}\label{class_t_p___aviation_______simulation_1_1_etat_a4b4656c1ebf9fc13f1ea395b4f443fd4}} 
+\index{TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}!m\_aeronef@{m\_aeronef}}
+\index{m\_aeronef@{m\_aeronef}!TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}}
+\doxysubsubsection{\texorpdfstring{m\_aeronef}{m\_aeronef}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat.\+m\+\_\+aeronef\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 12 of file Etat.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_etat_a7f523bace9b342eeae1b6d57ae5bb6e9}\label{class_t_p___aviation_______simulation_1_1_etat_a7f523bace9b342eeae1b6d57ae5bb6e9}} 
+\index{TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}!Index@{Index}}
+\index{Index@{Index}!TP\_Aviation\_\_\_Simulation.Etat@{TP\_Aviation\_\_\_Simulation.Etat}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily virtual int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Etat.\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Retourne l\textquotesingle{}etat ou est rnedu l\textquotesingle{}aeronef 
+
+
+
+Definition at line 27 of file Etat.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_etat_8cs}{Etat.\+cs}}\end{DoxyCompactItemize}

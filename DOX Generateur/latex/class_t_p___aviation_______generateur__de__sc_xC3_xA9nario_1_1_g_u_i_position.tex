@@ -1,0 +1,193 @@
+\hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position Class Reference}
+\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position}\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+
+
+Classe qui gère la position géographique  
+
+
+Inheritance diagram for T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a3be6c1d45579c0c8ff4b8ba3a8cd2ede}{G\+U\+I\+Position}} (\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_generateur}{G\+U\+I\+Generateur}} gui)
+\begin{DoxyCompactList}\small\item\em Cosntructeur du G\+UI de sélection de position \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_ac6c5a56a20d5aa2fb3c508e8ff904f68}{Pcb\+Worldmap\+\_\+\+Mouse\+Click}} (object sender, Mouse\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Sélectionne les positions X et Y de la souris lorsqu\textquotesingle{}on clique sur la window \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_abe5f36801784dc12d139d4c0fc32598f}{convert\+Pos\+To\+Min\+Sec}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Convertit les positiosn de la souris en coordonnée géograpgique en degrée \end{DoxyCompactList}\item 
+protected override void \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a7a2f1905685ea1d5ea04b2bf3e34bd08}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\item 
+private void \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a2919bc350beb10b941747568f06a56c9}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_generateur}{G\+U\+I\+Generateur}} \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a9bc7eb77b417ec024a216f739081cbc1}{guigen}}
+\item 
+private System Component\+Model I\+Container \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a0f685f8323e72b64ba0a2402c7261bfa}{components}} = null
+\begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
+private System Windows Forms Picture\+Box \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a9675d0bc1c9a6b3ec3ae5aaa7afa44ee}{pcb\+Worldmap}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe qui gère la position géographique 
+
+
+
+Definition at line 17 of file G\+U\+I\+Position.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a3be6c1d45579c0c8ff4b8ba3a8cd2ede}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a3be6c1d45579c0c8ff4b8ba3a8cd2ede}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!GUIPosition@{GUIPosition}}
+\index{GUIPosition@{GUIPosition}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{GUIPosition()}{GUIPosition()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+G\+U\+I\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_generateur}{G\+U\+I\+Generateur}}}]{gui }\end{DoxyParamCaption})}
+
+
+
+Cosntructeur du G\+UI de sélection de position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gui} & Variable qui contient le G\+UI du générateur\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file G\+U\+I\+Position.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_abe5f36801784dc12d139d4c0fc32598f}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_abe5f36801784dc12d139d4c0fc32598f}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!convertPosToMinSec@{convertPosToMinSec}}
+\index{convertPosToMinSec@{convertPosToMinSec}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{convertPosToMinSec()}{convertPosToMinSec()}}
+{\footnotesize\ttfamily string T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+convert\+Pos\+To\+Min\+Sec (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convertit les positiosn de la souris en coordonnée géograpgique en degrée 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Position X de la souris\\
+\hline
+{\em y} & Position Y de la souris\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne la coordonnée géographique avec les valeurs Nord, Sud, Est, Ouest
+\end{DoxyReturn}
+
+
+Definition at line 51 of file G\+U\+I\+Position.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a7a2f1905685ea1d5ea04b2bf3e34bd08}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a7a2f1905685ea1d5ea04b2bf3e34bd08}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily protected override void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file G\+U\+I\+Position.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a2919bc350beb10b941747568f06a56c9}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a2919bc350beb10b941747568f06a56c9}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}}
+{\footnotesize\ttfamily private void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required method for Designer support -\/ do not modify the contents of this method with the code editor. 
+
+
+
+Definition at line 29 of file G\+U\+I\+Position.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_ac6c5a56a20d5aa2fb3c508e8ff904f68}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_ac6c5a56a20d5aa2fb3c508e8ff904f68}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!PcbWorldmap\_MouseClick@{PcbWorldmap\_MouseClick}}
+\index{PcbWorldmap\_MouseClick@{PcbWorldmap\_MouseClick}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{PcbWorldmap\_MouseClick()}{PcbWorldmap\_MouseClick()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+Pcb\+Worldmap\+\_\+\+Mouse\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Mouse\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sélectionne les positions X et Y de la souris lorsqu\textquotesingle{}on clique sur la window 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Objet d\textquotesingle{}évènement\\
+\hline
+{\em e} & Objet souris\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file G\+U\+I\+Position.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a0f685f8323e72b64ba0a2402c7261bfa}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a0f685f8323e72b64ba0a2402c7261bfa}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!components@{components}}
+\index{components@{components}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily private System Component\+Model I\+Container T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+components = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required designer variable. 
+
+
+
+Definition at line 8 of file G\+U\+I\+Position.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a9bc7eb77b417ec024a216f739081cbc1}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a9bc7eb77b417ec024a216f739081cbc1}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!guigen@{guigen}}
+\index{guigen@{guigen}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{guigen}{guigen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_generateur}{G\+U\+I\+Generateur}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+guigen\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file G\+U\+I\+Position.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a9675d0bc1c9a6b3ec3ae5aaa7afa44ee}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_g_u_i_position_a9675d0bc1c9a6b3ec3ae5aaa7afa44ee}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}!pcbWorldmap@{pcbWorldmap}}
+\index{pcbWorldmap@{pcbWorldmap}!TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition@{TP\_Aviation\_\_\_Generateur\_de\_scénario.GUIPosition}}
+\doxysubsubsection{\texorpdfstring{pcbWorldmap}{pcbWorldmap}}
+{\footnotesize\ttfamily private System Windows Forms Picture\+Box T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+G\+U\+I\+Position.\+pcb\+Worldmap\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 63 of file G\+U\+I\+Position.\+Designer.\+cs.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Generateur de scénario/\mbox{\hyperlink{_g_u_i_position_8cs}{G\+U\+I\+Position.\+cs}}\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Generateur de scénario/\mbox{\hyperlink{_g_u_i_position_8_designer_8cs}{G\+U\+I\+Position.\+Designer.\+cs}}\end{DoxyCompactItemize}

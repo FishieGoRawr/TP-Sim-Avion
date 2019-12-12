@@ -1,0 +1,236 @@
+\hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario Class Reference}
+\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario}\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a0acfeba8f0e766400eed0580877c51a3}{ajout\+Aeroport}} (string nom, int achal\+Pass, int achal\+March, Text\+Box position)
+\begin{DoxyCompactList}\small\item\em Ajoute un aéroport au scnénario \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a6fe40eaae07bd231c12a626869b6ba8d}{ajouter\+Aeronef}} (string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, string aeroports)
+\begin{DoxyCompactList}\small\item\em Ajoute un aéronef dans l\textquotesingle{}aéroport sélectionner \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_acdf85c492c40916388b31ae613a11550}{Serialize\+Scenario}} ()
+\begin{DoxyCompactList}\small\item\em Sérialise le scénario dans le fichier \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_aa52e96f8e7d0ab832aafb0e49252e729}{Deserialize\+Scenario}} ()
+\begin{DoxyCompactList}\small\item\em Désérialise un scnénario à partir d\textquotesingle{}un fichier sélectionner \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_aeroport}{Aeroport}} $>$ \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a3923cb82cce9652f77b8e582f3d7cffd}{list\+Areoport}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario}{Scenario}} \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_af348176a3a019c385a6f0dbdccc95684}{get\+Scenario}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Constructeur vide d\textquotesingle{}un scénario \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_aeroport}{Aeroport}} \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a1b5f1568272cbe9dbd282088b2e53d1c}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ascesseur de l\textquotesingle{}aréoport a l\textquotesingle{}indice dans la liste d\textquotesingle{}aréoports \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_ada02f380f1fef019784e2dbb1c4f602b}{Scenario}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un scénario \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_usine_aeronef}{Usine\+Aeronef}} \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_ac031a9e0a2cb6ac278d52b405be3854c}{usine}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario}{Scenario}} \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a5608e7f090e4aff0ff720bce3eeffe8b}{m\+\_\+scenario}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_ada02f380f1fef019784e2dbb1c4f602b}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_ada02f380f1fef019784e2dbb1c4f602b}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!Scenario@{Scenario}}
+\index{Scenario@{Scenario}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{Scenario()}{Scenario()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+Scenario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructeur d\textquotesingle{}un scénario 
+
+
+
+Definition at line 21 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a0acfeba8f0e766400eed0580877c51a3}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a0acfeba8f0e766400eed0580877c51a3}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!ajoutAeroport@{ajoutAeroport}}
+\index{ajoutAeroport@{ajoutAeroport}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{ajoutAeroport()}{ajoutAeroport()}}
+{\footnotesize\ttfamily string T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+ajout\+Aeroport (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{int}]{achal\+Pass,  }\item[{int}]{achal\+March,  }\item[{Text\+Box}]{position }\end{DoxyParamCaption})}
+
+
+
+Ajoute un aéroport au scnénario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom de l\textquotesingle{}aéroport\\
+\hline
+{\em achal\+Pass} & Indice d\textquotesingle{}achalandage de passagers de l\textquotesingle{}aéroport\\
+\hline
+{\em achal\+March} & Indice d\textquotesingle{}achalandage de marchandises de l\textquotesingle{}aéroport\\
+\hline
+{\em position} & Posiition géographique de l\textquotesingle{}aéroport\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a6fe40eaae07bd231c12a626869b6ba8d}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a6fe40eaae07bd231c12a626869b6ba8d}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!ajouterAeronef@{ajouterAeronef}}
+\index{ajouterAeronef@{ajouterAeronef}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{ajouterAeronef()}{ajouterAeronef()}}
+{\footnotesize\ttfamily string T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+ajouter\+Aeronef (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{string}]{type,  }\item[{int}]{vitesse,  }\item[{int}]{entretien,  }\item[{int}]{charger,  }\item[{int}]{decharger,  }\item[{int}]{change,  }\item[{string}]{aeroports }\end{DoxyParamCaption})}
+
+
+
+Ajoute un aéronef dans l\textquotesingle{}aéroport sélectionner 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom de l\textquotesingle{}aéronef\\
+\hline
+{\em type} & Type de l\textquotesingle{}aéronef\\
+\hline
+{\em vitesse} & Vitesse de l\textquotesingle{}aéronef\\
+\hline
+{\em entretien} & Temps de maintenance de l\textquotesingle{}aéronef\\
+\hline
+{\em charger} & Temps d\textquotesingle{}embarquement de l\textquotesingle{}aéronef\\
+\hline
+{\em decharger} & Temps de débarquement de l\textquotesingle{}aéronef\\
+\hline
+{\em change} & Nombre qui représente la capacité ou le rayon de l\textquotesingle{}aéronef selon le type\\
+\hline
+{\em aeroports} & Nom de l\textquotesingle{}aéroport de l\textquotesingle{}aéronef\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne l\textquotesingle{}aéronef avec ses informations sous forme de texte
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_aa52e96f8e7d0ab832aafb0e49252e729}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_aa52e96f8e7d0ab832aafb0e49252e729}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!DeserializeScenario@{DeserializeScenario}}
+\index{DeserializeScenario@{DeserializeScenario}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{DeserializeScenario()}{DeserializeScenario()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+Deserialize\+Scenario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Désérialise un scnénario à partir d\textquotesingle{}un fichier sélectionner 
+
+
+
+Definition at line 139 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_acdf85c492c40916388b31ae613a11550}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_acdf85c492c40916388b31ae613a11550}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!SerializeScenario@{SerializeScenario}}
+\index{SerializeScenario@{SerializeScenario}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{SerializeScenario()}{SerializeScenario()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+Serialize\+Scenario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sérialise le scénario dans le fichier 
+
+
+
+Definition at line 117 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a3923cb82cce9652f77b8e582f3d7cffd}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a3923cb82cce9652f77b8e582f3d7cffd}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!listAreoport@{listAreoport}}
+\index{listAreoport@{listAreoport}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{listAreoport}{listAreoport}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_aeroport}{Aeroport}}$>$ T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+list\+Areoport}
+
+
+
+Definition at line 15 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a5608e7f090e4aff0ff720bce3eeffe8b}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a5608e7f090e4aff0ff720bce3eeffe8b}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!m\_scenario@{m\_scenario}}
+\index{m\_scenario@{m\_scenario}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{m\_scenario}{m\_scenario}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario}{Scenario}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+m\+\_\+scenario\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_ac031a9e0a2cb6ac278d52b405be3854c}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_ac031a9e0a2cb6ac278d52b405be3854c}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!usine@{usine}}
+\index{usine@{usine}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{usine}{usine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_usine_aeronef}{Usine\+Aeronef}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+usine\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file Scenario.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_af348176a3a019c385a6f0dbdccc95684}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_af348176a3a019c385a6f0dbdccc95684}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!getScenario@{getScenario}}
+\index{getScenario@{getScenario}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{getScenario}{getScenario}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario}{Scenario}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+get\+Scenario\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Constructeur vide d\textquotesingle{}un scénario 
+
+
+
+Definition at line 31 of file Scenario.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a1b5f1568272cbe9dbd282088b2e53d1c}\label{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_scenario_a1b5f1568272cbe9dbd282088b2e53d1c}} 
+\index{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario@{TP\_Aviation\_\_\_Generateur\_de\_scénario.Scenario}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______generateur__de__sc_xC3_xA9nario_1_1_aeroport}{Aeroport}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Generateur\+\_\+de\+\_\+scénario.\+Scenario.\+this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ascesseur de l\textquotesingle{}aréoport a l\textquotesingle{}indice dans la liste d\textquotesingle{}aréoports 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indice dans la liste\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Scenario.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Generateur de scénario/\mbox{\hyperlink{_scenario_8cs}{Scenario.\+cs}}\end{DoxyCompactItemize}

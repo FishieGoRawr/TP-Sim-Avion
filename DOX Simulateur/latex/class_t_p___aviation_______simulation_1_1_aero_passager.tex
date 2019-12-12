@@ -1,0 +1,192 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_aero_passager}\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+Inheritance diagram for T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_t_p___aviation_______simulation_1_1_aero_passager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_a8797d02c93c6a5f68935a2cabe31f914}{Aero\+Passager}} (string nom, string type, int vitesse, int entretien, \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} origine, int charger, int decharger, int change)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager}{Aero\+Passager}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_a57d4bffe6cf35fa4790cd8c3f72be8de}{Aero\+Passager}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur vide pour \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager}{Aero\+Passager}} \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_ab49c37ac6259ed1952faa419f6b0f418}{avancer\+Avion}} (int temps, List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$ clients)
+\begin{DoxyCompactList}\small\item\em Appelle le bon état pour faire avancer l\textquotesingle{}aéronef ou changer l\textquotesingle{}état \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_a79da86485ea76b0b900b3bc873f58961}{m\+\_\+capacite}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+override int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_aa3a1da4ba6538b2b595781f0126dfece}{Capacite}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ascesseur de la capacité de l\textquotesingle{}aéronef \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_ac7acd42e305b6289882d371b577f2356}{Embarquement}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ascesseur du temps de d\textquotesingle{}embarquement type de l\textquotesingle{}aéronef \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_ace27b907a6caf87eddeabc0bdfea3fee}{Debarquement}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ascesseur du temps de debarquement type de l\textquotesingle{}aéronef \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Bitmap \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager_ac112fa9e721b1f5a5785d94d577f8379}{m\+\_\+image}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Aero\+Passager.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_a8797d02c93c6a5f68935a2cabe31f914}\label{class_t_p___aviation_______simulation_1_1_aero_passager_a8797d02c93c6a5f68935a2cabe31f914}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!AeroPassager@{AeroPassager}}
+\index{AeroPassager@{AeroPassager}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{AeroPassager()}{AeroPassager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+Aero\+Passager (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{string}]{type,  }\item[{int}]{vitesse,  }\item[{int}]{entretien,  }\item[{\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}}}]{origine,  }\item[{int}]{charger,  }\item[{int}]{decharger,  }\item[{int}]{change }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager}{Aero\+Passager}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom de l\textquotesingle{}aeronef\\
+\hline
+{\em vitesse} & Vitesse de l\textquotesingle{}aeronef\\
+\hline
+{\em entretien} & Temps d\textquotesingle{}entretien de l\textquotesingle{}aeronef\\
+\hline
+{\em origine} & Point d\textquotesingle{}origine de l\textquotesingle{}aeronef\\
+\hline
+{\em charger} & Temps pour charger l\textquotesingle{}aeronef\\
+\hline
+{\em decharger} & Temps pour decharger l\textquotesingle{}aeronef\\
+\hline
+{\em change} & Capacité de passager de l\textquotesingle{}aeronef\\
+\hline
+{\em type} & Type de l\textquotesingle{}areonef\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Aero\+Passager.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_a57d4bffe6cf35fa4790cd8c3f72be8de}\label{class_t_p___aviation_______simulation_1_1_aero_passager_a57d4bffe6cf35fa4790cd8c3f72be8de}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!AeroPassager@{AeroPassager}}
+\index{AeroPassager@{AeroPassager}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{AeroPassager()}{AeroPassager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+Aero\+Passager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur vide pour \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aero_passager}{Aero\+Passager}} 
+
+
+
+Definition at line 44 of file Aero\+Passager.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_ab49c37ac6259ed1952faa419f6b0f418}\label{class_t_p___aviation_______simulation_1_1_aero_passager_ab49c37ac6259ed1952faa419f6b0f418}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!avancerAvion@{avancerAvion}}
+\index{avancerAvion@{avancerAvion}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{avancerAvion()}{avancerAvion()}}
+{\footnotesize\ttfamily override void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+avancer\+Avion (\begin{DoxyParamCaption}\item[{int}]{temps,  }\item[{List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$}]{clients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Appelle le bon état pour faire avancer l\textquotesingle{}aéronef ou changer l\textquotesingle{}état 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temps} & Temps passer dans la simulation en minute\\
+\hline
+{\em clients} & Liste des clients de l\textquotesingle{}aéroport auquel l\textquotesingle{}aéronef appartient\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef_a2997d2831f1b6035e9d83babd6e5b49e}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeronef}}.
+
+
+
+Definition at line 60 of file Aero\+Passager.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_ac112fa9e721b1f5a5785d94d577f8379}\label{class_t_p___aviation_______simulation_1_1_aero_passager_ac112fa9e721b1f5a5785d94d577f8379}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!m\_image@{m\_image}}
+\index{m\_image@{m\_image}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{m\_image}{m\_image}}
+{\footnotesize\ttfamily Bitmap T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+m\+\_\+image\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file Aero\+Passager.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_aa3a1da4ba6538b2b595781f0126dfece}\label{class_t_p___aviation_______simulation_1_1_aero_passager_aa3a1da4ba6538b2b595781f0126dfece}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!Capacite@{Capacite}}
+\index{Capacite@{Capacite}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{Capacite}{Capacite}}
+{\footnotesize\ttfamily override int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+Capacite\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Ascesseur de la capacité de l\textquotesingle{}aéronef 
+
+
+
+Definition at line 103 of file Aero\+Passager.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_ace27b907a6caf87eddeabc0bdfea3fee}\label{class_t_p___aviation_______simulation_1_1_aero_passager_ace27b907a6caf87eddeabc0bdfea3fee}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!Debarquement@{Debarquement}}
+\index{Debarquement@{Debarquement}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{Debarquement}{Debarquement}}
+{\footnotesize\ttfamily override int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+Debarquement\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Ascesseur du temps de debarquement type de l\textquotesingle{}aéronef 
+
+
+
+Definition at line 119 of file Aero\+Passager.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_ac7acd42e305b6289882d371b577f2356}\label{class_t_p___aviation_______simulation_1_1_aero_passager_ac7acd42e305b6289882d371b577f2356}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!Embarquement@{Embarquement}}
+\index{Embarquement@{Embarquement}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{Embarquement}{Embarquement}}
+{\footnotesize\ttfamily override int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+Embarquement\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Ascesseur du temps de d\textquotesingle{}embarquement type de l\textquotesingle{}aéronef 
+
+
+
+Definition at line 111 of file Aero\+Passager.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aero_passager_a79da86485ea76b0b900b3bc873f58961}\label{class_t_p___aviation_______simulation_1_1_aero_passager_a79da86485ea76b0b900b3bc873f58961}} 
+\index{TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}!m\_capacite@{m\_capacite}}
+\index{m\_capacite@{m\_capacite}!TP\_Aviation\_\_\_Simulation.AeroPassager@{TP\_Aviation\_\_\_Simulation.AeroPassager}}
+\doxysubsubsection{\texorpdfstring{m\_capacite}{m\_capacite}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aero\+Passager.\+m\+\_\+capacite\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [private]}}
+
+
+
+Definition at line 12 of file Aero\+Passager.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_aero_passager_8cs}{Aero\+Passager.\+cs}}\end{DoxyCompactItemize}

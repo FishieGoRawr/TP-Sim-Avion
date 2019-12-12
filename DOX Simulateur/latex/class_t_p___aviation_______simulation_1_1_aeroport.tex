@@ -1,0 +1,197 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_aeroport}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_aeroport}\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a774cffc9a478c9c71cbc4a2d5a47c8ee}{Aeroport}} (string p\+\_\+nom, int p\+\_\+achal\+Marchandise, int p\+\_\+achal\+Passager)
+\begin{DoxyCompactList}\small\item\em Cosntructeur d\textquotesingle{}un aéroport \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a4b462396f2e1d509e6e93751344de7a5}{Aeroport}} ()
+\begin{DoxyCompactList}\small\item\em Cosntructeur vide d\textquotesingle{}un aéroport \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a8d82625bd95b9138abcc16cc806e0b2d}{bouger\+Avion}} (int temps)
+\begin{DoxyCompactList}\small\item\em Demande a tous les aviosn dans la liste d\textquotesingle{}avancer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}} $>$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a6cfb7bc084a149893b133e8e8f2252fc}{m\+\_\+list\+Client}}
+\item 
+Bitmap \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a31e394d84918bc8f3038b62b9d066a27}{m\+\_\+image}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a3681cd38580fff8dcfcbca8246e5907c}{m\+\_\+nom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a92fdfdea051546d5da3bbee9f19aef39}{m\+\_\+localisation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}} $>$ \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a5174470bc2cd94f92c03f41b0f7b3401}{m\+\_\+list\+Aeronef}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a3f99927b27c5093d0280c251c161b135}{m\+\_\+achal\+Passager}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a727df79963d6b3856f745c2bc22e516f}{m\+\_\+achal\+Marchandise}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeroport_a1377ac59903ee6b10bee56224e5d508a}{Localisation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ascesseur de la position de l\textquotesingle{}aéroport \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Aeroport.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a774cffc9a478c9c71cbc4a2d5a47c8ee}\label{class_t_p___aviation_______simulation_1_1_aeroport_a774cffc9a478c9c71cbc4a2d5a47c8ee}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!Aeroport@{Aeroport}}
+\index{Aeroport@{Aeroport}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{Aeroport()}{Aeroport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+Aeroport (\begin{DoxyParamCaption}\item[{string}]{p\+\_\+nom,  }\item[{int}]{p\+\_\+achal\+Marchandise,  }\item[{int}]{p\+\_\+achal\+Passager }\end{DoxyParamCaption})}
+
+
+
+Cosntructeur d\textquotesingle{}un aéroport 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+nom} & Nom de l\textquotesingle{}aeroport\\
+\hline
+{\em p\+\_\+achal\+Marchandise} & Nombre représentant l\textquotesingle{}achalandage des marchandises de l\textquotesingle{}aeroport\\
+\hline
+{\em p\+\_\+achal\+Passager} & Nombre représentant l\textquotesingle{}achalandage des passagers de l\textquotesingle{}aeroport\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Aeroport.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a4b462396f2e1d509e6e93751344de7a5}\label{class_t_p___aviation_______simulation_1_1_aeroport_a4b462396f2e1d509e6e93751344de7a5}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!Aeroport@{Aeroport}}
+\index{Aeroport@{Aeroport}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{Aeroport()}{Aeroport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+Aeroport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cosntructeur vide d\textquotesingle{}un aéroport 
+
+
+
+Definition at line 40 of file Aeroport.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a8d82625bd95b9138abcc16cc806e0b2d}\label{class_t_p___aviation_______simulation_1_1_aeroport_a8d82625bd95b9138abcc16cc806e0b2d}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!bougerAvion@{bougerAvion}}
+\index{bougerAvion@{bougerAvion}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{bougerAvion()}{bougerAvion()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+bouger\+Avion (\begin{DoxyParamCaption}\item[{int}]{temps }\end{DoxyParamCaption})}
+
+
+
+Demande a tous les aviosn dans la liste d\textquotesingle{}avancer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temps} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file Aeroport.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a31e394d84918bc8f3038b62b9d066a27}\label{class_t_p___aviation_______simulation_1_1_aeroport_a31e394d84918bc8f3038b62b9d066a27}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!m\_image@{m\_image}}
+\index{m\_image@{m\_image}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{m\_image}{m\_image}}
+{\footnotesize\ttfamily Bitmap T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+m\+\_\+image}
+
+
+
+Definition at line 18 of file Aeroport.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a6cfb7bc084a149893b133e8e8f2252fc}\label{class_t_p___aviation_______simulation_1_1_aeroport_a6cfb7bc084a149893b133e8e8f2252fc}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!m\_listClient@{m\_listClient}}
+\index{m\_listClient@{m\_listClient}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{m\_listClient}{m\_listClient}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_client}{Client}}$>$ T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+m\+\_\+list\+Client}
+
+
+
+Definition at line 15 of file Aeroport.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a1377ac59903ee6b10bee56224e5d508a}\label{class_t_p___aviation_______simulation_1_1_aeroport_a1377ac59903ee6b10bee56224e5d508a}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!Localisation@{Localisation}}
+\index{Localisation@{Localisation}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{Localisation}{Localisation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+Localisation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ascesseur de la position de l\textquotesingle{}aéroport 
+
+
+
+Definition at line 65 of file Aeroport.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a727df79963d6b3856f745c2bc22e516f}\label{class_t_p___aviation_______simulation_1_1_aeroport_a727df79963d6b3856f745c2bc22e516f}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!m\_achalMarchandise@{m\_achalMarchandise}}
+\index{m\_achalMarchandise@{m\_achalMarchandise}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{m\_achalMarchandise}{m\_achalMarchandise}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+m\+\_\+achal\+Marchandise\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 17 of file Aeroport.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a3f99927b27c5093d0280c251c161b135}\label{class_t_p___aviation_______simulation_1_1_aeroport_a3f99927b27c5093d0280c251c161b135}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!m\_achalPassager@{m\_achalPassager}}
+\index{m\_achalPassager@{m\_achalPassager}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{m\_achalPassager}{m\_achalPassager}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+m\+\_\+achal\+Passager\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 16 of file Aeroport.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a5174470bc2cd94f92c03f41b0f7b3401}\label{class_t_p___aviation_______simulation_1_1_aeroport_a5174470bc2cd94f92c03f41b0f7b3401}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!m\_listAeronef@{m\_listAeronef}}
+\index{m\_listAeronef@{m\_listAeronef}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{m\_listAeronef}{m\_listAeronef}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_aeronef}{Aeronef}}$>$ T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+m\+\_\+list\+Aeronef\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 14 of file Aeroport.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a92fdfdea051546d5da3bbee9f19aef39}\label{class_t_p___aviation_______simulation_1_1_aeroport_a92fdfdea051546d5da3bbee9f19aef39}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!m\_localisation@{m\_localisation}}
+\index{m\_localisation@{m\_localisation}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{m\_localisation}{m\_localisation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+m\+\_\+localisation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 13 of file Aeroport.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_aeroport_a3681cd38580fff8dcfcbca8246e5907c}\label{class_t_p___aviation_______simulation_1_1_aeroport_a3681cd38580fff8dcfcbca8246e5907c}} 
+\index{TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}!m\_nom@{m\_nom}}
+\index{m\_nom@{m\_nom}!TP\_Aviation\_\_\_Simulation.Aeroport@{TP\_Aviation\_\_\_Simulation.Aeroport}}
+\doxysubsubsection{\texorpdfstring{m\_nom}{m\_nom}}
+{\footnotesize\ttfamily string T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Aeroport.\+m\+\_\+nom\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 12 of file Aeroport.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_aeroport_8cs}{Aeroport.\+cs}}\end{DoxyCompactItemize}

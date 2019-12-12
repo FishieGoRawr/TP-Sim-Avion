@@ -1,0 +1,187 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_horloge}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_horloge}\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a45b5bf3617361f12070fdd5314292dcb}{Horloge}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}horloge par défaut \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_ad7cc363cd28d1a1c9073fc9109dc1b11}{ajoute\+Heure}} ()
+\begin{DoxyCompactList}\small\item\em Ajoute une heure a l\textquotesingle{}horloge \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a595f6d5770c67e6a86168980421dff20}{ajoute\+Minutes}} ()
+\begin{DoxyCompactList}\small\item\em Ajoute 5 minutes a l\textquotesingle{}horloge \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a333bbf0adc1e5f6a3c843de2b978bbfc}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Obtient une version stringifier de l\textquotesingle{}horloge \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a4167c1e3ee9289c283c9376d2f756cec}{Heure\+Ajoutee}} ()
+\begin{DoxyCompactList}\small\item\em Appelle tout ceux qui sont subscribe a l\textquotesingle{}event \char`\"{}\+Temps\+Changed\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_aafddbe6543386d8aa59f81bb8cc6761b}{m\+\_\+heures}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a7fc5358afc6bc50f875d97163aa94d91}{m\+\_\+minutes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_t_p___aviation_______simulation_ab5db512dc3e9bf2d1ce440124e59dcd6}{Horloge\+Event\+Handler}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a11f4cd2e035a4d4100e9d92a3997e78b}{Temps\+Changed}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Thread \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a427a30b5b7532b46de80c6194456464a}{main\+Thread}}
+\item 
+Method\+Invoker \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_horloge_a0772a8810ed23cdb63ecdf6bba1a2f51}{invoker}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file Horloge.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a45b5bf3617361f12070fdd5314292dcb}\label{class_t_p___aviation_______simulation_1_1_horloge_a45b5bf3617361f12070fdd5314292dcb}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!Horloge@{Horloge}}
+\index{Horloge@{Horloge}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{Horloge()}{Horloge()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+Horloge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}horloge par défaut 
+
+
+
+Definition at line 26 of file Horloge.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_ad7cc363cd28d1a1c9073fc9109dc1b11}\label{class_t_p___aviation_______simulation_1_1_horloge_ad7cc363cd28d1a1c9073fc9109dc1b11}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!ajouteHeure@{ajouteHeure}}
+\index{ajouteHeure@{ajouteHeure}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{ajouteHeure()}{ajouteHeure()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+ajoute\+Heure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ajoute une heure a l\textquotesingle{}horloge 
+
+
+
+Definition at line 43 of file Horloge.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a595f6d5770c67e6a86168980421dff20}\label{class_t_p___aviation_______simulation_1_1_horloge_a595f6d5770c67e6a86168980421dff20}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!ajouteMinutes@{ajouteMinutes}}
+\index{ajouteMinutes@{ajouteMinutes}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{ajouteMinutes()}{ajouteMinutes()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+ajoute\+Minutes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ajoute 5 minutes a l\textquotesingle{}horloge 
+
+
+
+Definition at line 52 of file Horloge.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a4167c1e3ee9289c283c9376d2f756cec}\label{class_t_p___aviation_______simulation_1_1_horloge_a4167c1e3ee9289c283c9376d2f756cec}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!HeureAjoutee@{HeureAjoutee}}
+\index{HeureAjoutee@{HeureAjoutee}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{HeureAjoutee()}{HeureAjoutee()}}
+{\footnotesize\ttfamily virtual void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+Heure\+Ajoutee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Appelle tout ceux qui sont subscribe a l\textquotesingle{}event \char`\"{}\+Temps\+Changed\char`\"{} 
+
+
+
+Definition at line 35 of file Horloge.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a333bbf0adc1e5f6a3c843de2b978bbfc}\label{class_t_p___aviation_______simulation_1_1_horloge_a333bbf0adc1e5f6a3c843de2b978bbfc}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!ToString@{ToString}}
+\index{ToString@{ToString}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtient une version stringifier de l\textquotesingle{}horloge 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Horloge.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a0772a8810ed23cdb63ecdf6bba1a2f51}\label{class_t_p___aviation_______simulation_1_1_horloge_a0772a8810ed23cdb63ecdf6bba1a2f51}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!invoker@{invoker}}
+\index{invoker@{invoker}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{invoker}{invoker}}
+{\footnotesize\ttfamily Method\+Invoker T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+invoker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file Horloge.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a427a30b5b7532b46de80c6194456464a}\label{class_t_p___aviation_______simulation_1_1_horloge_a427a30b5b7532b46de80c6194456464a}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!mainThread@{mainThread}}
+\index{mainThread@{mainThread}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{mainThread}{mainThread}}
+{\footnotesize\ttfamily Thread T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+main\+Thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file Horloge.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_aafddbe6543386d8aa59f81bb8cc6761b}\label{class_t_p___aviation_______simulation_1_1_horloge_aafddbe6543386d8aa59f81bb8cc6761b}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!m\_heures@{m\_heures}}
+\index{m\_heures@{m\_heures}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{m\_heures}{m\_heures}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+m\+\_\+heures\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 20 of file Horloge.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a7fc5358afc6bc50f875d97163aa94d91}\label{class_t_p___aviation_______simulation_1_1_horloge_a7fc5358afc6bc50f875d97163aa94d91}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!m\_minutes@{m\_minutes}}
+\index{m\_minutes@{m\_minutes}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{m\_minutes}{m\_minutes}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+m\+\_\+minutes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 21 of file Horloge.\+cs.
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_horloge_a11f4cd2e035a4d4100e9d92a3997e78b}\label{class_t_p___aviation_______simulation_1_1_horloge_a11f4cd2e035a4d4100e9d92a3997e78b}} 
+\index{TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}!TempsChanged@{TempsChanged}}
+\index{TempsChanged@{TempsChanged}!TP\_Aviation\_\_\_Simulation.Horloge@{TP\_Aviation\_\_\_Simulation.Horloge}}
+\doxysubsubsection{\texorpdfstring{TempsChanged}{TempsChanged}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_t_p___aviation_______simulation_ab5db512dc3e9bf2d1ce440124e59dcd6}{Horloge\+Event\+Handler}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Horloge.\+Temps\+Changed}
+
+
+
+Definition at line 18 of file Horloge.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_horloge_8cs}{Horloge.\+cs}}\end{DoxyCompactItemize}

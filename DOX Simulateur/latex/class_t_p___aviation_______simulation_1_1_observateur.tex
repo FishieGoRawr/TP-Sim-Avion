@@ -1,0 +1,146 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_observateur}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observateur Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_observateur}\index{TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}}
+Inheritance diagram for T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observateur\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_t_p___aviation_______simulation_1_1_observateur}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_observateur_a40f360573f2d384880a07705349edfd3}{Observateur}} (int width, int height, Random rand)
+\begin{DoxyCompactList}\small\item\em Constructeur de base d\textquotesingle{}observateur \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_observateur_a6f2feac41a31804d89ad08a3c6e6c47f}{random\+Position}} (int width, int height, Random rand)
+\begin{DoxyCompactList}\small\item\em Obtient une position aléatoire dans la carte pour un observateur \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_observateur_a76e87080c4955f76d10c263970850cc8}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Version stringifier d\textquotesingle{}un observateur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_observateur_a529e8fa2715558b0896830f4717683c1}{Destination}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Accesseur de la positiongeo de l\textquotesingle{}observateur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_observateur_a101addf6b56801848f5098e237e405c9}{m\+\_\+rayon}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Observateur.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_observateur_a40f360573f2d384880a07705349edfd3}\label{class_t_p___aviation_______simulation_1_1_observateur_a40f360573f2d384880a07705349edfd3}} 
+\index{TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}!Observateur@{Observateur}}
+\index{Observateur@{Observateur}!TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}}
+\doxysubsubsection{\texorpdfstring{Observateur()}{Observateur()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observateur.\+Observateur (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{Random}]{rand }\end{DoxyParamCaption})}
+
+
+
+Constructeur de base d\textquotesingle{}observateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Widht de la carte\\
+\hline
+{\em height} & Hauteur de la carte\\
+\hline
+{\em rand} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Observateur.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_observateur_a6f2feac41a31804d89ad08a3c6e6c47f}\label{class_t_p___aviation_______simulation_1_1_observateur_a6f2feac41a31804d89ad08a3c6e6c47f}} 
+\index{TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}!randomPosition@{randomPosition}}
+\index{randomPosition@{randomPosition}!TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}}
+\doxysubsubsection{\texorpdfstring{randomPosition()}{randomPosition()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observateur.\+random\+Position (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{Random}]{rand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtient une position aléatoire dans la carte pour un observateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+{\em rand} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positiongeo aléatoire dans la carte
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_distance_client_a621a8ca2a4d34ac66152d88e4c9b4fa9}{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Distance\+Client}}.
+
+
+
+Definition at line 33 of file Observateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_observateur_a76e87080c4955f76d10c263970850cc8}\label{class_t_p___aviation_______simulation_1_1_observateur_a76e87080c4955f76d10c263970850cc8}} 
+\index{TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}!ToString@{ToString}}
+\index{ToString@{ToString}!TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observateur.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Version stringifier d\textquotesingle{}un observateur 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Observateur.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_observateur_a101addf6b56801848f5098e237e405c9}\label{class_t_p___aviation_______simulation_1_1_observateur_a101addf6b56801848f5098e237e405c9}} 
+\index{TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}!m\_rayon@{m\_rayon}}
+\index{m\_rayon@{m\_rayon}!TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}}
+\doxysubsubsection{\texorpdfstring{m\_rayon}{m\_rayon}}
+{\footnotesize\ttfamily int T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observateur.\+m\+\_\+rayon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file Observateur.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_observateur_a529e8fa2715558b0896830f4717683c1}\label{class_t_p___aviation_______simulation_1_1_observateur_a529e8fa2715558b0896830f4717683c1}} 
+\index{TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}!Destination@{Destination}}
+\index{Destination@{Destination}!TP\_Aviation\_\_\_Simulation.Observateur@{TP\_Aviation\_\_\_Simulation.Observateur}}
+\doxysubsubsection{\texorpdfstring{Destination}{Destination}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_position_geo}{Position\+Geo}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+Observateur.\+Destination\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Accesseur de la positiongeo de l\textquotesingle{}observateur 
+
+
+
+Definition at line 56 of file Observateur.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_observateur_8cs}{Observateur.\+cs}}\end{DoxyCompactItemize}

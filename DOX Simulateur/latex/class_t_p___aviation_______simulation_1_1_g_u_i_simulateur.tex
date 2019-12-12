@@ -1,0 +1,402 @@
+\hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur}{}\doxysection{T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur Class Reference}
+\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur}\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+Inheritance diagram for T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a93d435af62d4872d2142f96a8afab635}{G\+U\+I\+Simulateur}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur du \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur}{G\+U\+I\+Simulateur}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a665c957311d9a05c2cf202386bf57ffb}{On\+Heure\+Ajoutee}} (string temps)
+\begin{DoxyCompactList}\small\item\em Event lorsque le temps change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_afcf1e6a7d66fbaee0bfd97b567699efb}{update\+G\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}actualiser le G\+UI avec tout les items nécessaire. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a7bc77c81929918859fc2a5a3969450ef}{obtenir\+Talle\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Obtient la taille de la carte \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a11039a09516bea80facc7e7cfd0eebc9}{Btn\+Start\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Event\+Handler du bouton \char`\"{}\+Btn\+Start\char`\"{} lors d\textquotesingle{}un click. Permet de stopper et de continuer la simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_afe9f5ec01b937a4cdafc9f7477f057f9}{Btn\+Charger\+Scenario\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Permet de changer le scénario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a088c3311f887847571e4806fbbcdfbf1}{btn\+Test\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Ajoute des clients sur demande, on le laisse au cas ou. \end{DoxyCompactList}\item 
+protected override void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aee4b7c8f6dbee4df8d1d5b2380b86caf}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Nettoyage des ressources utilisées. \end{DoxyCompactList}\item 
+private void \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aebee3191340276e1f26f49cf1db626bb}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Méthode requise pour la prise en charge du concepteur -\/ ne modifiez pas le contenu de cette méthode avec l\textquotesingle{}éditeur de code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_controller_simulateur}{Controller\+Simulateur}} \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_af780a65aa6a5e752b3f0fa88300163f5}{controller}}
+\item 
+bool \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a00dd9704ce31729a1108d36a19f67cef}{simulateur\+En\+Marche}}
+\item 
+private System Component\+Model I\+Container \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ab3bc73edfb4a4553d644fbc5d20af8ab}{components}} = null
+\begin{DoxyCompactList}\small\item\em Variable nécessaire au concepteur. \end{DoxyCompactList}\item 
+private System Windows Forms Picture\+Box \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ab053df02e54084380eca047a254e5044}{pcb\+Worldmap}}
+\item 
+private System Windows Forms Track\+Bar \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a2602f5beafb33449f466d7e1266b2a04}{track\+Bar1}}
+\item 
+private System Windows Forms Button \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aa3a4256099201ebb86502747e8982433}{btn\+Start}}
+\item 
+private System Windows Forms Button \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_adb0966b1282fc3b38889a3779ceac7f2}{btn\+Charger\+Scenario}}
+\item 
+private System Windows Forms List\+Box \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a9fd401bf8465e0b57d86216765833925}{lsb\+Areoport}}
+\item 
+private System Windows Forms List\+Box \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aec3025ddad9ba05e613f242d56227f14}{lsb\+Client}}
+\item 
+private System Windows Forms List\+Box \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a3be302936ecc31af67731a07bed7ed6a}{lsb\+Avion}}
+\item 
+private System Windows Forms Label \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a2b3c6d663d883177f3f6d938c3c74dd5}{lbl\+Areoport}}
+\item 
+private System Windows Forms Label \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a47faf99170ba53e3aea5312433ca2a4a}{label1}}
+\item 
+private System Windows Forms Label \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ac9f44d23df3e1ace4f68337466624dbe}{label2}}
+\item 
+private System Windows Forms Label \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a19954af76e0b2619637e80f113206825}{lbl\+Horloge}}
+\item 
+private System Windows Forms Button \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aec7bb9ed3bd6783577f11e1ceb7feb8f}{btn\+Test}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file G\+U\+I\+Simulateur.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a93d435af62d4872d2142f96a8afab635}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a93d435af62d4872d2142f96a8afab635}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!GUISimulateur@{GUISimulateur}}
+\index{GUISimulateur@{GUISimulateur}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{GUISimulateur()}{GUISimulateur()}}
+{\footnotesize\ttfamily T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+G\+U\+I\+Simulateur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur du \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur}{G\+U\+I\+Simulateur}} 
+
+
+
+Definition at line 22 of file G\+U\+I\+Simulateur.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_afe9f5ec01b937a4cdafc9f7477f057f9}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_afe9f5ec01b937a4cdafc9f7477f057f9}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!BtnChargerScenario\_Click@{BtnChargerScenario\_Click}}
+\index{BtnChargerScenario\_Click@{BtnChargerScenario\_Click}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{BtnChargerScenario\_Click()}{BtnChargerScenario\_Click()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+Btn\+Charger\+Scenario\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Permet de changer le scénario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file G\+U\+I\+Simulateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a11039a09516bea80facc7e7cfd0eebc9}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a11039a09516bea80facc7e7cfd0eebc9}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!BtnStart\_Click@{BtnStart\_Click}}
+\index{BtnStart\_Click@{BtnStart\_Click}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{BtnStart\_Click()}{BtnStart\_Click()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+Btn\+Start\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event\+Handler du bouton \char`\"{}\+Btn\+Start\char`\"{} lors d\textquotesingle{}un click. Permet de stopper et de continuer la simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file G\+U\+I\+Simulateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a088c3311f887847571e4806fbbcdfbf1}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a088c3311f887847571e4806fbbcdfbf1}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!btnTest\_Click@{btnTest\_Click}}
+\index{btnTest\_Click@{btnTest\_Click}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{btnTest\_Click()}{btnTest\_Click()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+btn\+Test\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ajoute des clients sur demande, on le laisse au cas ou. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file G\+U\+I\+Simulateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aee4b7c8f6dbee4df8d1d5b2380b86caf}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aee4b7c8f6dbee4df8d1d5b2380b86caf}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily protected override void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Nettoyage des ressources utilisées. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true si les ressources managées doivent être supprimées~; sinon, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aebee3191340276e1f26f49cf1db626bb}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aebee3191340276e1f26f49cf1db626bb}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}}
+{\footnotesize\ttfamily private void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Méthode requise pour la prise en charge du concepteur -\/ ne modifiez pas le contenu de cette méthode avec l\textquotesingle{}éditeur de code. 
+
+
+
+Definition at line 29 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a7bc77c81929918859fc2a5a3969450ef}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a7bc77c81929918859fc2a5a3969450ef}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!obtenirTalleMap@{obtenirTalleMap}}
+\index{obtenirTalleMap@{obtenirTalleMap}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{obtenirTalleMap()}{obtenirTalleMap()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+obtenir\+Talle\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtient la taille de la carte 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 160 of file G\+U\+I\+Simulateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a665c957311d9a05c2cf202386bf57ffb}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a665c957311d9a05c2cf202386bf57ffb}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!OnHeureAjoutee@{OnHeureAjoutee}}
+\index{OnHeureAjoutee@{OnHeureAjoutee}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{OnHeureAjoutee()}{OnHeureAjoutee()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+On\+Heure\+Ajoutee (\begin{DoxyParamCaption}\item[{string}]{temps }\end{DoxyParamCaption})}
+
+
+
+Event lorsque le temps change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temps} & Temps de l\textquotesingle{}horloge\\
+\hline
+\end{DoxyParams}
+~\newline
+ 
+
+Definition at line 36 of file G\+U\+I\+Simulateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_afcf1e6a7d66fbaee0bfd97b567699efb}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_afcf1e6a7d66fbaee0bfd97b567699efb}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!updateGUI@{updateGUI}}
+\index{updateGUI@{updateGUI}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{updateGUI()}{updateGUI()}}
+{\footnotesize\ttfamily void T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+update\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}actualiser le G\+UI avec tout les items nécessaire. 
+
+
+
+Definition at line 90 of file G\+U\+I\+Simulateur.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_adb0966b1282fc3b38889a3779ceac7f2}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_adb0966b1282fc3b38889a3779ceac7f2}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!btnChargerScenario@{btnChargerScenario}}
+\index{btnChargerScenario@{btnChargerScenario}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{btnChargerScenario}{btnChargerScenario}}
+{\footnotesize\ttfamily private System Windows Forms Button T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+btn\+Charger\+Scenario\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 200 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aa3a4256099201ebb86502747e8982433}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aa3a4256099201ebb86502747e8982433}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!btnStart@{btnStart}}
+\index{btnStart@{btnStart}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{btnStart}{btnStart}}
+{\footnotesize\ttfamily private System Windows Forms Button T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+btn\+Start\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 199 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aec7bb9ed3bd6783577f11e1ceb7feb8f}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aec7bb9ed3bd6783577f11e1ceb7feb8f}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!btnTest@{btnTest}}
+\index{btnTest@{btnTest}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{btnTest}{btnTest}}
+{\footnotesize\ttfamily private System Windows Forms Button T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+btn\+Test\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 208 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ab3bc73edfb4a4553d644fbc5d20af8ab}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ab3bc73edfb4a4553d644fbc5d20af8ab}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!components@{components}}
+\index{components@{components}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily private System Component\+Model I\+Container T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+components = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variable nécessaire au concepteur. 
+
+
+
+Definition at line 8 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_af780a65aa6a5e752b3f0fa88300163f5}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_af780a65aa6a5e752b3f0fa88300163f5}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!controller@{controller}}
+\index{controller@{controller}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_t_p___aviation_______simulation_1_1_controller_simulateur}{Controller\+Simulateur}} T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file G\+U\+I\+Simulateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a47faf99170ba53e3aea5312433ca2a4a}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a47faf99170ba53e3aea5312433ca2a4a}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!label1@{label1}}
+\index{label1@{label1}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{label1}{label1}}
+{\footnotesize\ttfamily private System Windows Forms Label T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+label1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 205 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ac9f44d23df3e1ace4f68337466624dbe}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ac9f44d23df3e1ace4f68337466624dbe}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!label2@{label2}}
+\index{label2@{label2}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{label2}{label2}}
+{\footnotesize\ttfamily private System Windows Forms Label T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+label2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 206 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a2b3c6d663d883177f3f6d938c3c74dd5}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a2b3c6d663d883177f3f6d938c3c74dd5}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!lblAreoport@{lblAreoport}}
+\index{lblAreoport@{lblAreoport}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{lblAreoport}{lblAreoport}}
+{\footnotesize\ttfamily private System Windows Forms Label T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+lbl\+Areoport\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 204 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a19954af76e0b2619637e80f113206825}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a19954af76e0b2619637e80f113206825}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!lblHorloge@{lblHorloge}}
+\index{lblHorloge@{lblHorloge}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{lblHorloge}{lblHorloge}}
+{\footnotesize\ttfamily private System Windows Forms Label T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+lbl\+Horloge\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 207 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a9fd401bf8465e0b57d86216765833925}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a9fd401bf8465e0b57d86216765833925}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!lsbAreoport@{lsbAreoport}}
+\index{lsbAreoport@{lsbAreoport}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{lsbAreoport}{lsbAreoport}}
+{\footnotesize\ttfamily private System Windows Forms List\+Box T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+lsb\+Areoport\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 201 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a3be302936ecc31af67731a07bed7ed6a}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a3be302936ecc31af67731a07bed7ed6a}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!lsbAvion@{lsbAvion}}
+\index{lsbAvion@{lsbAvion}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{lsbAvion}{lsbAvion}}
+{\footnotesize\ttfamily private System Windows Forms List\+Box T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+lsb\+Avion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 203 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aec3025ddad9ba05e613f242d56227f14}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_aec3025ddad9ba05e613f242d56227f14}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!lsbClient@{lsbClient}}
+\index{lsbClient@{lsbClient}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{lsbClient}{lsbClient}}
+{\footnotesize\ttfamily private System Windows Forms List\+Box T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+lsb\+Client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 202 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ab053df02e54084380eca047a254e5044}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_ab053df02e54084380eca047a254e5044}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!pcbWorldmap@{pcbWorldmap}}
+\index{pcbWorldmap@{pcbWorldmap}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{pcbWorldmap}{pcbWorldmap}}
+{\footnotesize\ttfamily private System Windows Forms Picture\+Box T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+pcb\+Worldmap\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 197 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a00dd9704ce31729a1108d36a19f67cef}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a00dd9704ce31729a1108d36a19f67cef}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!simulateurEnMarche@{simulateurEnMarche}}
+\index{simulateurEnMarche@{simulateurEnMarche}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{simulateurEnMarche}{simulateurEnMarche}}
+{\footnotesize\ttfamily bool T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+simulateur\+En\+Marche\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file G\+U\+I\+Simulateur.\+cs.
+
+\mbox{\Hypertarget{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a2602f5beafb33449f466d7e1266b2a04}\label{class_t_p___aviation_______simulation_1_1_g_u_i_simulateur_a2602f5beafb33449f466d7e1266b2a04}} 
+\index{TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}!trackBar1@{trackBar1}}
+\index{trackBar1@{trackBar1}!TP\_Aviation\_\_\_Simulation.GUISimulateur@{TP\_Aviation\_\_\_Simulation.GUISimulateur}}
+\doxysubsubsection{\texorpdfstring{trackBar1}{trackBar1}}
+{\footnotesize\ttfamily private System Windows Forms Track\+Bar T\+P\+\_\+\+Aviation\+\_\+\+\_\+\+\_\+\+Simulation.\+G\+U\+I\+Simulateur.\+track\+Bar1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 198 of file G\+U\+I\+Simulateur.\+Designer.\+cs.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_g_u_i_simulateur_8cs}{G\+U\+I\+Simulateur.\+cs}}\item 
+P\+:/École/\+Automne 2019/\+Prog I\+I\+I/\+T\+P/\+T\+P-\/\+Sim-\/\+Avion/\+T\+P Aviation -\/ Simulation/\mbox{\hyperlink{_g_u_i_simulateur_8_designer_8cs}{G\+U\+I\+Simulateur.\+Designer.\+cs}}\end{DoxyCompactItemize}
