@@ -10,10 +10,16 @@ namespace TP_Aviation___Generateur_de_scénario
     {
         private static UsineAeronef m_usineAeronef = null;
 
+        /// <summary>
+        /// Cosntructeur de l'usine
+        /// </summary>
         UsineAeronef()
         {
         }
 
+        /// <summary>
+        /// Appelle de l'usine par les autres classes, si non initialiser il se crée lui-même
+        /// </summary>
         public static UsineAeronef getUsineAeronef
         {
             get
@@ -26,6 +32,18 @@ namespace TP_Aviation___Generateur_de_scénario
             }
         }
 
+        /// <summary>
+        /// Crée un nouvel aéronef, selon le type reçu et avec bonnes les informations
+        /// </summary>
+        /// <param name="nom">Nom de l'aéronef</param>
+        /// <param name="type">Type de l'aéronef</param>
+        /// <param name="vitesse">Vitesse de l'aéronef</param>
+        /// <param name="entretien">Temps de maintenance de l'aéronef</param>
+        /// <param name="charger">Temps de débarquement de l'aéronef</param>
+        /// <param name="decharger">Temps d'embarquement de l'aéronef</param>
+        /// <param name="change">Nombre qui représente la capacité ou le rayon de l'aéronef selon le type</param>
+        /// <param name="origine">Position d'origine de l'aéronef, qui est la position de l'aéroport</param>
+        /// <returns></returns>
         public Aeronef creerAvion(string nom, string type, int vitesse, int entretien, int charger, int decharger, int change, PositionGeo origine)
         {
             Aeronef newAeronef = null;

@@ -14,12 +14,21 @@ namespace TP_Aviation___Generateur_de_scénario
     {
         GUIGenerateur guigen;
 
+        /// <summary>
+        /// Cosntructeur du GUI de sélection de position
+        /// </summary>
+        /// <param name="gui">Variable qui contient le GUI du générateur</param>
         public GUIPosition(GUIGenerateur gui)
         {
             guigen = gui;
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Sélectionne les positions X et Y de la souris lorsqu'on clique sur la window
+        /// </summary>
+        /// <param name="sender">Objet d'évènement</param>
+        /// <param name="e">Objet souris</param>
         private void PcbWorldmap_MouseClick(object sender, MouseEventArgs e)
         {
             string coordString = "";
@@ -29,6 +38,12 @@ namespace TP_Aviation___Generateur_de_scénario
             this.Dispose();
         }
 
+        /// <summary>
+        /// Convertit les positiosn de la souris en coordonnée géograpgique en degrée
+        /// </summary>
+        /// <param name="x">Position X de la souris</param>
+        /// <param name="y">Position Y de la souris</param>
+        /// <returns>Retourne la coordonnée géographique avec les valeurs Nord, Sud, Est, Ouest</returns>
         private string convertPosToMinSec(double x, double y)
         {
             string coords = "";
