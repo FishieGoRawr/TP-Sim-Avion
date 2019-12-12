@@ -39,7 +39,7 @@ namespace TP_Aviation___Simulation
 
         public void bougerAvion(int temps)
         {
-            foreach (var aeronef in m_listAeronef)
+            foreach (var aeronef in this.m_listAeronef)
             {
                 aeronef.avancerAvion(temps, m_listClient);
             }

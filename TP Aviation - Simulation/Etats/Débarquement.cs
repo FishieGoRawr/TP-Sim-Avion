@@ -18,14 +18,12 @@ namespace TP_Aviation___Simulation
 
         public override void avancer(int tempsPasse, List<Client> clients)
         {
+            tempsRestant = tempsRestant - tempsPasse;
+
             if (tempsRestant <= 0)
             {
-
+                m_aeronef.Dispo = true;
                 Index = 7;
-            }
-            else
-            {
-                tempsRestant = tempsRestant - tempsPasse;
             }
         }
     }

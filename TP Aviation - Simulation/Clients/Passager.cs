@@ -34,11 +34,11 @@ namespace TP_Aviation___Simulation
 
             while (!different)
             {
-                destination = rand.Next(0, count);
+                destination = rand.Next(count);
                 if (listAreoport[destination].Equals(origine))
-                    different = true;
-                else
                     different = false;
+                else
+                    different = true;
             }
 
             return listAreoport[destination];

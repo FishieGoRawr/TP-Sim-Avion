@@ -26,6 +26,8 @@ namespace TP_Aviation___Simulation
         public Etat m_etat { get; set; }
         [XmlIgnore]
         public int m_indexClient { get; set; }
+        [XmlIgnore]
+        public PositionGeo m_clientDestination { get; set; }
 
         /// <summary>
         /// Constructeur d'aeronef.
@@ -59,46 +61,11 @@ namespace TP_Aviation___Simulation
             m_origine = new PositionGeo();
             this.m_dispo = true;
             this.m_indexClient = -1;
-            this.m_etat = null;
+            this.m_etat = new Etat(this); ;
         }
 
-        public void avancerAvion(int temps, List<Client> clients)
+        public virtual void avancerAvion(int temps, List<Client> clients)
         {
-            switch (m_etat.Index)
-            {
-                case 1:
-                    if(m_etat.GetType() != typeof(Attente))
-                        m_etat = new Attente(this);
-                    break;
-                case 2:
-                    if (m_etat.GetType() != typeof(Embarquement))
-                        m_etat = new Embarquement(this);
-                    break;
-                case 3:
-                    if (m_etat.GetType() != typeof(Aller))
-                        m_etat = new Aller(this);
-                    break;
-                case 4:
-                    if (m_etat.GetType() != typeof(AllerRetour))
-                        m_etat = new AllerRetour(this);
-                    break;
-                case 5:
-                    if (m_etat.GetType() != typeof(Observation))
-                        m_etat = new Observation(this);
-                    break;
-                case 6:
-                    if (m_etat.GetType() != typeof(Débarquement))
-                        m_etat = new Débarquement(this);
-                    break;
-                case 7:
-                    if (m_etat.GetType() != typeof(Maintenance))
-                        m_etat = new Maintenance(this);
-                    break;
-                default:
-                    break;
-            }
-
-            m_etat.avancer(temps, clients);
         }
 
         public String Type
@@ -125,6 +92,7 @@ namespace TP_Aviation___Simulation
         public virtual PositionGeo Localisation
         {
             get { return m_localisation; }
+            set { m_localisation = value; }
         }
 
         public virtual PositionGeo Origine

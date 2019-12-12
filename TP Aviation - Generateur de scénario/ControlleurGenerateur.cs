@@ -65,13 +65,5 @@ namespace TP_Aviation___Generateur_de_scénario
         {
             scenario.SerializeScenario();
         }
-
-        /// <summary>
-        /// Génére un scénario selon le fichier choisi
-        /// </summary>
-        public void deserializeScenario()
-        {
-            scenario.DeserializeScenario();
-        }
     }
 }

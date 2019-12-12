@@ -50,24 +50,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aeroport.cs" />
-    <Compile Include="Aller.cs" />
-    <Compile Include="AllerRetour.cs" />
-    <Compile Include="AeroIncendie.cs" />
-    <Compile Include="AeroMarchandise.cs" />
-    <Compile Include="Aeronef.cs" />
-    <Compile Include="AeroObservateur.cs" />
-    <Compile Include="AeroPassager.cs" />
-    <Compile Include="AeroSecours.cs" />
-    <Compile Include="Attente.cs" />
-    <Compile Include="Client.cs" />
+    <Compile Include="Etats\Aller.cs" />
+    <Compile Include="Etats\AllerRetour.cs" />
+    <Compile Include="Aeronefs\AeroIncendie.cs" />
+    <Compile Include="Aeronefs\AeroMarchandise.cs" />
+    <Compile Include="Aeronefs\Aeronef.cs" />
+    <Compile Include="Aeronefs\AeroObservateur.cs" />
+    <Compile Include="Aeronefs\AeroPassager.cs" />
+    <Compile Include="Aeronefs\AeroSecours.cs" />
+    <Compile Include="Etats\Attente.cs" />
+    <Compile Include="Clients\Client.cs" />
     <Compile Include="ControllerSimulateur.cs" />
-    <Compile Include="Distance.cs" />
-    <Compile Include="DistanceClient.cs" />
-    <Compile Include="Débarquement.cs" />
-    <Compile Include="Embarquement.cs" />
-    <Compile Include="EnVol.cs" />
-    <Compile Include="Etat.cs" />
-    <Compile Include="Feu.cs" />
+    <Compile Include="Aeronefs\Distance.cs" />
+    <Compile Include="Clients\DistanceClient.cs" />
+    <Compile Include="Etats\Débarquement.cs" />
+    <Compile Include="Etats\Embarquement.cs" />
+    <Compile Include="Etats\EnVol.cs" />
+    <Compile Include="Etats\Etat.cs" />
+    <Compile Include="Clients\Feu.cs" />
     <Compile Include="GUISimulateur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,19 +75,19 @@
       <DependentUpon>GUISimulateur.cs</DependentUpon>
     </Compile>
     <Compile Include="Horloge.cs" />
-    <Compile Include="Maintenance.cs" />
-    <Compile Include="Marchandise.cs" />
-    <Compile Include="Observateur.cs" />
-    <Compile Include="Observation.cs" />
-    <Compile Include="Passager.cs" />
+    <Compile Include="Etats\Maintenance.cs" />
+    <Compile Include="Clients\Marchandise.cs" />
+    <Compile Include="Clients\Observateur.cs" />
+    <Compile Include="Etats\Observation.cs" />
+    <Compile Include="Clients\Passager.cs" />
     <Compile Include="PositionGeo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scenario.cs" />
-    <Compile Include="Secours.cs" />
-    <Compile Include="Transport.cs" />
-    <Compile Include="TransportClient.cs" />
-    <Compile Include="UsineClient.cs" />
+    <Compile Include="Clients\Secours.cs" />
+    <Compile Include="Aeronefs\Transport.cs" />
+    <Compile Include="Clients\TransportClient.cs" />
+    <Compile Include="Clients\UsineClient.cs" />
     <EmbeddedResource Include="GUISimulateur.resx">
       <DependentUpon>GUISimulateur.cs</DependentUpon>
     </EmbeddedResource>
